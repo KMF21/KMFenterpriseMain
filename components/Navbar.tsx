@@ -180,7 +180,6 @@ function Navbar() {
         </nav>
       </div>
     </div>
-    
   )
 }
 
