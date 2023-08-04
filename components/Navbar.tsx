@@ -5,6 +5,8 @@ import Link from 'next/link'
 function Navbar() {
 
   const [focusText, setFocusText] = useState('');
+  const [change, setChange] = useState(false)
+  const [isClicked, setIsClicked]=useState(false)
 
 
    function handleInput(event) {
@@ -12,17 +14,15 @@ function Navbar() {
       setFocusText(value);
    }
 
+   function handleClick(){
+    setIsClicked(true) 
+   }
 
-    const [change, setChange] = useState(false)
-    const [toggler, setToggler]=useState(false)
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 
-    // Detect Y-scroll
     useEffect(() => {
-      // Attach the event listener when the component mounts
+
       window.addEventListener('scroll', () => {
-        // Change the background color when scrolling
         const scrolled = window.scrollY
         const threshold = 80
   
@@ -32,10 +32,10 @@ function Navbar() {
           setChange(false)
         }
       })
+
       // Clean up the event listener when the component unmounts
       return () => {
         window.removeEventListener('scroll', () => {
-          // Change the background color when scrolling
           const scrolled = window.scrollY
           const threshold = 80
     
@@ -47,18 +47,11 @@ function Navbar() {
         })
       }
     }, [])
-
-
-    
-    const handleToggle = () => {
-      //Main navigation Active Class Add Remove
-      setToggler(!toggler)
-    }
   
   return (
     <div 
       id="site-header header" 
-      className={change? "fixed-top nav-fixed" : "fixed-top"}
+      className={`fixed-top ${change && "nav-fixed"}`}
     >
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light stroke py-lg-0">
@@ -69,8 +62,7 @@ function Navbar() {
           </h1>
           <button
             id= "navbar-toggler"
-            className=" collapsed"
-            onClick={handleToggle}
+            className="navbar-toggler collapsed"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarScroll"
@@ -78,13 +70,18 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            {toggler ? <span className="navbar-toggler-icon fa icon-close fa-times"/> :<span className="navbar-toggler-icon fa icon-expand fa-bars" />}
+            <span className="navbar-toggler-icon fa icon-expand fa-bars" />
+            <span className="navbar-toggler-icon fa icon-close fa-times"/>
           </button>
-          <div className={`collapse navbar-collapse  ${toggler && 'active'}`} id="navbarScroll">
+          <div 
+            className={'collapse navbar-collapse'} 
+            id="navbarScroll"
+          >
             <ul className="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
               <li className="nav-item">
                 <Link
-                  className="nav-link active"
+                  onClick={handleClick}
+                  className='nav-link active' 
                   aria-current="page"
                   href="/"
                 >
@@ -92,17 +89,29 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="/about">
+                <Link 
+                  onClick={handleClick}
+                  className='nav-link'
+                  href="/about"
+                >
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="/services">
+                <Link 
+                  onClick={handleClick}
+                  className='nav-link'
+                  href="/services"
+                >
                   Services
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="/contact">
+                <Link 
+                  onClick={handleClick}
+                  className='nav-link'
+                  href="/contact"
+                >
                   Contact
                 </Link>
               </li>
@@ -171,6 +180,7 @@ function Navbar() {
           {/* //toggle switch for light and dark theme */}
         </nav>
       </div>
+      <hr className="my-0"/>
     </div>
   )
 }
