@@ -20,8 +20,6 @@ function Navbar() {
 
     // Detect Y-scroll
     useEffect(() => {
-      
-  
       // Attach the event listener when the component mounts
       window.addEventListener('scroll', () => {
         // Change the background color when scrolling
