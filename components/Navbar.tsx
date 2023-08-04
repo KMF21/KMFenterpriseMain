@@ -7,10 +7,10 @@ function Navbar() {
   const [focusText, setFocusText] = useState('');
 
 
-   function handleInput(event) {
-      const value = event.target.value;
-      setFocusText(value);
-   }
+  //  function handleInput(event) {
+  //     const value = event.target.value;
+  //     setFocusText(value);
+  //  }
 
 
     const [navbarBackground, setNavbarBackground] = useState('transparent')
@@ -78,7 +78,7 @@ function Navbar() {
           <button
             id= "navbar-toggler"
             className=" collapsed"
-            // onClick={handleToggle}
+            onClick={handleToggle}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarScroll"
@@ -86,7 +86,7 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            {toggler?<span className="navbar-toggler-icon fa icon-expand fa-bars" />:<span className="navbar-toggler-icon fa icon-close fa-times" />}
+            {toggler ? <span className="navbar-toggler-icon fa icon-close fa-times"/> :<span className="navbar-toggler-icon fa icon-expand fa-bars" />}
           </button>
           <div className={`collapse navbar-collapse  ${toggler && 'active'}`} id="navbarScroll">
             <ul className="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
@@ -133,8 +133,8 @@ function Navbar() {
                         name="search"
                         required="required"
                         autoFocus
-                        onInput = {handleInput} 
-                        value = {focusText}
+                        // onChange = {handleInput} 
+                        // value = {focusText}
                       />
                       <button type="submit" className="btn">
                         <span className="fas fa-search" aria-hidden="true" />
