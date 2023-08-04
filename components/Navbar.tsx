@@ -1,20 +1,37 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 function Navbar() {
   const [focusText, setFocusText] = useState('')
-  // function handleInput(event) {
-  //   const value = event.target.value
-  //   setFocusText(value)
-  // }
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    function handleScroll() {
+      setIsScrolled(window.scrollY > 0)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <div>
-      <div id="site-header" className="fixed-top">
+      <div
+        id="site-header"
+        className={`fixed-top h-20 border-bottom nav-height ${
+          isScrolled ? 'bg-white' : 'navbar-transparent'
+        }`}
+      >
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light stroke py-lg-0">
             <h1>
-              <Link className="navbar-brand pe-xl-5 pe-lg-4" href="/">
+              <Link
+                className={`navbar-brand pe-xl-5 pe-lg-4 ${
+                  isScrolled ? 'text-dark' : ''
+                }`}
+                href="/"
+              >
                 <span className="w3yellow">Work</span>Core
               </Link>
             </h1>
@@ -45,17 +62,26 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" href="/about">
+                  <Link
+                    className={`nav-link ${isScrolled ? 'text-dark' : ''}`}
+                    href="/about"
+                  >
                     About
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" href="/services">
+                  <Link
+                    className={`nav-link ${isScrolled ? 'text-dark' : ''}`}
+                    href="/services"
+                  >
                     Services
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" href="/contact">
+                  <Link
+                    className={`nav-link ${isScrolled ? 'text-dark' : ''}`}
+                    href="/contact"
+                  >
                     Contact
                   </Link>
                 </li>
@@ -82,8 +108,12 @@ function Navbar() {
                   <label className="theme-switch" htmlFor="checkbox">
                     <input type="checkbox" id="checkbox" />
                     <div className="mode-container">
-                      <i className="gg-sun" />
-                      <i className="gg-moon" />
+                      <i
+                        className={`gg-sun ${isScrolled ? 'text-dark' : ''}`}
+                      />
+                      <i
+                        className={`gg-moon ${isScrolled ? 'text-dark ' : ''}`}
+                      />
                     </div>
                   </label>
                 </div>

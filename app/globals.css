@@ -86,7 +86,6 @@ body {
 }
 
 body {
-  
 }
 
 a {
@@ -102,4 +101,20 @@ a {
 
 span.w3yellow {
   color: var(--primary-color);
+}
+
+/* Navbar transition smooth */
+.navbar-transparent {
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.bg-white {
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-height {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
