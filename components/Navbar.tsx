@@ -1,16 +1,73 @@
 'use client'
-import React, { useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import Link from 'next/link'
 
 function Navbar() {
+
   const [focusText, setFocusText] = useState('');
+
+
    function handleInput(event) {
       const value = event.target.value;
       setFocusText(value);
    }
+
+
+    const [navbarBackground, setNavbarBackground] = useState('transparent')
+    const [change, setChange] = useState(false)
+    const [toggler, setToggler]=useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+
+    // Detect Y-scroll
+    useEffect(() => {
+      
+  
+      // Attach the event listener when the component mounts
+      window.addEventListener('scroll', () => {
+        // Change the background color when scrolling
+        const scrolled = window.scrollY
+        const threshold = 80
+  
+        if (scrolled >= threshold) {
+          setNavbarBackground('white')
+          setChange(true)
+        } else {
+          setNavbarBackground('transparent')
+          setChange(false)
+        }
+      })
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('scroll', () => {
+          // Change the background color when scrolling
+          const scrolled = window.scrollY
+          const threshold = 80
+    
+          if (scrolled >= threshold) {
+            setNavbarBackground('white')
+            setChange(true)
+          } else {
+            setNavbarBackground('transparent')
+            setChange(false)
+          }
+        })
+      }
+    }, [])
+
+
+    
+    const handleToggle = () => {
+      //Main navigation Active Class Add Remove
+      setToggler(!toggler)
+    }
+  
   return (
-    <div>
-    <div id="site-header" className="fixed-top">
+    <div 
+      id="site-header header" 
+      className={change? "fixed-top nav-fixed" : "fixed-top"}
+      style={{ backgroundColor: navbarBackground }}
+    >
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light stroke py-lg-0">
           <h1>
@@ -19,7 +76,9 @@ function Navbar() {
             </Link>
           </h1>
           <button
-            className="navbar-toggler collapsed"
+            id= "navbar-toggler"
+            className=" collapsed"
+            // onClick={handleToggle}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarScroll"
@@ -27,10 +86,9 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon fa icon-expand fa-bars" />
-            <span className="navbar-toggler-icon fa icon-close fa-times" />
+            {toggler?<span className="navbar-toggler-icon fa icon-expand fa-bars" />:<span className="navbar-toggler-icon fa icon-close fa-times" />}
           </button>
-          <div className="collapse navbar-collapse" id="navbarScroll">
+          <div className={`collapse navbar-collapse  ${toggler && 'active'}`} id="navbarScroll">
             <ul className="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
               <li className="nav-item">
                 <Link
@@ -94,7 +152,7 @@ function Navbar() {
             <ul className="header-search me-lg-4">
               <li className="get-btn">
                 <Link
-                  href="contact.html"
+                  href="/contact"
                   className="btn btn-style btn-primary"
                   title="search"
                 >
@@ -121,10 +179,6 @@ function Navbar() {
           {/* //toggle switch for light and dark theme */}
         </nav>
       </div>
-    </div>
-    
-    
-
     </div>
     
   )

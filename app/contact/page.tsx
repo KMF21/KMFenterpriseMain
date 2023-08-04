@@ -22,9 +22,7 @@ function page() {
           marginHeight={0}
           marginWidth={0}
           src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Abuja,%20FCT,%20Nigeria+(WorkCore)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
-        >
-          <Link href="https://www.maps.ie/population/">Find Population on Map</Link>
-        </iframe>
+        />
       </div>
     </div>
 
