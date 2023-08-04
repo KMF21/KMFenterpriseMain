@@ -7,13 +7,12 @@ function Navbar() {
   const [focusText, setFocusText] = useState('');
 
 
-  //  function handleInput(event) {
-  //     const value = event.target.value;
-  //     setFocusText(value);
-  //  }
+   function handleInput(event) {
+      const value = event.target.value;
+      setFocusText(value);
+   }
 
 
-    const [navbarBackground, setNavbarBackground] = useState('transparent')
     const [change, setChange] = useState(false)
     const [toggler, setToggler]=useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -30,10 +29,8 @@ function Navbar() {
         const threshold = 80
   
         if (scrolled >= threshold) {
-          setNavbarBackground('white')
           setChange(true)
         } else {
-          setNavbarBackground('transparent')
           setChange(false)
         }
       })
@@ -45,10 +42,8 @@ function Navbar() {
           const threshold = 80
     
           if (scrolled >= threshold) {
-            setNavbarBackground('white')
             setChange(true)
           } else {
-            setNavbarBackground('transparent')
             setChange(false)
           }
         })
@@ -66,7 +61,6 @@ function Navbar() {
     <div 
       id="site-header header" 
       className={change? "fixed-top nav-fixed" : "fixed-top"}
-      style={{ backgroundColor: navbarBackground }}
     >
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light stroke py-lg-0">
