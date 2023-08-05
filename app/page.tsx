@@ -261,7 +261,7 @@ export default function Home() {
                   src="https://player.vimeo.com/video/124801644"
                   frameBorder={0}
                   allow="autoplay; fullscreen"
-                  allowFullScreen=""
+                  allowFullScreen
                 />
               </div>
 
