@@ -1,23 +1,15 @@
 'use client'
 import React, {useEffect, useState } from 'react';
 import Link from 'next/link';
+import Search from './Search';
+
 function Navbar() {
 
-  const [focusText, setFocusText] = useState('');
   const [change, setChange] = useState(false)
   const [isClicked1, setIsClicked1]=useState(false)
   const [isClicked2, setIsClicked2]=useState(false)
   const [isClicked3, setIsClicked3]=useState(false)
   const [isClicked4, setIsClicked4]=useState(false)
-
-
-   function handleInput(event:any) {
-      const value = event.target.value;
-      setFocusText(value);
-   }
-
-
-
 
     useEffect(() => {
 
@@ -80,7 +72,7 @@ function Navbar() {
           >
             <ul className="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
               <li className="nav-item">
-                <span
+                <Link
                   onClick={() => {
                      setIsClicked1(true) 
                      setIsClicked2(false)
@@ -88,10 +80,11 @@ function Navbar() {
                      setIsClicked4(false)
                   }}
                   className={`nav-link  ${isClicked1 && 'active'}` }
-                  aria-current="page"
+                  
+                  href='/'
                 >
                   Home
-                </span>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link
@@ -102,7 +95,6 @@ function Navbar() {
                     setIsClicked4(false)
                    }}
                   className={`nav-link ${isClicked2 && 'active'}` }
-                  aria-current="page"
                   href='/about'
                 >
                   About
@@ -117,7 +109,6 @@ function Navbar() {
                     setIsClicked4(false)
                    }}
                   className={`nav-link ${isClicked3 && 'active'}` }
-                  aria-current="page"
                   href='/services'
                 >
                   Services
@@ -132,45 +123,12 @@ function Navbar() {
                     setIsClicked4(true)
                    }}
                   className={`nav-link ${isClicked4 && 'active'}` }
-                  aria-current="page"
                   href='/contact'
                 >
                   Contact
                 </Link>
               </li>
-              <li className="nav-item search-right">
-                <Link href="#search" className="btn search-btn" title="search">
-                  <span className="fas fa-search me-2" aria-hidden="true" />
-                </Link>
-                {/* search popup */}
-                <div id="search" className="pop-overlay">
-                  <div className="popup">
-                    <h3 className="title-w3l two mb-4 text-left">Search Here</h3>
-                    <form
-                      action="#"
-                      method="GET"
-                      className="search-box d-flex position-relative"
-                    >
-                      <input
-                        type="search"
-                        placeholder="Enter Keyword here"
-                        name="search"
-                        required
-                        autoFocus
-                        onChange = {handleInput} 
-                        value = {focusText}
-                      />
-                      <button type="submit" className="btn">
-                        <span className="fas fa-search" aria-hidden="true" />
-                      </button>
-                    </form>
-                  </div>
-                  <Link className="close" href="#close">
-                    ×
-                  </Link>
-                </div>
-                {/* /search popup */}
-              </li>
+                  <Search />
             </ul>
             {/*/search-right*/}
             <ul className="header-search me-lg-4">
