@@ -1,7 +1,29 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Link from 'next/link'
 
 function Footer() {
+  const [input, setInput] = useState('')
+  // When the user scrolls down 20px from the top of the document, show the button
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("movetop").style.display = "block";
+    } else {
+        document.getElementById("movetop").style.display = "none";
+    }
+  }
+  if (typeof window !== undefined) {
+    window.onscroll = function() {
+        scrollFunction()
+    };
+  }
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+
   return (
     <>
       {/* //testimonials section */}
@@ -64,10 +86,15 @@ function Footer() {
                 <p>Get Updates By Subscribe Our Weekly Newsletter</p>
                 <form action="#" className="subscribe" method="post">
                   <input
+                    onChange={e =>{
+                      const value = e.target.value
+                      setInput(value)
+                    }}
                     type="email"
                     name="email"
                     placeholder="Your Email Address"
-                    required=""
+                    value={input}
+                    required
                   />
                   <button>
                     <span className="fas fa-paper-plane" />
@@ -98,33 +125,11 @@ function Footer() {
           </div>
         </div>
         {/* move top */}
-        <button onClick="topFunction()" id="movetop" title="Go to top">
+        <button onClick={topFunction} id="movetop" title="Go to top">
           <span className="fa fa-angle-up" />
         </button>
 
 
-
-        {/* jquery code
-        <script>
-            window.onscroll = function() {
-                scrollFunction()
-            };
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("movetop").style.display = "block";
-                } else {
-                    document.getElementById("movetop").style.display = "none";
-                }
-            }
-
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-
-        </script> */}
-        {/* //move top */}
       </footer>
     </>
 
