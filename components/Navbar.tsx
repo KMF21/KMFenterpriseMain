@@ -1,22 +1,21 @@
 'use client'
-import React, {useEffect, useState } from 'react'
-import Link from 'next/link'
-
+import React, {useEffect, useState } from 'react';
+import Link from 'next/link';
 function Navbar() {
 
   const [focusText, setFocusText] = useState('');
   const [change, setChange] = useState(false)
-  const [isClicked, setIsClicked]=useState(false)
+  const [isClicked1, setIsClicked1]=useState(false)
+  const [isClicked2, setIsClicked2]=useState(false)
+  const [isClicked3, setIsClicked3]=useState(false)
+  const [isClicked4, setIsClicked4]=useState(false)
 
 
-   function handleInput(event) {
+   function handleInput(event:any) {
       const value = event.target.value;
       setFocusText(value);
    }
 
-   function handleClick(){
-    setIsClicked(true) 
-   }
 
 
 
@@ -47,6 +46,8 @@ function Navbar() {
         })
       }
     }, [])
+
+    
   
   return (
     <div 
@@ -79,38 +80,60 @@ function Navbar() {
           >
             <ul className="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
               <li className="nav-item">
-                <Link
-                  onClick={handleClick}
-                  className='nav-link active' 
+                <span
+                  onClick={() => {
+                     setIsClicked1(true) 
+                     setIsClicked2(false)
+                     setIsClicked3(false)
+                     setIsClicked4(false)
+                  }}
+                  className={`nav-link  ${isClicked1 && 'active'}` }
                   aria-current="page"
-                  href="/"
                 >
                   Home
-                </Link>
+                </span>
               </li>
               <li className="nav-item">
-                <Link 
-                  onClick={handleClick}
-                  className='nav-link'
-                  href="/about"
+                <Link
+                  onClick={() => {
+                    setIsClicked1(false) 
+                    setIsClicked2(true)
+                    setIsClicked3(false)
+                    setIsClicked4(false)
+                   }}
+                  className={`nav-link ${isClicked2 && 'active'}` }
+                  aria-current="page"
+                  href='/about'
                 >
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link 
-                  onClick={handleClick}
-                  className='nav-link'
-                  href="/services"
+                <Link
+                  onClick={() => {
+                    setIsClicked1(false) 
+                    setIsClicked2(false)
+                    setIsClicked3(true)
+                    setIsClicked4(false)
+                   }}
+                  className={`nav-link ${isClicked3 && 'active'}` }
+                  aria-current="page"
+                  href='/services'
                 >
                   Services
                 </Link>
               </li>
               <li className="nav-item">
-                <Link 
-                  onClick={handleClick}
-                  className='nav-link'
-                  href="/contact"
+                <Link
+                  onClick={(e:any) => {
+                    setIsClicked1(false) 
+                    setIsClicked2(false)
+                    setIsClicked3(false)
+                    setIsClicked4(true)
+                   }}
+                  className={`nav-link ${isClicked4 && 'active'}` }
+                  aria-current="page"
+                  href='/contact'
                 >
                   Contact
                 </Link>
@@ -132,10 +155,10 @@ function Navbar() {
                         type="search"
                         placeholder="Enter Keyword here"
                         name="search"
-                        required="required"
+                        required
                         autoFocus
-                        // onChange = {handleInput} 
-                        // value = {focusText}
+                        onChange = {handleInput} 
+                        value = {focusText}
                       />
                       <button type="submit" className="btn">
                         <span className="fas fa-search" aria-hidden="true" />
