@@ -1,8 +1,9 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 
 function Footer() {
+  const [input, setInput] = useState('')
   // When the user scrolls down 20px from the top of the document, show the button
 
   function scrollFunction() {
@@ -85,9 +86,14 @@ function Footer() {
                 <p>Get Updates By Subscribe Our Weekly Newsletter</p>
                 <form action="#" className="subscribe" method="post">
                   <input
+                    onChange={e =>{
+                      const value = e.target.value
+                      setInput(value)
+                    }}
                     type="email"
                     name="email"
                     placeholder="Your Email Address"
+                    value={input}
                     required
                   />
                   <button>
