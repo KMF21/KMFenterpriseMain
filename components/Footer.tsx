@@ -4,24 +4,31 @@ import Link from 'next/link'
 
 function Footer() {
   const [input, setInput] = useState('')
-  // When the user scrolls down 20px from the top of the document, show the button
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("movetop").style.display = "block";
-    } else {
-        document.getElementById("movetop").style.display = "none";
+  function scrollFunction(): void {
+    if (typeof window !== 'undefined') {
+      const movetopElement = document.getElementById('movetop')
+      if (movetopElement) {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          movetopElement.style.display = 'block'
+        } else {
+          movetopElement.style.display = 'none'
+        }
+      }
     }
   }
   if (typeof window !== undefined) {
-    window.onscroll = function() {
-        scrollFunction()
-    };
+    window.onscroll = function () {
+      scrollFunction()
+    }
   }
   // When the user clicks on the button, scroll to the top of the document
   function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
   }
 
   return (
@@ -52,7 +59,9 @@ function Footer() {
                 <div className="footer-listw3-grids">
                   <ul className="footer-listw3">
                     <li>
-                      <Link href="tel:+(21) 255 999 8888">+(21) 255 999 8888</Link>
+                      <Link href="tel:+(21) 255 999 8888">
+                        +(21) 255 999 8888
+                      </Link>
                     </li>
                     <li>
                       <Link href="mailto:Workcore@mail.com" className="mail">
@@ -86,7 +95,7 @@ function Footer() {
                 <p>Get Updates By Subscribe Our Weekly Newsletter</p>
                 <form action="#" className="subscribe" method="post">
                   <input
-                    onChange={e =>{
+                    onChange={(e) => {
                       const value = e.target.value
                       setInput(value)
                     }}
@@ -118,8 +127,8 @@ function Footer() {
             </div>
             <div className="bottom-copies text-center">
               <p className="copy-footer-29">
-                © {(new Date().getFullYear())} WorkCore. All rights reserved | Designed by{" "}
-                <Link href="#">KMF</Link>
+                © {new Date().getFullYear()} WorkCore. All rights reserved |
+                Designed by <Link href="#">KMF</Link>
               </p>
             </div>
           </div>
@@ -128,11 +137,8 @@ function Footer() {
         <button onClick={topFunction} id="movetop" title="Go to top">
           <span className="fa fa-angle-up" />
         </button>
-
-
       </footer>
     </>
-
   )
 }
 
