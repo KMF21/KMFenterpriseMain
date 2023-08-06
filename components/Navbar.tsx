@@ -26,7 +26,9 @@ function Navbar() {
     return () => {
       window.removeEventListener('scroll', () => {
         const scrolled = window.scrollY
+
         const threshold = 80
+
 
         if (scrolled >= threshold) {
           setChange(true)
@@ -37,6 +39,25 @@ function Navbar() {
     }
   }, [])
 
+
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('scroll', () => {
+          const scrolled = window.scrollY
+          const threshold = 50
+    
+          if (scrolled >= threshold) {
+            setChange(true)
+          } else {
+            setChange(false)
+          }
+        })
+      }
+    }, [])
+
+    
+  
+
   return (
     <div
       id="site-header header"
@@ -46,11 +67,10 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-light stroke py-lg-0">
           <h1>
             <Link className="navbar-brand pe-xl-5 pe-lg-4" href="/">
-              <span className="w3yellow">Work</span>Core
+              <span className="w3yellow">Govt</span>Agency
             </Link>
           </h1>
           <button
-            id="navbar-toggler"
             className="navbar-toggler collapsed"
             type="button"
             data-bs-toggle="collapse"
@@ -62,7 +82,12 @@ function Navbar() {
             <span className="navbar-toggler-icon fa icon-expand fa-bars" />
             <span className="navbar-toggler-icon fa icon-close fa-times" />
           </button>
-          <div className={'collapse navbar-collapse'} id="navbarScroll">
+
+          <div 
+            className="collapse navbar-collapse"
+            id="navbarScroll"
+          >
+
             <ul className="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
               <li className="nav-item">
                 <Link
@@ -85,9 +110,11 @@ function Navbar() {
                     setIsClicked2(true)
                     setIsClicked3(false)
                     setIsClicked4(false)
+
                   }}
                   className={`nav-link ${isClicked2 && 'active'}`}
                   href="/about"
+
                 >
                   About
                 </Link>
@@ -99,6 +126,7 @@ function Navbar() {
                     setIsClicked2(false)
                     setIsClicked3(true)
                     setIsClicked4(false)
+
                   }}
                   className={`nav-link ${isClicked3 && 'active'}`}
                   href="/services"
@@ -113,9 +141,11 @@ function Navbar() {
                     setIsClicked2(false)
                     setIsClicked3(false)
                     setIsClicked4(true)
+
                   }}
                   className={`nav-link ${isClicked4 && 'active'}`}
                   href="/contact"
+
                 >
                   Contact
                 </Link>
@@ -153,7 +183,8 @@ function Navbar() {
           {/* //toggle switch for light and dark theme */}
         </nav>
       </div>
-      <hr className="my-0" />
+      <hr />
+
     </div>
   )
 }

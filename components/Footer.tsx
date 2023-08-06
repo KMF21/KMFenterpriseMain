@@ -62,9 +62,10 @@ function Footer() {
                       <Link href="tel:+(21) 255 999 8888">080 3457 3377</Link>
                     </li>
                     <li>
-                      <Link href="mailto:Workcore@mail.com" className="mail">
-                        Govtagency@gmail.com
-                      </Link>
+
+                      <Link href="mailto:govtagency@mail.com" className="mail">
+                        Govtagency@mail.com
+         </Link>
                     </li>
                   </ul>
                 </div>
@@ -74,16 +75,16 @@ function Footer() {
                 <div className="footer-listw3-grids">
                   <ul className="footer-listw3">
                     <li>
-                      <Link href="index.html">Home</Link>
+                      <Link href="/">Home</Link>
                     </li>
                     <li>
-                      <Link href="about.html">About</Link>
+                      <Link href="/about">About</Link>
                     </li>
                     <li>
                       <Link href="#">Blogs</Link>
                     </li>
                     <li>
-                      <Link href="contact.html">Contact</Link>
+                      <Link href="/contact">Contact</Link>
                     </li>
                   </ul>
                 </div>
@@ -125,7 +126,7 @@ function Footer() {
             </div>
             <div className="bottom-copies text-center">
               <p className="copy-footer-29">
-                © {new Date().getFullYear()} WorkCore. All rights reserved |
+                © {new Date().getFullYear()} GovtAgency. All rights reserved |
                 Designed by <Link href="#">KMF</Link>
               </p>
             </div>
