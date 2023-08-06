@@ -137,7 +137,7 @@ function Navbar() {
             {/*//search-right*/}
           </div>
           {/* toggle switch for light and dark theme */}
-          {/* <div className="mobile-position">
+          <div className="mobile-position">
             <nav className="navigation">
               <div className="theme-switch-wrapper">
                 <label className="theme-switch" htmlFor="checkbox">
@@ -149,7 +149,7 @@ function Navbar() {
                 </label>
               </div>
             </nav>
-          </div> */}
+          </div>
           {/* //toggle switch for light and dark theme */}
         </nav>
       </div>
