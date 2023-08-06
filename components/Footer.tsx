@@ -48,9 +48,9 @@ function Footer() {
                 <h6 className="footer-title-29">Address</h6>
                 <div className="footer-listw3-grids">
                   <ul className="footer-listw3">
-                    <li>London, UK</li>
-                    <li>998 13h Street, Office 436</li>
-                    <li>Harlo 61466</li>
+                    <li>Gwarimpa, Abuja</li>
+                    <li>998 Uru Street, Office 46</li>
+                    <li>CraveCafe 61466</li>
                   </ul>
                 </div>
               </div>
@@ -59,13 +59,11 @@ function Footer() {
                 <div className="footer-listw3-grids">
                   <ul className="footer-listw3">
                     <li>
-                      <Link href="tel:+(21) 255 999 8888">
-                        +(21) 255 999 8888
-                      </Link>
+                      <Link href="tel:+(21) 255 999 8888">080 3457 3377</Link>
                     </li>
                     <li>
                       <Link href="mailto:Workcore@mail.com" className="mail">
-                        Workcore@mail.com
+                        Govtagency@gmail.com
                       </Link>
                     </li>
                   </ul>

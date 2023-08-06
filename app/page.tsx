@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SliderComponent from '@/components/landing/SliderComponent'
 import bg1 from '../packages/ui/assets/images/g1.jpg'
-import bg2 from '../packages/ui/assets/images/g2.jpg'
-import bg3 from '../packages/ui/assets/images/g6.jpg'
+import bg2 from '../packages/ui/assets/images/g1.jpg'
+import bg3 from '../packages/ui/assets/images/g1.jpg'
 import bg4 from '../packages/ui/assets/images/ab1.jpg'
 import bg5 from '../packages/ui/assets/images/ab2.jpg'
 import bg6 from '../packages/ui/assets/images/g3.jpg'
@@ -296,11 +296,11 @@ export default function Home() {
                       <ul className="blog-meta">
                         <li>
                           <span className="meta-value">by</span>
-                          <Link href="#author"> Lynda Stone</Link>
+                          <Link href="#author"> Moses Bliss</Link>
                         </li>
                       </ul>
                       <div className="date">
-                        <p>20 July, 2021</p>
+                        <p>20 July, 2024</p>
                       </div>
                     </div>
                   </div>
@@ -337,11 +337,11 @@ export default function Home() {
                       <ul className="blog-meta">
                         <li>
                           <span className="meta-value">by</span>
-                          <Link href="#author"> David Marks</Link>
+                          <Link href="#author"> David Bolaji</Link>
                         </li>
                       </ul>
                       <div className="date">
-                        <p>25 July, 2021</p>
+                        <p>25 July, 2024</p>
                       </div>
                     </div>
                   </div>
@@ -378,7 +378,7 @@ export default function Home() {
                       <ul className="blog-meta">
                         <li>
                           <span className="meta-value">by</span>
-                          <Link href="#author"> David Nelson</Link>
+                          <Link href="#author"> Somtochwkwu Wence</Link>
                         </li>
                       </ul>
                       <div className="date">
@@ -430,7 +430,7 @@ export default function Home() {
                         />
                       </Link>
                       <div className="people-info align-self">
-                        <h3>Johnson william</h3>
+                        <h3>Johnson Ojogbane</h3>
                         <p className="identity">Example City</p>
                       </div>
                     </div>
@@ -454,7 +454,7 @@ export default function Home() {
                         />
                       </Link>
                       <div className="people-info align-self">
-                        <h3>Alexander sakura</h3>
+                        <h3>Bola Tinubu</h3>
                         <p className="identity">Example City</p>
                       </div>
                     </div>
