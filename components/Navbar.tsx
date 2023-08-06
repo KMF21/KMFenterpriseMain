@@ -15,7 +15,7 @@ function Navbar() {
 
       window.addEventListener('scroll', () => {
         const scrolled = window.scrollY
-        const threshold = 80
+        const threshold = 50
   
         if (scrolled >= threshold) {
           setChange(true)
@@ -28,7 +28,7 @@ function Navbar() {
       return () => {
         window.removeEventListener('scroll', () => {
           const scrolled = window.scrollY
-          const threshold = 80
+          const threshold = 50
     
           if (scrolled >= threshold) {
             setChange(true)
@@ -50,11 +50,10 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-light stroke py-lg-0">
           <h1>
             <Link className="navbar-brand pe-xl-5 pe-lg-4" href="/">
-              <span className="w3yellow">Work</span>Core
+              <span className="w3yellow">Govt</span>Agency
             </Link>
           </h1>
           <button
-            id= "navbar-toggler"
             className="navbar-toggler collapsed"
             type="button"
             data-bs-toggle="collapse"
@@ -67,7 +66,7 @@ function Navbar() {
             <span className="navbar-toggler-icon fa icon-close fa-times"/>
           </button>
           <div 
-            className={'collapse navbar-collapse'} 
+            className="collapse navbar-collapse"
             id="navbarScroll"
           >
             <ul className="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
@@ -95,7 +94,7 @@ function Navbar() {
                     setIsClicked4(false)
                    }}
                   className={`nav-link ${isClicked2 && 'active'}` }
-                  href='/about'
+                  href='#'
                 >
                   About
                 </Link>
@@ -109,7 +108,7 @@ function Navbar() {
                     setIsClicked4(false)
                    }}
                   className={`nav-link ${isClicked3 && 'active'}` }
-                  href='/services'
+                  href='#'
                 >
                   Services
                 </Link>
@@ -123,7 +122,7 @@ function Navbar() {
                     setIsClicked4(true)
                    }}
                   className={`nav-link ${isClicked4 && 'active'}` }
-                  href='/contact'
+                  href='#'
                 >
                   Contact
                 </Link>
@@ -161,7 +160,7 @@ function Navbar() {
           {/* //toggle switch for light and dark theme */}
         </nav>
       </div>
-      <hr className="my-0"/>
+      <hr />
     </div>
   )
 }
