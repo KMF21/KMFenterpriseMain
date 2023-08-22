@@ -111,10 +111,10 @@ function Navbar1() {
                       </NavDropdown.Item>
                     </NavDropdown>
 
-                    <Nav.Link className="mx-3" href="#">
+                    <Nav.Link className="mx-3" href="/services">
                       Services
                     </Nav.Link>
-                    <Nav.Link className="mx-3" href="#">
+                    <Nav.Link className="mx-3" href="/contact">
                       Contact
                     </Nav.Link>
                   </Nav>

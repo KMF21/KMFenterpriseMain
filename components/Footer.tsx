@@ -1,12 +1,11 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 function Footer() {
   const [input, setInput] = useState('')
-
-  function scrollFunction(): void {
-    if (typeof window !== 'undefined') {
+  useEffect(() => {
+    function scrollFunction() {
       const movetopElement = document.getElementById('movetop')
       if (movetopElement) {
         if (
@@ -19,13 +18,14 @@ function Footer() {
         }
       }
     }
-  }
-  if (typeof window !== undefined) {
-    window.onscroll = function () {
-      scrollFunction()
+
+    window.addEventListener('scroll', scrollFunction)
+
+    return () => {
+      window.removeEventListener('scroll', scrollFunction)
     }
-  }
-  // When the user clicks on the button, scroll to the top of the document
+  }, [])
+
   function topFunction() {
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
@@ -62,10 +62,9 @@ function Footer() {
                       <Link href="tel:+(21) 255 999 8888">080 3457 3377</Link>
                     </li>
                     <li>
-
                       <Link href="mailto:govtagency@mail.com" className="mail">
                         Govtagency@mail.com
-         </Link>
+                      </Link>
                     </li>
                   </ul>
                 </div>
