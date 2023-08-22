@@ -18995,7 +18995,7 @@ a.btn.btn-style.btn-banner:hover {
     }
 }
 
-@media (max-width: 667px) {
+/* @media (max-width: 667px) {
     .w3l-main-slider .mai-hero-19 {
         grid-gap: 10px;
     }
@@ -19007,7 +19007,7 @@ a.btn.btn-style.btn-banner:hover {
     .w3l-main-slider .banner-top4 {
         min-height: 460px;
     }
-}
+} */
 
 @media (max-width: 600px) {
     .w3l-main-slider h3.title-hero-19 {
