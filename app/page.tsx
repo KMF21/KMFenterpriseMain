@@ -240,11 +240,11 @@ export default function Home() {
                 </Link>
                 {/* dialog itself, mfp-hide class is required to make dialog hidden -- */}
                 <div id="small-dialog1" className="zoom-anim-dialog mfp-hide">
-                  <iframe
+                  {/* <iframe
                     src="https://player.vimeo.com/video/124801644"
                     allow="autoplay; fullscreen"
                     allowFullScreen
-                  />
+                  /> */}
                 </div>
               </div>
             </div>

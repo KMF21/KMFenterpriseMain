@@ -2,8 +2,12 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Search from './Search'
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
-function Navbar() {
+function Navbar1() {
   const [change, setChange] = useState(false)
   const [isClicked1, setIsClicked1] = useState(false)
   const [isClicked2, setIsClicked2] = useState(false)
@@ -53,65 +57,56 @@ function Navbar() {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarScroll">
-            <ul className="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
-              <li className="nav-item">
-                <Link
-                  onClick={() => {
-                    setIsClicked1(true)
-                    setIsClicked2(false)
-                    setIsClicked3(false)
-                    setIsClicked4(false)
-                  }}
-                  className={`nav-link  ${isClicked1 && 'active'}`}
-                  href="/"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  onClick={() => {
-                    setIsClicked1(false)
-                    setIsClicked2(true)
-                    setIsClicked3(false)
-                    setIsClicked4(false)
-                  }}
-                  className={`nav-link ${isClicked2 && 'active'}`}
-                  href="/about"
-                >
-                  About
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  onClick={() => {
-                    setIsClicked1(false)
-                    setIsClicked2(false)
-                    setIsClicked3(true)
-                    setIsClicked4(false)
-                  }}
-                  className={`nav-link ${isClicked3 && 'active'}`}
-                  href="/services"
-                >
-                  Services
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  onClick={(e: any) => {
-                    setIsClicked1(false)
-                    setIsClicked2(false)
-                    setIsClicked3(false)
-                    setIsClicked4(true)
-                  }}
-                  className={`nav-link ${isClicked4 && 'active'}`}
-                  href="/contact"
-                >
-                  Contact
-                </Link>
-              </li>
-              <Search />
-            </ul>
+            <Navbar expand="lg" className="bg-body-tertiary">
+              <Container>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="me-auto">
+                    <Nav.Link href="#home">Home</Nav.Link>
+
+                    <NavDropdown title="About" id="basic-nav-dropdown">
+                      <NavDropdown.Item href="#action/3.1">
+                        Welcom to GovtAgency
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action/3.2">
+                        Director General's profile
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action/3.3">
+                        Contact Us
+                      </NavDropdown.Item>
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item href="#action/3.4">
+                        GovtAgency
+                      </NavDropdown.Item>
+                    </NavDropdown>
+                    <NavDropdown title="Department" id="basic-nav-dropdown">
+                      <NavDropdown.Item href="#action/3.1">
+                        Biotechnology
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action/3.2">
+                        Production, analytical & laboratory Management
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action/3.3">
+                        Project Development and Design
+                      </NavDropdown.Item>
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item href="#action/3.4">
+                        Human Resources
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action/3.4">
+                        Finance & Account
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action/3.4">
+                        Procurement Department
+                      </NavDropdown.Item>
+                    </NavDropdown>
+
+                    <Nav.Link href="#">Services</Nav.Link>
+                    <Nav.Link href="#">Contact</Nav.Link>
+                  </Nav>
+                </Navbar.Collapse>
+              </Container>
+            </Navbar>
             {/*/search-right*/}
             <ul className="header-search me-lg-4">
               <li className="get-btn">
@@ -120,7 +115,7 @@ function Navbar() {
                   className="btn btn-style btn-primary"
                   title="search"
                 >
-                  Get Started <i className="fas fa-arrow-right ms-lg-4 ms-2" />
+                  See More <i className="fas fa-arrow-right ms-lg-4 ms-2" />
                 </Link>
               </li>
             </ul>
@@ -148,4 +143,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Navbar1
