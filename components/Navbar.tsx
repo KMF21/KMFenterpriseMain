@@ -62,9 +62,15 @@ function Navbar1() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link className="mx-3" href="#home">
+                      Home
+                    </Nav.Link>
 
-                    <NavDropdown title="About" id="basic-nav-dropdown">
+                    <NavDropdown
+                      className="mx-2"
+                      title="About"
+                      id="basic-nav-dropdown"
+                    >
                       <NavDropdown.Item href="#action/3.1">
                         Welcom to GovtAgency
                       </NavDropdown.Item>
@@ -79,7 +85,11 @@ function Navbar1() {
                         GovtAgency
                       </NavDropdown.Item>
                     </NavDropdown>
-                    <NavDropdown title="Department" id="basic-nav-dropdown">
+                    <NavDropdown
+                      className="mx-2"
+                      title="Department"
+                      id="basic-nav-dropdown"
+                    >
                       <NavDropdown.Item href="#action/3.1">
                         Biotechnology
                       </NavDropdown.Item>
@@ -101,8 +111,12 @@ function Navbar1() {
                       </NavDropdown.Item>
                     </NavDropdown>
 
-                    <Nav.Link href="#">Services</Nav.Link>
-                    <Nav.Link href="#">Contact</Nav.Link>
+                    <Nav.Link className="mx-3" href="#">
+                      Services
+                    </Nav.Link>
+                    <Nav.Link className="mx-3" href="#">
+                      Contact
+                    </Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
               </Container>
