@@ -40,7 +40,7 @@ function Navbar1() {
         <nav className="navbar navbar-expand-lg navbar-light stroke py-lg-0">
           <h1>
             <Link className="navbar-brand pe-xl-5 pe-lg-4" href="/">
-              <span className="w3yellow">Govt</span>Agency
+              KMF<span className="w3yellow">enterprise</span>
             </Link>
           </h1>
           <button
