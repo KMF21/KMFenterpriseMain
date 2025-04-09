@@ -63,7 +63,7 @@ function Footer() {
                     </li>
                     <li>
                       <Link href="mailto:govtagency@mail.com" className="mail">
-                        Govtagency@mail.com
+                        KMFenterprise@mail.com
                       </Link>
                     </li>
                   </ul>
@@ -125,8 +125,8 @@ function Footer() {
             </div>
             <div className="bottom-copies text-center">
               <p className="copy-footer-29">
-                © {new Date().getFullYear()} GovtAgency. All rights reserved |
-                Designed by <Link href="#">KMF</Link>
+                © {new Date().getFullYear()} KMFenterprise Agency. All rights
+                reserved | Designed by <Link href="#">KMF</Link>
               </p>
             </div>
           </div>
