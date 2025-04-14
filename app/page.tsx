@@ -31,7 +31,7 @@ export default function Home() {
               <div className="title-content text-left">
                 <h6 className="title-subw3hny mb-1">About Us</h6>
                 <h3 className="title-w3l">
-                  The best solutions for your business{' '}
+                  Excellence is the baseline. Premium or nothing.{' '}
                 </h3>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function Home() {
                     </Link>
                   </h6>
                   <h4 className="gdnhy-1">
-                    <Link href="#">Development Strategies</Link>
+                    <Link href="#">SEO Strategies</Link>
                     <Link className="w3item-link" href="#">
                       <i className="fas fa-arrow-right ms-lg-4" />
                     </Link>
