@@ -11,16 +11,16 @@ function SliderComponent() {
         <div className="item">
           <div className="slider-info banner-view banner-top1">
             <div className="container">
-              <div className="banner-info header-hero-19">
+              <div className=" header-hero-19">
                 <h5>Software &amp; Consulting Company</h5>
                 <h3 className="title-hero-19">
-                  We Craft Unique Business Ideas
+                  We Design Nigeria's Most Trusted Websites & Brands
                 </h3>
                 <Link
                   href="/about"
                   className="btn btn-style btn-banner mt-sm-5 mt-4"
                 >
-                  Read More <i className="fas fa-arrow-right ms-lg-4 ms-2" />
+                  Work With Us <i className="fas fa-arrow-right ms-lg-4 ms-2" />
                 </Link>
               </div>
             </div>

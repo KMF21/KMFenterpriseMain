@@ -3,9 +3,9 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SliderComponent from '@/components/landing/SliderComponent'
-import bg1 from '../packages/ui/assets/images/g1.jpg'
+import bg1 from '../packages/ui/assets/images/g1a.jpg'
 import bg2 from '../packages/ui/assets/images/g1.jpg'
-import bg3 from '../packages/ui/assets/images/g1.jpg'
+import bg3 from '../packages/ui/assets/images/g1c.jpg'
 import bg4 from '../packages/ui/assets/images/ab1.jpg'
 import bg5 from '../packages/ui/assets/images/ab2.jpg'
 import bg6 from '../packages/ui/assets/images/g3.jpg'
@@ -64,7 +64,7 @@ export default function Home() {
                     </Link>
                   </h6>
                   <h4 className="gdnhy-1">
-                    <Link href="#">Your Business Consulting</Link>
+                    <Link href="#">Website Design</Link>
                     <Link className="w3item-link" href="#">
                       <i className="fas fa-arrow-right ms-lg-4" />
                     </Link>
@@ -84,7 +84,7 @@ export default function Home() {
                     </Link>
                   </h6>
                   <h4 className="gdnhy-1">
-                    <Link href="#">Financial Audit Services</Link>
+                    <Link href="#">Social Media</Link>
                     <Link className="w3item-link" href="#">
                       <i className="fas fa-arrow-right ms-lg-4" />
                     </Link>
@@ -121,9 +121,7 @@ export default function Home() {
         <div className="container py-lg-5 py-md-4 py-2">
           <div className="title-content text-center mb-md-5 mb-4">
             <h6 className="title-subw3hny mb-1">Who We Are</h6>
-            <h3 className="title-w3l mb-5">
-              We are entrepreneurs, marketers and business experts
-            </h3>
+            <h3 className="title-w3l mb-5">Learn More About Our Services.</h3>
           </div>
           <div className="main-cont-wthree-2 align-items-center text-center pt-lg-4">
             <div className="row align-items-center">

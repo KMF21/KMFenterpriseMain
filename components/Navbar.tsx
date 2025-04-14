@@ -63,29 +63,15 @@ function Navbar1() {
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
                     <Nav.Link className="mx-3" href="#home">
-                      Home
+                      HOME
                     </Nav.Link>
-
-                    <NavDropdown
-                      className="mx-2"
-                      title="About"
-                      id="basic-nav-dropdown"
-                    >
-                      <NavDropdown.Item href="#action/3.1">
-                        Welcom to GovtAgency
-                      </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.2">
-                        Director General's profile
-                      </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.3">
-                        Contact Us
-                      </NavDropdown.Item>
-                      <NavDropdown.Divider />
-                      <NavDropdown.Item href="#action/3.4">
-                        GovtAgency
-                      </NavDropdown.Item>
-                    </NavDropdown>
-                    <NavDropdown
+                    <Nav.Link className="mx-3" href="/about">
+                      ABOUT US
+                    </Nav.Link>
+                    <Nav.Link className="mx-3" href="/services">
+                      SERVICES
+                    </Nav.Link>
+                    {/* <NavDropdown
                       className="mx-2"
                       title="Department"
                       id="basic-nav-dropdown"
@@ -109,13 +95,12 @@ function Navbar1() {
                       <NavDropdown.Item href="#action/3.4">
                         Procurement Department
                       </NavDropdown.Item>
-                    </NavDropdown>
-
-                    <Nav.Link className="mx-3" href="/services">
-                      Services
+                    </NavDropdown> */}
+                    <Nav.Link className="mx-3" href="/portfolio">
+                      PORTFOLIO
                     </Nav.Link>
                     <Nav.Link className="mx-3" href="/contact">
-                      Contact
+                      CONTACT
                     </Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
@@ -129,14 +114,14 @@ function Navbar1() {
                   className="btn btn-style btn-primary"
                   title="search"
                 >
-                  See More <i className="fas fa-arrow-right ms-lg-4 ms-2" />
+                  BOOK A CALL <i className="fas fa-arrow-right ms-lg-4 ms-2" />
                 </Link>
               </li>
             </ul>
             {/*//search-right*/}
           </div>
           {/* toggle switch for light and dark theme */}
-          <div className="mobile-position">
+          {/* <div className="mobile-position">
             <nav className="navigation">
               <div className="theme-switch-wrapper">
                 <label className="theme-switch" htmlFor="checkbox">
@@ -148,11 +133,12 @@ function Navbar1() {
                 </label>
               </div>
             </nav>
-          </div>
+          </div> */}
+
           {/* //toggle switch for light and dark theme */}
         </nav>
       </div>
-      <hr />
+      <hr className="hr-color" />
     </div>
   )
 }

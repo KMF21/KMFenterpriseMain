@@ -238,12 +238,12 @@ sup {
 }
 
 a {
-    color: #F7AB0A;
+    color: #0ead69;
     text-decoration: underline
 }
 
 a:hover {
-    color: #F7AB0A;
+    color: #0ead69;
 }
 
 a:not([href]):not([class]),
@@ -3825,7 +3825,7 @@ fieldset:disabled .btn {
 
 .btn-outline-dark.disabled,
 .btn-outline-dark:disabled {
-    color: #F7AB0A;
+    color: #0ead69;
     background-color: transparent;
 }
 
@@ -18085,7 +18085,7 @@ p.white {
 }
 
 .transparant-btn {
-    color: #F7AB0A;
+    color: #fff;
     background: transparent;
     border: 1px solid var(--primary-color);
 }
@@ -18412,7 +18412,7 @@ nav ul li a:before {
 .navbar-expand-lg .navbar-nav .nav-link {
     transition: all 0.5s ease;
     padding: 26px 3px 20px 3px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     color: #fff;
     white-space: nowrap;
@@ -18882,7 +18882,7 @@ a.dropdown-item.active {
     color: #fff;
     font-size: 70px;
     text-transform: capitalize;
-    font-weight: 700;
+    font-weight: 600;
     border: none;
     text-shadow: rgb(0 0 0) 0px 0px 0px;
     line-height: 80px;
@@ -18900,20 +18900,20 @@ a.dropdown-item.active {
 }
 
 a.btn.btn-style.btn-banner {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.25);
     color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid #0ead69;
 }
 
 a.btn.btn-style.btn-banner:hover {
     border: 1px solid  #F7AB0A;
-;
     background: #b57d0a;
+      color: #fff;
 }
 
 @media (max-width: 1280px) {
     .w3l-main-slider h3.title-hero-19 {
-        font-size: 76px;
+        font-size: 60px;
         line-height: 86px;
     }
 
@@ -19508,7 +19508,7 @@ ul.icon-list-items li i {
 }
 
 .w3l-services-6 h4 a.title-head:hover {
-    color: #F7AB0A;
+    color: #fff;
 }
 
 .w3l-services-6 .area-box:hover {

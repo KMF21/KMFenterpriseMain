@@ -99,6 +99,9 @@ span.w3yellow {
   color: #f7ab0a;
 }
 
+.hr-color {
+  background-color: #0aed69;
+}
 /* Navbar transition smooth */
 .navbar-transparent {
   background-color: transparent;
