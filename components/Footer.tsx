@@ -126,7 +126,8 @@ function Footer() {
             <div className="bottom-copies text-center">
               <p className="copy-footer-29">
                 © {new Date().getFullYear()} KMFenterprise Agency. All rights
-                reserved | Designed by <Link href="#">KMF</Link>
+                reserved | Designed by <Link href="#">KMF</Link> - Building
+                Nigeria's Most Trusted Brands
               </p>
             </div>
           </div>

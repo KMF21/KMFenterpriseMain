@@ -19513,7 +19513,7 @@ ul.icon-list-items li i {
 
 .w3l-services-6 .area-box:hover {
     transition: .3s;
-    background: var(--primary-color);
+    background: var(--secondary-color);
 }
 
 .w3l-services-6 .area-box:hover .area-icon {
