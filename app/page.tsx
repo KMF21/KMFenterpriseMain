@@ -117,60 +117,74 @@ export default function Home() {
       </div>
       {/* <!--//bottom-3-grids--> */}
       {/* <!--/features-section --> */}
-      <section className="w3l-features py-5" id="work">
+      <section className="w3l-features" id="work">
         <div className="container py-lg-5 py-md-4 py-2">
           <div className="title-content text-center mb-md-5 mb-4">
-            <h6 className="title-subw3hny mb-1">Who We Are</h6>
-            <h3 className="title-w3l mb-5">Learn More About Our Services.</h3>
+            <h6 className="title-subw3hny mb-1">Pricing Plans</h6>
+            <h3 className="title-w3l mb-5">Choose the perfect plan for your needs</h3>
           </div>
+<<<<<<< HEAD
           <PricePlan />
           {/* <div className="main-cont-wthree-2 align-items-center text-center pt-lg-4">
+=======
+          <div className="main-cont-wthree-2 align-items-center text-center ">
+>>>>>>> sandbox
             <div className="row align-items-center">
-              <div className="col-lg-4 col-md-6">
-                <div className="grids-1 box-wrap">
-                  <div className="icon">
-                    <i className="fas fa-bullhorn" />
-                  </div>
-                  <h4>
-                    <Link href="#service" className="title-head mb-3">
-                      Profitable Marketing
-                    </Link>
-                  </h4>
-                  <p className="text-para">
-                    Lorem ipsum dolor sit amet, elit. Id ab commodi magnam.{' '}
-                  </p>
+              <div class="container py-5">
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-4">
+                        <div class="pricing-card card h-100 p-4">
+                            <div class="card-body text-center">
+                                <h5 class="text-muted text-uppercase mb-3">Starter</h5>
+                                <h2 class="display-4 fw-bold mb-4">$19</h2>
+                                <p class="text-muted mb-4">Perfect for small businesses</p>
+                                <ul class="list-unstyled feature-list mb-4">
+                                    <li>5 Team Members</li>
+                                    <li>10GB Storage</li>
+                                    <li>Basic Analytics</li>
+                                    <li>Email Support</li>
+                                </ul>
+                                <button class="btn btn-custom text-white w-100">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="pricing-card card h-100 p-4 border-2 border-primary">
+                            <span class="badge bg-primary popular-badge">Popular</span>
+                            <div class="card-body text-center">
+                                <h5 class="text-primary text-uppercase mb-3">Premium</h5>
+                                <h2 class="display-4 fw-bold mb-4">$49</h2>
+                                <p class="text-muted mb-4">Ideal for growing teams</p>
+                                <ul class="list-unstyled feature-list mb-4">
+                                    <li>15 Team Members</li>
+                                    <li>50GB Storage</li>
+                                    <li>Advanced Analytics</li>
+                                    <li>24/7 Support</li>
+                                </ul>
+                                <button class="btn btn-custom text-white w-100">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="pricing-card card h-100 p-4">
+                            <div class="card-body text-center">
+                                <h5 class="text-muted text-uppercase mb-3">Enterprise</h5>
+                                <h2 class="display-4 fw-bold mb-4">$99</h2>
+                                <p class="text-muted mb-4">For large organizations</p>
+                                <ul class="list-unstyled feature-list mb-4">
+                                    <li>Unlimited Members</li>
+                                    <li>500GB Storage</li>
+                                    <li>Custom Analytics</li>
+                                    <li>Priority Support</li>
+                                </ul>
+                                <button class="btn btn-custom text-white w-100">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className="col-lg-4 col-md-6 mt-md-0 mt-5">
-                <div className="grids-1 box-wrap">
-                  <div className="icon">
-                    <i className="fas fa-toolbox" />
-                  </div>
-                  <h4>
-                    <Link href="#service" className="title-head mb-3">
-                      SEO Specialists
-                    </Link>
-                  </h4>
-                  <p className="text-para">
-                    Lorem ipsum dolor sit amet, elit. Id ab commodi magnam.{' '}
-                  </p>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 mt-lg-0 mt-5">
-                <div className="grids-1 box-wrap">
-                  <div className="icon">
-                    <i className="fas fa-podcast" />
-                  </div>
-                  <h4>
-                    <Link href="#service" className="title-head mb-3">
-                      Audience Analysis
-                    </Link>
-                  </h4>
-                  <p className="text-para">
-                    Lorem ipsum dolor sit amet, elit. Id ab commodi magnam.{' '}
-                  </p>
-                </div>
-              </div>
+            </div>
             </div>
           </div> */}
         </div>

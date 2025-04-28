@@ -40,6 +40,42 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+.pricing-card {
+  transition: all 0.3s ease;
+  border: none;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-list li {
+  padding: 8px 0;
+  position: relative;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: rotate(15deg);
+}
+
+.btn-custom {
+  background: linear-gradient(45deg, #b57d0a, #F7AB0A);
+  border: none;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(143, 137, 51, 0.4);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

@@ -19,7 +19,7 @@ function NavLanding({props}:{props:string}) {
                 <div className="w3breadcrumb-right">
                     <ul className="breadcrumbs-custom-path">
                     <li>
-                        <Link href="index.html">Home</Link>
+                        <Link href="/">Home</Link>
                     </li>
                     <li className="active">
                         <span className="fas fa-angle-double-right mx-2" /> {props}
