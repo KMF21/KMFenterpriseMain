@@ -1,19 +1,19 @@
 import React from 'react'
-import Navbar from "@/components/Navbar"
-import NavLanding from "@/components/landing/NavLanding"
+import Navbar from '@/components/Navbar'
+import NavLanding from '@/components/landing/NavLanding'
 import Image from 'next/image'
 import Link from 'next/link'
-import Footer from "@/components/Footer"
-import bg1 from "../../packages/ui/assets/images/g8.jpg"
-import bg2 from "../../packages/ui/assets/images/g2.jpg"
-import bg3 from "../../packages/ui/assets/images/g4.jpg"
-import bg4 from "../../packages/ui/assets/images/g6.jpg"
+import Footer from '@/components/Footer'
+import bg1 from '../../packages/ui/assets/images/g8.jpg'
+import bg2 from '../../packages/ui/assets/images/g2.jpg'
+import bg3 from '../../packages/ui/assets/images/g4.jpg'
+import bg4 from '../../packages/ui/assets/images/g6.jpg'
 
 function page() {
   return (
     <div>
       <Navbar />
-      <NavLanding props='Services'/>
+      <NavLanding props="Services" />
       {/*//inner-page*/}
       {/*/w3l-services-1*/}
       <div className="w3l-services-1 py-5" id="grids-3">
@@ -21,25 +21,21 @@ function page() {
           {/*/row-1*/}
           <div className="row mb-5 pb-lg-4">
             <div className="col-lg-6 p5-lg-4 services-1-left">
-              <Image
-                src={bg1}
-                alt=""
-                className="img-fluid radius-image"
-              />
+              <Image src={bg1} alt="" className="img-fluid radius-image" />
             </div>
             <div className="services-1-right col-lg-6 mt-lg-0 mt-md-5 mt-4 ps-lg-5">
               <div className="title-content text-left">
                 <h6 className="title-subw3hny mb-1">Services Info</h6>
                 <h3 className="title-w3l mb-3">
-                  The best solutions for your business{" "}
+                  Excellence is the baseline. Premium or nothing.{' '}
                 </h3>
               </div>
               <p className="">
-                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices
-                in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet elit
-                ipsum dolor.Lorem ipsum viverra feugiat. Pellen tesque libero ut
-                justo, ultrices in ligula. Semper at tempufddfel tesque libero ut
-                justo.
+                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit
+                amet elit ipsum dolor.Lorem ipsum viverra feugiat. Pellen tesque
+                libero ut justo, ultrices in ligula. Semper at tempufddfel
+                tesque libero ut justo.
               </p>
               <Link
                 href="#services"
@@ -58,11 +54,14 @@ function page() {
           <div className="container py-lg-5 py-md-3">
             <div className="serve-title-header text-left">
               <h6 className="title-subw3hny mb-1">What We Offer</h6>
-              <h3 className="title-w3l mb-3">We improve your online presence.</h3>
+              <h3 className="title-w3l mb-3">
+                We improve your online presence.
+              </h3>
               <p className="pr-lg-5">
-                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices
-                in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet elit.
-                Non quae, fugiat nihil ad. Lorem ipsum dolor sit amet.
+                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit
+                amet elit. Non quae, fugiat nihil ad. Lorem ipsum dolor sit
+                amet.
               </p>
             </div>
             <div className="grids-of-5 row mt-5 text-center">
@@ -121,7 +120,7 @@ function page() {
 
       {/* /w3l-skills*/}
       {/*/w3-grids-3*/}
-      
+
       <section className="w3l-services-6 py-5" id="services">
         <div className="container py-lg-5 py-md-4 py-2">
           <div className="title-services text-center">
@@ -211,10 +210,8 @@ function page() {
         </div>
       </section>
 
-      
       {/*//w3-grids-3*/}
       {/*/w3l-footer-29-main*/}
-
 
       <Footer />
     </div>

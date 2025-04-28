@@ -16,6 +16,7 @@ import bg10 from '../packages/ui/assets/images/g4.jpg'
 import bg11 from '../packages/ui/assets/images/team3.jpg'
 import bg12 from '../packages/ui/assets/images/team1.jpg'
 import bg13 from '../packages/ui/assets/images/team2.jpg'
+import PricePlan from '@/components/PricePlan'
 
 export default function Home() {
   return (
@@ -31,15 +32,14 @@ export default function Home() {
               <div className="title-content text-left">
                 <h6 className="title-subw3hny mb-1">About Us</h6>
                 <h3 className="title-w3l">
-                  The best solutions for your business{' '}
+                  Excellence is the baseline. Premium or nothing.{' '}
                 </h3>
               </div>
             </div>
             <div className="col-lg-4 mt-lg-0 mt-md-5 mt-4 ps-lg-4">
               <p className="">
-                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit
-                amet elit ipsum dolor.
+                A creative agency specialising in thoughtful and compelling
+                brands powered by a high-converting online presence.
               </p>
             </div>
             <div className="col-lg-4 mt-lg-0 mt-md-5 mt-4 ps-lg-4">
@@ -104,7 +104,7 @@ export default function Home() {
                     </Link>
                   </h6>
                   <h4 className="gdnhy-1">
-                    <Link href="#">Development Strategies</Link>
+                    <Link href="#">SEO Strategies</Link>
                     <Link className="w3item-link" href="#">
                       <i className="fas fa-arrow-right ms-lg-4" />
                     </Link>
@@ -123,7 +123,12 @@ export default function Home() {
             <h6 className="title-subw3hny mb-1">Pricing Plans</h6>
             <h3 className="title-w3l mb-5">Choose the perfect plan for your needs</h3>
           </div>
+<<<<<<< HEAD
+          <PricePlan />
+          {/* <div className="main-cont-wthree-2 align-items-center text-center pt-lg-4">
+=======
           <div className="main-cont-wthree-2 align-items-center text-center ">
+>>>>>>> sandbox
             <div className="row align-items-center">
               <div class="container py-5">
                 <div class="row justify-content-center g-4">
@@ -181,7 +186,7 @@ export default function Home() {
                 </div>
             </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -204,14 +209,18 @@ export default function Home() {
             <div className="col-lg-5 title-content text-left ps-lg-5 mt-lg-0 mt-5">
               <h6 className="title-subw3hny mb-1">Why Us</h6>
               <h3 className="title-w3l mb-3">
-                Modern Approach to Every New Project
+                We Partner with Conscious Businesses to Grow Impact & Income
               </h3>
               <p className="mb-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                non ipsum soluta perferendis veniam qui esse magnam commodi
-                quisquam.
+                At KMFenterprise we specialise in telling your story through
+                intentional design that creates impact (and income!). We love
+                working with clients driven by purpose who&apos;ve built their
+                businesses from the ground up and are ready for a brand
+                reflective of the impactful industry leaders they&apos;ve
+                become.
               </p>
-              <ul className="icon-list-items mt-3">
+
+              {/* <ul className="icon-list-items mt-3">
                 <li className="icon-list-item">
                   <i aria-hidden="true" className="fas fa-check" />
                   Innovative ideas
@@ -224,7 +233,7 @@ export default function Home() {
                   <i aria-hidden="true" className="fas fa-check" />
                   Financial advisory
                 </li>
-              </ul>
+              </ul> */}
             </div>
             {/*/grids */}
           </div>
