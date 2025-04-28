@@ -127,7 +127,7 @@ function Footer() {
               <p className="copy-footer-29">
                 © {new Date().getFullYear()} KMFenterprise Agency. All rights
                 reserved | Designed by <Link href="#">KMF</Link> - Building
-                Nigeria's Most Trusted Brands
+                Nigeria&apos;s Most Trusted Brands
               </p>
             </div>
           </div>
