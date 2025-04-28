@@ -14,7 +14,7 @@ function SliderComponent() {
               <div className=" header-hero-19">
                 <h5>Software &amp; Consulting Company</h5>
                 <h3 className="title-hero-19">
-                  We Design Nigeria's Most Trusted Websites & Brands
+                  We Design Nigeria&lsquo;s Most Trusted Websites & Brands
                 </h3>
                 <Link
                   href="/about"
