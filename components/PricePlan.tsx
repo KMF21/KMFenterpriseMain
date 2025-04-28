@@ -2,7 +2,7 @@ import React from 'react'
 
 const PricePlan = () => {
   return (
-    <section id="pricing" className="pricing-content section-padding">
+    <div id="pricing" className="pricing-content section-padding">
       <div className="container">
         <div className="row text-center">
           <div
@@ -103,7 +103,7 @@ const PricePlan = () => {
         {/*- END ROW */}
       </div>
       {/*- END CONTAINER */}
-    </section>
+    </div>
   )
 }
 
