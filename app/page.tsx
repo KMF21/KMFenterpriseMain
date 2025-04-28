@@ -20,7 +20,7 @@ import PricePlan from '@/components/PricePlan'
 
 export default function Home() {
   return (
-    <main className="">
+    <div className="">
       <Navbar />
       {/* Header */}
       <SliderComponent />
@@ -121,14 +121,12 @@ export default function Home() {
         <div className="container py-lg-5 py-md-4 py-2">
           <div className="title-content text-center mb-md-5 mb-4">
             <h6 className="title-subw3hny mb-1">Pricing Plans</h6>
-            <h3 className="title-w3l mb-5">Choose the perfect plan for your needs</h3>
+            <h3 className="title-w3l mb-5">
+              Choose the perfect plan for your needs
+            </h3>
           </div>
-<<<<<<< HEAD
           <PricePlan />
           {/* <div className="main-cont-wthree-2 align-items-center text-center pt-lg-4">
-=======
-          <div className="main-cont-wthree-2 align-items-center text-center ">
->>>>>>> sandbox
             <div className="row align-items-center">
               <div class="container py-5">
                 <div class="row justify-content-center g-4">
@@ -485,6 +483,6 @@ export default function Home() {
       {/*/w3l-footer-29-main*/}
 
       <Footer />
-    </main>
+    </div>
   )
 }
