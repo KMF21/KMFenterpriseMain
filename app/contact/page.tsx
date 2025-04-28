@@ -11,10 +11,9 @@ function page() {
       <Navbar />
       <NavLanding props="Contact Us" />
 
-
       {/*//inner-page*/}
       <div className="map-iframe">
-        <div style={{ width: "100%" }}>
+        <div style={{ width: '100%' }}>
           <iframe
             width="100%"
             height={400}
@@ -28,10 +27,7 @@ function page() {
           <div className="container py-lg-4 py-md-3 py-2">
             <div className="title-content text-center">
               <h6 className="title-subw3hny mb-1">Get in touch</h6>
-              <h3 className="title-w3l mb-5">
-                Contact with our support <br />
-                during emergency!
-              </h3>
+              <h3 className="title-w3l mb-5">Apply to work with us</h3>
             </div>
             <div className="contact-grids d-grid mt-5 pt-lg-3">
               <div className="contact-left">
@@ -43,8 +39,8 @@ function page() {
                     <div className="cont-right">
                       <h6>Our head office address:</h6>
                       <p>
-                        Lorem ipsum Agency, 343 marketing, #4148 Honey street, NY
-                        - 62617.
+                        Lorem ipsum Agency, 343 marketing, #4148 Honey street,
+                        NY - 62617.
                       </p>
                     </div>
                   </div>
@@ -55,13 +51,13 @@ function page() {
                     <div className="cont-right">
                       <h6>Call for help :</h6>
                       <p>
-                        <Link href="tel:+1(21) 234 4567">
-                          +1(21) 234 557 4567
+                        <Link href="tel:+234 816 391 0146">
+                          +234 906 783 1050
                         </Link>
                       </p>
                       <p>
-                        <Link href="tel:+1(21) 234 4567">
-                          +1(21) 234 557 4568
+                        <Link href="tel:+234 816 391 0146">
+                          +234 816 391 0146
                         </Link>
                       </p>
                     </div>
@@ -113,7 +109,7 @@ function page() {
                       type="text"
                       name="w3lSubect"
                       id="w3lSubect"
-                      placeholder="Subject*"
+                      placeholder="Your Current Website (if you have one)*"
                       className="contact-input"
                       required
                     />
@@ -122,11 +118,30 @@ function page() {
                     <textarea
                       name="w3lMessage"
                       id="w3lMessage"
-                      placeholder="Type your message here*"
+                      placeholder="Tell us your story, what does your business do and how did you get here?*"
                       required
                       defaultValue={''}
                     />
                   </div>
+                  <div className="form-input">
+                    <textarea
+                      name="w3lMessage"
+                      id="w3lMessage"
+                      placeholder="which of our services are you interested in?*"
+                      required
+                      defaultValue={''}
+                    />
+                  </div>
+                  <div className="form-input">
+                    <textarea
+                      name="w3lMessage"
+                      id="w3lMessage"
+                      placeholder="Tell us your project, what problems are you hoping to solve by working with us and what does success look like for your business?*"
+                      required
+                      defaultValue={''}
+                    />
+                  </div>
+
                   <div className="submit-w3l-button text-lg-right">
                     <button className="btn btn-style btn-primary">
                       Send Message
