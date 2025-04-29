@@ -51,7 +51,7 @@ function page() {
                     <div className="cont-right">
                       <h6>Call for help :</h6>
                       <p>
-                        <Link href="tel:+234 816 391 0146">
+                        <Link href="tel:+234 906 783 1050">
                           +234 906 783 1050
                         </Link>
                       </p>
