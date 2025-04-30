@@ -144,7 +144,7 @@ function page() {
                 </div>
                 <h4>
                   <Link href="#feature" className="title-head">
-                    Web Design
+                    Web Development
                   </Link>
                 </h4>
                 <p>Lorem ipsum dolor sit amet elit. Velit beatae amet. </p>
@@ -163,7 +163,7 @@ function page() {
                 <p>Lorem ipsum dolor sit amet elit. Velit beatae amet. </p>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 grids-feature mt-lg-0 mt-4">
+            {/* <div className="col-lg-4 col-md-6 grids-feature mt-lg-0 mt-4">
               <div className="area-box">
                 <div className="area-icon icon-blue">
                   <span className="fas fa-laptop" />
@@ -214,7 +214,7 @@ function page() {
                 </h4>
                 <p>Lorem ipsum dolor sit amet elit. Velit beatae amet. </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
