@@ -62,13 +62,13 @@ function Navbar1() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
-                    <Nav.Link className="mx-3" href="#home">
+                    <Nav.Link className="mx-4" href="#home">
                       HOME
                     </Nav.Link>
-                    <Nav.Link className="mx-3" href="/about">
+                    <Nav.Link className="mx-4" href="/about">
                       ABOUT US
                     </Nav.Link>
-                    <Nav.Link className="mx-3" href="/services">
+                    <Nav.Link className="mx-4" href="/services">
                       SERVICES
                     </Nav.Link>
                     {/* <NavDropdown
@@ -96,10 +96,10 @@ function Navbar1() {
                         Procurement Department
                       </NavDropdown.Item>
                     </NavDropdown> */}
-                    <Nav.Link className="mx-3" href="/portfolio">
+                    <Nav.Link className="mx-4" href="/portfolio">
                       PORTFOLIO
                     </Nav.Link>
-                    <Nav.Link className="mx-3" href="/contact">
+                    <Nav.Link className="mx-4" href="/contact">
                       CONTACT
                     </Nav.Link>
                   </Nav>
