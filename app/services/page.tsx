@@ -30,19 +30,28 @@ function page() {
                   Excellence is the baseline. Premium or nothing.{' '}
                 </h3>
               </div>
-              <p className="">
-                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit
-                amet elit ipsum dolor.Lorem ipsum viverra feugiat. Pellen tesque
-                libero ut justo, ultrices in ligula. Semper at tempufddfel
-                tesque libero ut justo.
-              </p>
-              <Link
+              <div className="p-4 bg-light  shadow-sm">
+                <h6 className="fw-bold text-primary mb-2">
+                  Hard work got you here, but now it's time to grow
+                </h6>
+                <p className="text-muted mb-2">
+                  You've put your heart and soul into your business. But hard
+                  work can only get you so far, and a poor brand presence will
+                  have you working overtime without seeing results.
+                </p>
+                <p className="text-muted">
+                  So it's time to set yourself apart as the industry leader
+                  you've become, with a kick-ass brand your customers genuinely
+                  love as much as you do.
+                </p>
+              </div>
+
+              {/* <Link
                 href="#services"
                 className="btn btn-style btn-primary mt-lg-5 mt-4"
               >
                 Read More <i className="fas fa-arrow-right ms-lg-4 ms-2" />
-              </Link>
+              </Link> */}
             </div>
           </div>
           {/*//row-1*/}

@@ -6,17 +6,10 @@ import SliderComponent from '@/components/landing/SliderComponent'
 import bg1 from '../packages/ui/assets/images/g1a.jpg'
 import bg2 from '../packages/ui/assets/images/g1.jpg'
 import bg3 from '../packages/ui/assets/images/g1c.jpg'
-import bg4 from '../packages/ui/assets/images/ab1.jpg'
-import bg5 from '../packages/ui/assets/images/ab2.jpg'
-import bg6 from '../packages/ui/assets/images/g3.jpg'
-import bg7 from '../packages/ui/assets/images/team1.jpg'
-import bg8 from '../packages/ui/assets/images/g5.jpg'
-import bg9 from '../packages/ui/assets/images/team2.jpg'
-import bg10 from '../packages/ui/assets/images/g4.jpg'
-import bg11 from '../packages/ui/assets/images/team3.jpg'
 import bg12 from '../packages/ui/assets/images/team1.jpg'
 import bg13 from '../packages/ui/assets/images/team2.jpg'
-import PricePlan from '@/components/PricePlan'
+import PricePlan from '@/components/PricePlanSection'
+import MidSliderSection from '@/components/MidSliderSection'
 
 export default function Home() {
   return (
@@ -126,119 +119,13 @@ export default function Home() {
             </h3>
           </div>
           <PricePlan />
-          {/* <div className="main-cont-wthree-2 align-items-center text-center pt-lg-4">
-            <div className="row align-items-center">
-              <div class="container py-5">
-                <div class="row justify-content-center g-4">
-                    <div class="col-md-4">
-                        <div class="pricing-card card h-100 p-4">
-                            <div class="card-body text-center">
-                                <h5 class="text-muted text-uppercase mb-3">Starter</h5>
-                                <h2 class="display-4 fw-bold mb-4">$19</h2>
-                                <p class="text-muted mb-4">Perfect for small businesses</p>
-                                <ul class="list-unstyled feature-list mb-4">
-                                    <li>5 Team Members</li>
-                                    <li>10GB Storage</li>
-                                    <li>Basic Analytics</li>
-                                    <li>Email Support</li>
-                                </ul>
-                                <button class="btn btn-custom text-white w-100">Get Started</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="pricing-card card h-100 p-4 border-2 border-primary">
-                            <span class="badge bg-primary popular-badge">Popular</span>
-                            <div class="card-body text-center">
-                                <h5 class="text-primary text-uppercase mb-3">Premium</h5>
-                                <h2 class="display-4 fw-bold mb-4">$49</h2>
-                                <p class="text-muted mb-4">Ideal for growing teams</p>
-                                <ul class="list-unstyled feature-list mb-4">
-                                    <li>15 Team Members</li>
-                                    <li>50GB Storage</li>
-                                    <li>Advanced Analytics</li>
-                                    <li>24/7 Support</li>
-                                </ul>
-                                <button class="btn btn-custom text-white w-100">Get Started</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="pricing-card card h-100 p-4">
-                            <div class="card-body text-center">
-                                <h5 class="text-muted text-uppercase mb-3">Enterprise</h5>
-                                <h2 class="display-4 fw-bold mb-4">$99</h2>
-                                <p class="text-muted mb-4">For large organizations</p>
-                                <ul class="list-unstyled feature-list mb-4">
-                                    <li>Unlimited Members</li>
-                                    <li>500GB Storage</li>
-                                    <li>Custom Analytics</li>
-                                    <li>Priority Support</li>
-                                </ul>
-                                <button class="btn btn-custom text-white w-100">Get Started</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-          </div> */}
         </div>
       </section>
 
       {/* <!--//features section --> */}
-      {/* <!--/w3l-midslider--> */}
-      <section className="w3l-midslider py-5" id="midslider">
-        {/* /grids */}
-        <div className="container py-md-5">
-          <div className="row">
-            <div className="col-lg-7 stats_info-images pe-lg-5">
-              <div className="stats_info-images-right row">
-                <div className="col-6 mid-slider-content">
-                  <Image src={bg4} className="img-fluid radius-image" alt="" />
-                </div>
-                <div className="col-6 mid-slider-content">
-                  <Image src={bg5} className="img-fluid radius-image" alt="" />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-5 title-content text-left ps-lg-5 mt-lg-0 mt-5">
-              <h6 className="title-subw3hny mb-1">Why Us</h6>
-              <h3 className="title-w3l mb-3">
-                We Partner with Conscious Businesses to Grow Impact & Income
-              </h3>
-              <p className="mb-3">
-                At KMFenterprise we specialise in telling your story through
-                intentional design that creates impact (and income!). We love
-                working with clients driven by purpose who&apos;ve built their
-                businesses from the ground up and are ready for a brand
-                reflective of the impactful industry leaders they&apos;ve
-                become.
-              </p>
 
-              {/* <ul className="icon-list-items mt-3">
-                <li className="icon-list-item">
-                  <i aria-hidden="true" className="fas fa-check" />
-                  Innovative ideas
-                </li>
-                <li className="icon-list-item mt-2">
-                  <i aria-hidden="true" className="fas fa-check" />
-                  Professional assistance
-                </li>
-                <li className="icon-list-item mt-2">
-                  <i aria-hidden="true" className="fas fa-check" />
-                  Financial advisory
-                </li>
-              </ul> */}
-            </div>
-            {/*/grids */}
-          </div>
-          {/*/grids */}
-        </div>
-      </section>
-      {/*//w3l-midslider*/}
+      <MidSliderSection />
+
       {/*/home-page-video-popup*/}
       <section className="w3l-video-sec" id="video">
         <div className="container">
@@ -291,9 +178,11 @@ export default function Home() {
                   <div className="testimonial-content">
                     <div className="testimonial">
                       <p>
-                        <i className="fas fa-quote-left me-2" /> Lorem ipsum
-                        dolor sit amet elit. hic odio tenetur. ante ipsum primis
-                        in faucibus orci luctus et ultrices posuere.
+                        <i className="fas fa-quote-left me-2" /> I love how
+                        passionate the KMFEnterprise Tech Agency team is about
+                        helping business owners stand out. They truly make us
+                        look polished, professional, and ready to thrive in
+                        today’s modern business world.
                       </p>
                     </div>
                     <div className="bottom-info mt-4">
@@ -315,9 +204,11 @@ export default function Home() {
                   <div className="testimonial-content">
                     <div className="testimonial">
                       <p>
-                        <i className="fas fa-quote-left me-2" /> Lorem ipsum
-                        dolor sit amet elit. hic odio tenetur. ante ipsum primis
-                        in faucibus orci luctus et ultrices posuere.
+                        <i className="fas fa-quote-left me-2" />
+                        If you're looking for high-quality, impactful marketing,
+                        reach out to KMFenterprise. Their team is committed to
+                        setting you up for success and making your brand stand
+                        out!
                       </p>
                     </div>
                     <div className="bottom-info mt-4">

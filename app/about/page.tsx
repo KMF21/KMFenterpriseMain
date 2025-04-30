@@ -9,8 +9,8 @@ import bg2 from '../../packages/ui/assets/images/banner1.jpg'
 import bg3 from '../../packages/ui/assets/images/team3.jpg'
 import bg4 from '../../packages/ui/assets/images/team1.jpg'
 import bg5 from '../../packages/ui/assets/images/team2.jpg'
-import bg6 from '../../packages/ui/assets/images/ab1.jpg'
-import bg7 from '../../packages/ui/assets/images/ab2.jpg'
+import bg6 from '../../packages/ui/assets/images/ab1.png'
+import bg7 from '../../packages/ui/assets/images/ab2.png'
 
 function page() {
   return (

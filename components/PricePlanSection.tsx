@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PricePlan = () => {
+const PricePlanSection = () => {
   return (
     <div id="pricing" className="pricing-content section-padding">
       <div className="container">
@@ -107,4 +107,4 @@ const PricePlan = () => {
   )
 }
 
-export default PricePlan
+export default PricePlanSection

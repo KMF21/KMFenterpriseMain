@@ -1,13 +1,13 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import Search from './Search'
+import Search from './SearchSection'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
-function Navbar1() {
+function NavbarSection() {
   const [change, setChange] = useState(false)
   const [isClicked1, setIsClicked1] = useState(false)
   const [isClicked2, setIsClicked2] = useState(false)
@@ -143,4 +143,4 @@ function Navbar1() {
   )
 }
 
-export default Navbar1
+export default NavbarSection

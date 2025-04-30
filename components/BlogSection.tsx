@@ -7,7 +7,6 @@ import bg8 from '../packages/ui/assets/images/g5.jpg'
 import bg9 from '../packages/ui/assets/images/team2.jpg'
 import bg10 from '../packages/ui/assets/images/g4.jpg'
 import bg11 from '../packages/ui/assets/images/team3.jpg'
-
 const BlogSection = () => {
   return (
     <div>
