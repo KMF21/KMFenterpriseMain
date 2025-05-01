@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
-function Footer() {
+function FooterSection() {
   const [input, setInput] = useState('')
   useEffect(() => {
     function scrollFunction() {
@@ -141,4 +141,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default FooterSection
