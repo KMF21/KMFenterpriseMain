@@ -454,9 +454,11 @@ export default function Home() {
                   <div className="testimonial-content">
                     <div className="testimonial">
                       <p>
-                        <i className="fas fa-quote-left me-2" /> Lorem ipsum
-                        dolor sit amet elit. hic odio tenetur. ante ipsum primis
-                        in faucibus orci luctus et ultrices posuere.
+                        <i className="fas fa-quote-left me-2" />
+                        If you&apos;re looking for high-quality, impactful
+                        marketing, reach out to KMFenterprise. Their team is
+                        committed to setting you up for success and making your
+                        brand stand out!
                       </p>
                     </div>
                     <div className="bottom-info mt-4">
