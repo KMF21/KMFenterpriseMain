@@ -32,7 +32,7 @@ function page() {
               </div>
               <div className="p-4 bg-light  shadow-sm">
                 <h6 className="fw-bold text-primary mb-2">
-                  Hard work got you here, but now it's time to grow
+                  Hard work got you here, but now it&apos;s time to grow
                 </h6>
                 <p className="text-muted mb-2">
                   You&apos;ve put your heart and soul into your business. But
