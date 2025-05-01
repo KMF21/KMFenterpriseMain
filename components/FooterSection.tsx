@@ -49,8 +49,8 @@ function FooterSection() {
                 <div className="footer-listw3-grids">
                   <ul className="footer-listw3">
                     <li>Gwarimpa, Abuja</li>
-                    <li>998 Uru Street, Office 46</li>
-                    <li>CraveCafe 61466</li>
+                    {/* <li>998 Uru Street, Office 46</li>
+                    <li>CraveCafe 61466</li> */}
                   </ul>
                 </div>
               </div>
@@ -79,9 +79,9 @@ function FooterSection() {
                     <li>
                       <Link href="/about">About</Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link href="#">Blogs</Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/contact">Contact</Link>
                     </li>

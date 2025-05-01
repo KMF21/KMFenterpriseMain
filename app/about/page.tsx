@@ -31,9 +31,11 @@ function page() {
             </div>
             <div className="col-lg-6 mt-lg-0 mt-md-5 mt-4 ps-lg-5">
               <p className="">
-                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit
-                amet elit ipsum dolor.
+                At KMFenterprise we specialise in telling your story through
+                intentional design that creates impact (and income!). We love
+                working with clients driven by purpose who've built their
+                businesses from the ground up and are ready for a brand
+                reflective of the impactful industry leaders they've become.
               </p>
             </div>
           </div>
@@ -72,28 +74,28 @@ function page() {
             <div className="col-lg-3 col-md-6 w3stats_info counter_grid">
               <div className="count-box">
                 <i className="fas fa-users" />
-                <p className="counter">960</p>
+                <p className="counter">25+</p>
                 <p>Happy Clients</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 mt-5 mt-md-0 w3stats_info counter_grid">
               <div className="count-box">
                 <i className="far fa-images" />
-                <p className="counter">1560</p>
+                <p className="counter">40+</p>
                 <p>Projects</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0 w3stats_info counter_grid">
               <div className="count-box">
                 <i className="fas fa-headset" />
-                <p className="counter">1660</p>
+                <p className="counter">200+</p>
                 <p>Hours Of Support</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0 w3stats_info counter_grid">
               <div className="count-box">
                 <i className="fas fa-user-tie" />
-                <p className="counter">860</p>
+                <p className="counter">10+</p>
                 <p>Hard Workers</p>
               </div>
             </div>
@@ -101,9 +103,9 @@ function page() {
         </div>
       </section>
       {/*//Counts-Section*/}
-      {/*/team*/}
 
-      <section id="team" className="w3lteam py-5">
+      {/*/team*/}
+      {/* <section id="team" className="w3lteam py-5">
         <div className="container py-md-5">
           <div className="title-content text-center">
             <h6 className="title-subw3hny mb-1">Our Team</h6>
@@ -178,11 +180,11 @@ function page() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* End Team Section */}
       {/*/w3l-project*/}
 
-      <section className="w3l-index5 py-5">
+      <section className="w3l-index5 py-5 mt-5">
         <div className="container py-md-3">
           <div className="w3l-project-in">
             <div className="row">
