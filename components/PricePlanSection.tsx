@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PricePlan = () => {
+const PricePlanSection = () => {
   return (
     <div id="pricing" className="pricing-content section-padding">
       <div className="container">
@@ -21,8 +21,8 @@ const PricePlan = () => {
                 <span />
                 <span />
               </div>
-              <h1 className="price">200,000</h1>
-              <h5>Monthly</h5>
+              <h1 className="price">170,000</h1>
+              {/* <h5>Monthly</h5> */}
               <ul>
                 <li>Up to 2 Pages</li>
                 <li>Free Domain (1st Year)</li>
@@ -52,8 +52,8 @@ const PricePlan = () => {
                 <span />
                 <span />
               </div>
-              <h1 className="price">360,000</h1>
-              <h5>Monthly</h5>
+              <h1 className="price">320,000</h1>
+              {/* <h5>Monthly</h5> */}
               <ul>
                 <li>Up to 5 pages</li>
                 <li>Free Domain (1st year)</li>
@@ -84,8 +84,8 @@ const PricePlan = () => {
                 <span />
               </div>
               <span className="price-label">Here</span>
-              <h1 className="price">550,000</h1>
-              <h5>Monthly</h5>
+              <h1 className="price">500,000</h1>
+              {/* <h5>Monthly</h5> */}
               <ul>
                 <li>Up to 10 pages</li>
                 <li>Free Domain (1st year)</li>
@@ -107,4 +107,4 @@ const PricePlan = () => {
   )
 }
 
-export default PricePlan
+export default PricePlanSection

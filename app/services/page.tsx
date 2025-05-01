@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/NavbarSection'
 import NavLanding from '@/components/landing/NavLanding'
 import Image from 'next/image'
 import Link from 'next/link'
-import Footer from '@/components/Footer'
+import Footer from '@/components/FooterSection'
 import bg1 from '../../packages/ui/assets/images/g8.jpg'
 import bg2 from '../../packages/ui/assets/images/g2.jpg'
 import bg3 from '../../packages/ui/assets/images/g4.jpg'
@@ -30,19 +30,28 @@ function page() {
                   Excellence is the baseline. Premium or nothing.{' '}
                 </h3>
               </div>
-              <p className="">
-                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit
-                amet elit ipsum dolor.Lorem ipsum viverra feugiat. Pellen tesque
-                libero ut justo, ultrices in ligula. Semper at tempufddfel
-                tesque libero ut justo.
-              </p>
-              <Link
+              <div className="p-4 bg-light  shadow-sm">
+                <h6 className="fw-bold text-primary mb-2">
+                  Hard work got you here, but now it&apos;s time to grow
+                </h6>
+                <p className="text-muted mb-2">
+                  You&apos;ve put your heart and soul into your business. But
+                  hard work can only get you so far, and a poor brand presence
+                  will have you working overtime without seeing results.
+                </p>
+                <p className="text-muted">
+                  So it&apos;s time to set yourself apart as the industry leader
+                  you&apos;ve become, with a kick-ass brand your customers
+                  genuinely love as much as you do.
+                </p>
+              </div>
+
+              {/* <Link
                 href="#services"
                 className="btn btn-style btn-primary mt-lg-5 mt-4"
               >
                 Read More <i className="fas fa-arrow-right ms-lg-4 ms-2" />
-              </Link>
+              </Link> */}
             </div>
           </div>
           {/*//row-1*/}
@@ -135,7 +144,7 @@ function page() {
                 </div>
                 <h4>
                   <Link href="#feature" className="title-head">
-                    Web Design
+                    Web Development
                   </Link>
                 </h4>
                 <p>Lorem ipsum dolor sit amet elit. Velit beatae amet. </p>
@@ -154,7 +163,7 @@ function page() {
                 <p>Lorem ipsum dolor sit amet elit. Velit beatae amet. </p>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 grids-feature mt-lg-0 mt-4">
+            {/* <div className="col-lg-4 col-md-6 grids-feature mt-lg-0 mt-4">
               <div className="area-box">
                 <div className="area-icon icon-blue">
                   <span className="fas fa-laptop" />
@@ -205,7 +214,7 @@ function page() {
                 </h4>
                 <p>Lorem ipsum dolor sit amet elit. Velit beatae amet. </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

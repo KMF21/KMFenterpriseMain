@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/NavbarSection'
 import NavLanding from '@/components/landing/NavLanding'
 import Image from 'next/image'
 import Link from 'next/link'
-import Footer from '@/components/Footer'
+import Footer from '@/components/FooterSection'
 
 function page() {
   return (
