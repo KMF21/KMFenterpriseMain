@@ -4501,7 +4501,10 @@ fieldset:disabled .btn {
 
 .navbar-nav .nav-link {
     padding-right: 0;
-    padding-left: 0
+    padding-left: 0;
+    padding-bottom: 0.4rem !important; /* or try 0.2rem */
+    margin-bottom: 0 !important;
+    position: relative;
 }
 
 .navbar-nav .dropdown-menu {
@@ -18103,7 +18106,7 @@ p.white {
 
 .title-w3l,
 .title-w3l.two {
-    font-size: 34px;
+    font-size: 32px;
     line-height: 46px;
     font-weight: 700;
     text-transform: capitalize;
@@ -18412,7 +18415,7 @@ nav ul li a:before {
 .navbar-expand-lg .navbar-nav .nav-link {
     transition: all 0.5s ease;
     padding: 26px 3px 20px 3px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
     color: #fff;
     white-space: nowrap;
@@ -18880,7 +18883,7 @@ a.dropdown-item.active {
 
 .w3l-main-slider h3.title-hero-19 {
     color: #fff;
-    font-size: 60px;
+    font-size: 70px;
     text-transform: capitalize;
     font-weight: 600;
     border: none;
@@ -18928,8 +18931,8 @@ a.btn.btn-style.btn-banner:hover {
 
 @media (max-width: 1080px) {
     .w3l-main-slider h3.title-hero-19 {
-        font-size: 60px;
-        line-height: 70px;
+        font-size: 70px;
+        line-height: 80px;
     }
 
     .w3l-main-slider .banner-view,
@@ -19513,7 +19516,7 @@ ul.icon-list-items li i {
 
 .w3l-services-6 .area-box:hover {
     transition: .3s;
-    background: var(--secondary-color);
+    background: var(--primary-color);
 }
 
 .w3l-services-6 .area-box:hover .area-icon {
