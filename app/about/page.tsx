@@ -33,9 +33,10 @@ function page() {
               <p className="">
                 At KMFenterprise we specialise in telling your story through
                 intentional design that creates impact (and income!). We love
-                working with clients driven by purpose who've built their
+                working with clients driven by purpose who&apos;ve built their
                 businesses from the ground up and are ready for a brand
-                reflective of the impactful industry leaders they've become.
+                reflective of the impactful industry leaders they&apos;'ve
+                become.
               </p>
             </div>
           </div>

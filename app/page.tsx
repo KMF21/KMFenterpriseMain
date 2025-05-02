@@ -164,8 +164,8 @@ export default function Home() {
                 <h6 className="title-subw3hny">Reviews</h6>
                 <h3 className="title-w3l two">What Our Clients Say</h3>
                 <p className="test-p mt-3">
-                  Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                  ultrices in ligula. Semper at tempufddfel.
+                  A creative studio specialising in thoughtful and compelling
+                  brands powered by a high-converting online presence.
                 </p>
               </div>
             </div>
