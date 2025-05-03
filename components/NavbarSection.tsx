@@ -64,6 +64,7 @@ function NavbarSection() {
                     className={`nav-link ${
                       pathname === item.href ? 'active' : ''
                     }`}
+                    onClick={() => setMenuOpen(false)}
                   >
                     {item.label}
                   </Link>
