@@ -274,3 +274,10 @@ body {
 .single-pricing-white h5 {
   color: #fff;
 }
+
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+}
