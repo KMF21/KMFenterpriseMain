@@ -172,7 +172,7 @@ export default function Home() {
             <div className="col-lg-8 testimonials-con-right mt-lg-0 mt-3 p-xl-3 pb-4">
               <div
                 id="owl-demo2"
-                className="owl-carousel owl-theme py-sm-5 pt-0 py-3 row"
+                className="owl-theme py-sm-5 pt-0 py-3 row"
               >
                 <div className="col-md-6 item">
                   <div className="testimonial-content">
