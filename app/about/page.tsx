@@ -6,9 +6,6 @@ import Link from 'next/link'
 import Footer from '@/components/FooterSection'
 import bg1 from '../../packages/ui/assets/images/banner5.jpg'
 import bg2 from '../../packages/ui/assets/images/banner1.jpg'
-import bg3 from '../../packages/ui/assets/images/team3.jpg'
-import bg4 from '../../packages/ui/assets/images/team1.jpg'
-import bg5 from '../../packages/ui/assets/images/team2.jpg'
 import bg6 from '../../packages/ui/assets/images/ab1.png'
 import bg7 from '../../packages/ui/assets/images/ab2.png'
 
@@ -35,7 +32,7 @@ function page() {
                 intentional design that creates impact (and income!). We love
                 working with clients driven by purpose who&apos;ve built their
                 businesses from the ground up and are ready for a brand
-                reflective of the impactful industry leaders they&apos;'ve
+                reflective of the impactful industry leaders they&apos;ve
                 become.
               </p>
             </div>
