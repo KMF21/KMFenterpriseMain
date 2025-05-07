@@ -1,17 +1,29 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import Navbar from '@/components/NavbarSection'
-import Footer from '@/components/FooterSection'
-import SliderComponent from '@/components/landing/SliderComponent'
-import bg1 from '../packages/ui/assets/images/g1a.jpg'
-import bg2 from '../packages/ui/assets/images/g1.jpg'
-import bg3 from '../packages/ui/assets/images/g1c.jpg'
-import bg12 from '../packages/ui/assets/images/team1.jpg'
-import bg13 from '../packages/ui/assets/images/team2.jpg'
-import PricePlan from '@/components/PricePlanSection'
-import MidSliderSection from '@/components/MidSliderSection'
+import Image from "next/image";
+import Link from "next/link";
+import Navbar from "@/components/NavbarSection";
+import Footer from "@/components/FooterSection";
+import SliderComponent from "@/components/landing/SliderComponent";
+import bg1 from "../packages/ui/assets/images/g1a.jpg";
+import bg2 from "../packages/ui/assets/images/g1.jpg";
+import bg3 from "../packages/ui/assets/images/g1c.jpg";
+import bg12 from "../packages/ui/assets/images/team1.jpg";
+import bg13 from "../packages/ui/assets/images/team2.jpg";
+import PricePlan from "@/components/PricePlanSection";
+import MidSliderSection from "@/components/MidSliderSection";
 
 export default function Home() {
+  const portfolioServices = [
+    {
+      title: "Buy Views",
+      price: "$0.005",
+      href: "/services/buy-youtube-views",
+    },
+    { title: "Buy Likes", price: "$0.036", href: "#" },
+    { title: "Buy Subscribers", price: "$0.036", href: "#" },
+    { title: "Buy Comments", price: "$0.036", href: "#" },
+    { title: "Buy Favorites", price: "$0.036", href: "#" },
+    { title: "Buy Shares", price: "$0.036", href: "#" },
+  ];
   return (
     <div className="">
       <Navbar />
@@ -25,7 +37,7 @@ export default function Home() {
               <div className="title-content text-left">
                 <h6 className="title-subw3hny mb-1">About Us</h6>
                 <h3 className="title-w3l">
-                  Excellence is the baseline. Premium or nothing.{' '}
+                  Excellence is the baseline. Premium or nothing.{" "}
                 </h3>
               </div>
             </div>
@@ -108,6 +120,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* <!--//bottom-3-grids--> */}
       {/* <!--/features-section --> */}
       <section className="w3l-features" id="work">
@@ -125,9 +138,45 @@ export default function Home() {
       {/* <!--//features section --> */}
 
       <MidSliderSection />
+      <section className="w3l-features" id="work">
+        <div className="container py-lg-5 py-md-4 py-2">
+          <div className="title-content text-center mb-md-5 mb-4">
+            <h6 className="title-subw3hny mb-1">Portfolio</h6>
+            <h3 className="title-w3l mb-5">Setting Industry Standards</h3>
+          </div>
+          <div className="container py-5">
+            <div className="row g-4">
+              {portfolioServices.map((service, index) => (
+                <div className="col-12 col-sm-6 col-md-4" key={index}>
+                  <Link
+                    href={service.href}
+                    className="text-decoration-none text-dark"
+                  >
+                    <div className="card text-center service-card h-100 p-3 border rounded-3 transition">
+                      <div className="icon-wrapper mx-auto mb-3">
+                        <i className="bi bi-youtube fs-3 text-danger"></i>
+                        {/* <Image
+                          src="/youtube-icon.png"
+                          width={32}
+                          height={32}
+                          alt="YouTube logo"
+                        /> */}
+                      </div>
+                      <h6 className="fw-semibold mb-1">{service.title} &gt;</h6>
+                      <p className="small text-success mb-0">
+                        Starting from {service.price}
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/*/home-page-video-popup*/}
-      <section className="w3l-video-sec" id="video">
+      <section className="w3l-video-sec mt-5" id="video">
         <div className="container">
           <div className="w3l-index5 py-5" id="video">
             <div className="history-info align-self text-center py-5 my-lg-5">
@@ -170,10 +219,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-lg-8 testimonials-con-right mt-lg-0 mt-3 p-xl-3 pb-4">
-              <div
-                id="owl-demo2"
-                className="owl-theme py-sm-5 pt-0 py-3 row"
-              >
+              <div id="owl-demo2" className="owl-theme py-sm-5 pt-0 py-3 row">
                 <div className="col-md-6 item">
                   <div className="testimonial-content">
                     <div className="testimonial">
@@ -236,5 +282,5 @@ export default function Home() {
 
       <Footer />
     </div>
-  )
+  );
 }
