@@ -55,9 +55,9 @@ function page() {
                 <Image src={bg2} alt="" className="img-fluid radius-image" />
                 <h3 className="title-w3l mt-4 mb-2">Our Mission</h3>
                 <p className="">
-                  At KMF Web Agency, our mission is to design and develop
-                  dynamic digital platforms that help businesses thrive online.
-                  Guided by our philosophy of 'Keep Moving Forward,' we combine
+                  At KMFenterprise, our mission is to design and develop dynamic
+                  digital platforms that help businesses thrive online. Guided
+                  by our philosophy of 'Keep Moving Forward,' we combine
                   creativity, technology, and strategy to deliver scalable web
                   solutions that accelerate progress for startups, SMEs, and
                   enterprises.
