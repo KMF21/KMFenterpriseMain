@@ -197,9 +197,10 @@ function page() {
                       Refer and Get Free Services
                     </h3>
                     <p>
-                      Lorem ipsum dolor sit amet elit. Velit beatae rem ullam
-                      dolore nisi esse quasi, sit amet. Lorem ipsum dolor sit
-                      amet elit.
+                      Love working with us? Spread the word! Refer your friends,
+                      startups, or businesses to our agency and earn free design
+                      hours, discounts, or even full services on your next
+                      project.
                     </p>
                   </div>
                 </div>
