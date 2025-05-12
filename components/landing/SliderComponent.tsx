@@ -43,7 +43,7 @@ function SliderComponent() {
                   We Design Nigeria&lsquo;s Most Trusted Websites & Brands
                 </h3>
                 <Link
-                  href="/about"
+                  href="/contact"
                   className="btn btn-style btn-banner mt-sm-5 mt-4"
                 >
                   Work With Us <i className="fas fa-arrow-right ms-lg-4 ms-2" />
@@ -63,7 +63,7 @@ function SliderComponent() {
                   Your Path to a Powerful Online Identity Starts Here
                 </h3>
                 <Link
-                  href="/about"
+                  href="/contact"
                   className="btn btn-style btn-banner mt-sm-5 mt-4"
                 >
                   Discuss Your Project{' '}
@@ -85,7 +85,7 @@ function SliderComponent() {
                   Solutions
                 </h3>
                 <Link
-                  href="/about"
+                  href="/contact"
                   className="btn btn-style btn-banner mt-sm-5 mt-4"
                 >
                   Discuss Your Project{' '}

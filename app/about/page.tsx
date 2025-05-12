@@ -57,10 +57,10 @@ function page() {
                 <p className="">
                   At KMFenterprise, our mission is to design and develop dynamic
                   digital platforms that help businesses thrive online. Guided
-                  by our philosophy of 'Keep Moving Forward,' we combine
-                  creativity, technology, and strategy to deliver scalable web
-                  solutions that accelerate progress for startups, SMEs, and
-                  enterprises.
+                  by our philosophy of &apos;Keep Moving Forward,&apos; we
+                  combine creativity, technology, and strategy to deliver
+                  scalable web solutions that accelerate progress for startups,
+                  SMEs, and enterprises.
                 </p>
               </div>
             </div>
