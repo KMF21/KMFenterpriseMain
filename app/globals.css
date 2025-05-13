@@ -182,7 +182,7 @@ body {
 }
 .single-pricing:hover {
   box-shadow: 0px 60px 60px rgba(0, 0, 0, 0.1);
-  z-index: 100;
+  z-index: 2;
   transform: translate(0, -10px);
 }
 .price-label {
@@ -283,19 +283,35 @@ body {
   padding-left: 1rem;
 }
 
+.service-card h6 {
+  color: #ffffff;
+  position: relative;
+  z-index:2;
+}
+
+.service-card p {
+  color: var(--primary-color);
+  /* color: #F7AB0A; */
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+} 
+
+
 .service-card {
-  transition: all 0.3s ease;
+transition: all 0.3s ease;
 }
 
 .icon-wrapper {
-  width: 60px;
-  height: 60px;
-  border: 3px solid #8df3a5;
+  width: 40px;
+  height: 40px;
+  /* border: 3px solid #8df3a5; */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f8f9fa;
+  background-color: transparent;
+  z-index: 2;
 }
 
 .service-card:hover {
@@ -304,3 +320,8 @@ body {
   /* border-color: #28a745; */
 }
 
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  border-radius: inherit;
+}

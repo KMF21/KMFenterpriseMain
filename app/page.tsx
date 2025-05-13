@@ -17,12 +17,38 @@ export default function Home() {
       title: "Buy Views",
       price: "$0.005",
       href: "/services/buy-youtube-views",
+      bgImage: "/assets/images/g1a.jpg",
     },
-    { title: "Buy Likes", price: "$0.036", href: "#" },
-    { title: "Buy Subscribers", price: "$0.036", href: "#" },
-    { title: "Buy Comments", price: "$0.036", href: "#" },
-    { title: "Buy Favorites", price: "$0.036", href: "#" },
-    { title: "Buy Shares", price: "$0.036", href: "#" },
+    {
+      title: "Buy Likes",
+      price: "$0.036",
+      href: "#",
+      bgImage: "/assets/images/g1a.jpg",
+    },
+    {
+      title: "Buy Subscribers",
+      price: "$0.036",
+      href: "#",
+      bgImage: "/assets/images/g1a.jpg",
+    },
+    {
+      title: "Buy Comments",
+      price: "$0.036",
+      href: "#",
+      bgImage: "/assets/images/g1a.jpg",
+    },
+    {
+      title: "Buy Favorites",
+      price: "$0.036",
+      href: "#",
+      bgImage: "/assets/images/g1a.jpg",
+    },
+    {
+      title: "Buy Shares",
+      price: "$0.036",
+      href: "#",
+      bgImage: "/assets/images/g1a.jpg",
+    },
   ];
   return (
     <div className="">
@@ -144,19 +170,26 @@ export default function Home() {
         <div className="container py-lg-5 py-md-4 py-2">
           <div className="title-content text-center mb-md-5 mb-4">
             <h6 className="title-subw3hny mb-1">Portfolio</h6>
-            <h3 className="title-w3l mb-5">Setting Industry Standards</h3>
+            <h3 className="title-w3l mb-2">Setting Industry Standards</h3>
           </div>
-          <div className="container py-5">
-            <div className="row g-4">
+          <div className="container">
+            <div className="row g-4 ">
               {portfolioServices.map((service, index) => (
-                <div className="col-12 col-sm-6 col-md-4" key={index}>
+                <div className="col-12 col-sm-6 col-md-4 " key={index}>
                   <Link
                     href={service.href}
                     className="text-decoration-none text-dark"
                   >
-                    <div className="card text-center service-card h-100 p-3 border rounded-3 transition">
-                      <div className="icon-wrapper mx-auto mb-3">
-                        <i className="bi bi-youtube fs-3 text-danger"></i>
+                    <div
+                      className="card text-start service-card h-100 p-3 mb-3 border rounded-3 transition"
+                      style={{
+                        backgroundImage: `url(${service.bgImage})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
+                    >
+                      <div className="icon-wrapper mb-3 ">
+                        <i className="bi bi-youtube fs-2 text-danger"></i>
                         {/* <Image
                           src="/youtube-icon.png"
                           width={32}
@@ -164,8 +197,11 @@ export default function Home() {
                           alt="YouTube logo"
                         /> */}
                       </div>
-                      <h6 className="fw-semibold mb-1">{service.title} &gt;</h6>
-                      <p className="small text-success mb-0">
+                      <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+                      <h6 className="fw-semibold mb-1">
+                        {service.title} &gt;
+                      </h6>
+                      <p className="small mb-0">
                         Starting from {service.price}
                       </p>
                     </div>
