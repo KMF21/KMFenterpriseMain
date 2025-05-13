@@ -43,15 +43,17 @@ export default function Home() {
             </div>
             <div className="col-lg-4 mt-lg-0 mt-md-5 mt-4 ps-lg-4">
               <p className="">
-                A creative agency specialising in thoughtful and compelling
-                brands powered by a high-converting online presence.
+                At KMFenterprise, we create innovative, high-performance
+                websites that help businesses grow and succeed online. With a
+                focus on design, development, and digital strategy, we deliver
+                solutions that drive progress and keep you moving forward in the
+                digital world.
               </p>
             </div>
             <div className="col-lg-4 mt-lg-0 mt-md-5 mt-4 ps-lg-4">
               <p className="">
-                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit
-                amet elit ipsum dolor.
+                A creative agency specialising in thoughtful and compelling
+                brands powered by a high-converting online presence.
               </p>
             </div>
           </div>

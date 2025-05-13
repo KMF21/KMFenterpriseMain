@@ -1,15 +1,15 @@
-"use client";
-import React, { useEffect } from "react";
-import Link from "next/link";
+'use client'
+import React, { useEffect } from 'react'
+import Link from 'next/link'
 
 function SliderComponent() {
   useEffect(() => {
     const initCarousel = () => {
       // Check if jQuery is loaded
-      if (typeof window !== "undefined" && (window as any).$) {
-        const $ = (window as any).$;
-        if ($(".owl-one").owlCarousel) {
-          $(".owl-one").owlCarousel({
+      if (typeof window !== 'undefined' && (window as any).$) {
+        const $ = (window as any).$
+        if ($('.owl-one').owlCarousel) {
+          $('.owl-one').owlCarousel({
             // $(".owl-one").owlCarousel({
             loop: true,
             margin: 0,
@@ -20,15 +20,15 @@ function SliderComponent() {
             autoplaySpeed: 1000,
             autoplayHoverPause: false,
             items: 1,
-          });
+          })
         } else {
-          console.warn("Owl Carousel JS not loaded");
+          console.warn('Owl Carousel JS not loaded')
         }
       }
-    };
+    }
     // Delay init to wait for external scripts
-    setTimeout(initCarousel, 500);
-  }, []);
+    setTimeout(initCarousel, 500)
+  }, [])
 
   return (
     <div className="w3l-main-slider banner-slider position-relative" id="home">
@@ -43,7 +43,7 @@ function SliderComponent() {
                   We Design Nigeria&lsquo;s Most Trusted Websites & Brands
                 </h3>
                 <Link
-                  href="/about"
+                  href="/contact"
                   className="btn btn-style btn-banner mt-sm-5 mt-4"
                 >
                   Work With Us <i className="fas fa-arrow-right ms-lg-4 ms-2" />
@@ -60,13 +60,14 @@ function SliderComponent() {
               <div className=" header-hero-19">
                 <h5>Software &amp; Consulting Company</h5>
                 <h3 className="title-hero-19">
-                  We Design Nigeria&lsquo;s Most Trusted Websites & Brands
+                  Your Path to a Powerful Online Identity Starts Here
                 </h3>
                 <Link
-                  href="/about"
+                  href="/contact"
                   className="btn btn-style btn-banner mt-sm-5 mt-4"
                 >
-                  Work With Us <i className="fas fa-arrow-right ms-lg-4 ms-2" />
+                  Discuss Your Project{' '}
+                  <i className="fas fa-arrow-right ms-lg-4 ms-2" />
                 </Link>
               </div>
             </div>
@@ -80,22 +81,23 @@ function SliderComponent() {
               <div className=" header-hero-19">
                 <h5>Software &amp; Consulting Company</h5>
                 <h3 className="title-hero-19">
-                  We Design Nigeria&lsquo;s Most Trusted Websites & Brands
+                  Turn Clicks into Customers with Our App/Web Development
+                  Solutions
                 </h3>
                 <Link
-                  href="/about"
+                  href="/contact"
                   className="btn btn-style btn-banner mt-sm-5 mt-4"
                 >
-                  Work With Us <i className="fas fa-arrow-right ms-lg-4 ms-2" />
+                  Discuss Your Project{' '}
+                  <i className="fas fa-arrow-right ms-lg-4 ms-2" />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-  );
+  )
 }
 
-export default SliderComponent;
+export default SliderComponent

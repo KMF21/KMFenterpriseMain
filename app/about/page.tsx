@@ -42,11 +42,11 @@ function page() {
             <div className="col-md-6">
               <div className="abw3-info">
                 <Image src={bg1} alt="" className="img-fluid radius-image" />
-                <h3 className="title-w3l mt-4 mb-2">Our Approach</h3>
+                <h3 className="title-w3l mt-4 mb-2">Our Vision</h3>
                 <p className="">
-                  Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                  ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor
-                  sit amet elit ipsum dolor.
+                  To empower businesses across Africa and beyond with
+                  innovative, forward-thinking web solutions that drive digital
+                  transformation and sustainable growth.
                 </p>
               </div>
             </div>
@@ -55,9 +55,12 @@ function page() {
                 <Image src={bg2} alt="" className="img-fluid radius-image" />
                 <h3 className="title-w3l mt-4 mb-2">Our Mission</h3>
                 <p className="">
-                  Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                  ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor
-                  sit amet elit ipsum dolor.
+                  At KMFenterprise, our mission is to design and develop dynamic
+                  digital platforms that help businesses thrive online. Guided
+                  by our philosophy of &apos;Keep Moving Forward,&apos; we
+                  combine creativity, technology, and strategy to deliver
+                  scalable web solutions that accelerate progress for startups,
+                  SMEs, and enterprises.
                 </p>
               </div>
             </div>
@@ -194,9 +197,10 @@ function page() {
                       Refer and Get Free Services
                     </h3>
                     <p>
-                      Lorem ipsum dolor sit amet elit. Velit beatae rem ullam
-                      dolore nisi esse quasi, sit amet. Lorem ipsum dolor sit
-                      amet elit.
+                      Love working with us? Spread the word! Refer your friends,
+                      startups, or businesses to our agency and earn free design
+                      hours, discounts, or even full services on your next
+                      project.
                     </p>
                   </div>
                 </div>
@@ -231,26 +235,37 @@ function page() {
           <div className="row">
             <div className="col-lg-5 title-content text-left pe-lg-5 mb-lg-0 mb-5">
               <h6 className="title-subw3hny mb-1">Why Us</h6>
-              <h3 className="title-w3l mb-3">
-                Modern Approach to Every New Project
-              </h3>
+              <h3 className="title-w3l mb-3">The Values That Drive Us</h3>
               <p className="mb-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                non ipsum soluta perferendis veniam qui esse magnam commodi
-                quisquam.
+                Our core values are the foundation of everything we do. They
+                guide our actions, shape our culture, and drive us toward
+                excellence. Here’s what we stand for:
               </p>
               <ul className="icon-list-items mt-3">
                 <li className="icon-list-item">
                   <i aria-hidden="true" className="fas fa-check" />
-                  Innovative ideas
+                  Innovation – We embrace cutting-edge technologies to create
+                  future-ready solutions.
                 </li>
                 <li className="icon-list-item mt-2">
                   <i aria-hidden="true" className="fas fa-check" />
-                  Professional assistance
+                  Excellence – We strive for quality in every pixel and line of
+                  code.
                 </li>
                 <li className="icon-list-item mt-2">
                   <i aria-hidden="true" className="fas fa-check" />
-                  Financial advisory
+                  Growth – We are driven by a commitment to helping our clients
+                  grow.
+                </li>
+                <li className="icon-list-item mt-2">
+                  <i aria-hidden="true" className="fas fa-check" />
+                  Integrity – We build trust through transparency and
+                  reliability.
+                </li>
+                <li className="icon-list-item mt-2">
+                  <i aria-hidden="true" className="fas fa-check" />
+                  Resilience – Like our name, we keep moving forward—no matter
+                  what.
                 </li>
               </ul>
             </div>

@@ -19464,7 +19464,7 @@ ul.icon-list-items li i {
 
 .w3l-services-6 .area-box {
     background-color: var(--bg-grey);
-    padding: 50px 40px;
+    padding: 40px 30px;
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
@@ -19535,7 +19535,7 @@ ul.icon-list-items li i {
 
 @media (max-width: 1080px) {
     .w3l-services-6 .area-box {
-        padding: 50px 40px;
+        padding: 40px 30px;
     }
 }
 
