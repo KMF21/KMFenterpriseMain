@@ -1,55 +1,18 @@
-import Image from "next/image";
-import Link from "next/link";
-import Navbar from "@/components/NavbarSection";
-import Footer from "@/components/FooterSection";
-import SliderComponent from "@/components/landing/SliderComponent";
-import bg1 from "../packages/ui/assets/images/g1a.jpg";
-import bg2 from "../packages/ui/assets/images/g1.jpg";
-import bg3 from "../packages/ui/assets/images/g1c.jpg";
-import bg12 from "../packages/ui/assets/images/team1.jpg";
-import bg13 from "../packages/ui/assets/images/team2.jpg";
-import PricePlan from "@/components/PricePlanSection";
-import MidSliderSection from "@/components/MidSliderSection";
+import Image from 'next/image'
+import Link from 'next/link'
+import Navbar from '@/components/NavbarSection'
+import Footer from '@/components/FooterSection'
+import SliderComponent from '@/components/landing/SliderComponent'
+import bg1 from '../packages/ui/assets/images/g1a.jpg'
+import bg2 from '../packages/ui/assets/images/g1.jpg'
+import bg3 from '../packages/ui/assets/images/g1c.jpg'
+import bg12 from '../packages/ui/assets/images/team1.jpg'
+import bg13 from '../packages/ui/assets/images/team2.jpg'
+import PricePlan from '@/components/PricePlanSection'
+import MidSliderSection from '@/components/MidSliderSection'
+import { portfolioServices } from './libraries/portfolioServices'
 
 export default function Home() {
-  const portfolioServices = [
-    {
-      title: "Buy Views",
-      price: "$0.005",
-      href: "/services/buy-youtube-views",
-      bgImage: "/assets/images/g1a.jpg",
-    },
-    {
-      title: "Buy Likes",
-      price: "$0.036",
-      href: "#",
-      bgImage: "/assets/images/g1a.jpg",
-    },
-    {
-      title: "Buy Subscribers",
-      price: "$0.036",
-      href: "#",
-      bgImage: "/assets/images/g1a.jpg",
-    },
-    {
-      title: "Buy Comments",
-      price: "$0.036",
-      href: "#",
-      bgImage: "/assets/images/g1a.jpg",
-    },
-    {
-      title: "Buy Favorites",
-      price: "$0.036",
-      href: "#",
-      bgImage: "/assets/images/g1a.jpg",
-    },
-    {
-      title: "Buy Shares",
-      price: "$0.036",
-      href: "#",
-      bgImage: "/assets/images/g1a.jpg",
-    },
-  ];
   return (
     <div className="">
       <Navbar />
@@ -63,7 +26,7 @@ export default function Home() {
               <div className="title-content text-left">
                 <h6 className="title-subw3hny mb-1">About Us</h6>
                 <h3 className="title-w3l">
-                  Excellence is the baseline. Premium or nothing.{" "}
+                  Excellence is the baseline. Premium or nothing.{' '}
                 </h3>
               </div>
             </div>
@@ -173,37 +136,38 @@ export default function Home() {
             <h3 className="title-w3l mb-2">Setting Industry Standards</h3>
           </div>
           <div className="container">
-            <div className="row g-4 ">
+            <div className="row g-4">
               {portfolioServices.map((service, index) => (
-                <div className="col-12 col-sm-6 col-md-4 " key={index}>
+                <div className="col-12 col-sm-6 col-md-6 " key={index}>
                   <Link
                     href={service.href}
                     className="text-decoration-none text-dark"
                   >
                     <div
-                      className="card text-start service-card h-100 p-3 mb-3 border rounded-3 transition"
+                      className="card text-start service-card p-4 mb-4 border rounded-3 transition position-relative"
                       style={{
                         backgroundImage: `url(${service.bgImage})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        minHeight: '300px',
                       }}
                     >
-                      <div className="icon-wrapper mb-3 ">
-                        <i className="bi bi-youtube fs-2 text-danger"></i>
-                        {/* <Image
-                          src="/youtube-icon.png"
-                          width={32}
-                          height={32}
-                          alt="YouTube logo"
-                        /> */}
-                      </div>
+                      {/* Overlay */}
                       <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-                      <h6 className="fw-semibold mb-1">
-                        {service.title} &gt;
-                      </h6>
+
+                      {/* Icon */}
+                      <div
+                        className="icon-wrapper mb-3"
+                        style={{ backgroundColor: 'transparent' }}
+                      >
+                        <i className="bi bi-youtube fs-2 text-danger"></i>
+                      </div>
+
+                      {/* Text Content */}
+                      {/* <h6 className="fw-semibold mb-1">{service.title} &gt;</h6>
                       <p className="small mb-0">
                         Starting from {service.price}
-                      </p>
+                      </p> */}
                     </div>
                   </Link>
                 </div>
@@ -320,5 +284,5 @@ export default function Home() {
 
       <Footer />
     </div>
-  );
+  )
 }

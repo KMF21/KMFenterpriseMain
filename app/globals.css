@@ -65,7 +65,7 @@
 }
 
 .btn-custom {
-  background: linear-gradient(45deg, #b57d0a, #F7AB0A);
+  background: linear-gradient(45deg, #b57d0a, #f7ab0a);
   border: none;
   padding: 12px 30px;
   transition: all 0.3s ease;
@@ -182,7 +182,7 @@ body {
 }
 .single-pricing:hover {
   box-shadow: 0px 60px 60px rgba(0, 0, 0, 0.1);
-  z-index: 2;
+  z-index: 100;
   transform: translate(0, -10px);
 }
 .price-label {
@@ -283,45 +283,35 @@ body {
   padding-left: 1rem;
 }
 
-.service-card h6 {
-  color: #ffffff;
-  position: relative;
-  z-index:2;
-}
-
-.service-card p {
-  color: var(--primary-color);
-  /* color: #F7AB0A; */
-  font-weight: 600;
-  position: relative;
-  z-index: 2;
-} 
-
-
+/* portfolio */
 .service-card {
-transition: all 0.3s ease;
-}
-
-.icon-wrapper {
-  width: 40px;
-  height: 40px;
-  /* border: 3px solid #8df3a5; */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  z-index: 2;
+  transition: all 0.3s ease;
+  min-height: 250px;
 }
 
 .service-card:hover {
   background-color: #f6fff9;
   border: 3px solid #28a745;
-  /* border-color: #28a745; */
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
 }
 
 .bg-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
-  border-radius: inherit;
+}
+
+.card .icon-wrapper,
+.card h6,
+.card p {
+  z-index: 2;
+  position: relative;
 }
