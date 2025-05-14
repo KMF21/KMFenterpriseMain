@@ -65,7 +65,7 @@
 }
 
 .btn-custom {
-  background: linear-gradient(45deg, #b57d0a, #F7AB0A);
+  background: linear-gradient(45deg, #b57d0a, #f7ab0a);
   border: none;
   padding: 12px 30px;
   transition: all 0.3s ease;
@@ -163,15 +163,15 @@ span.w3yellow {
 body {
   margin-top: 20px;
 }
-.pricing-content {
-}
+
 .single-pricing {
   background: #fff;
+  color: #111;
   padding: 40px 20px;
   border-radius: 5px;
   position: relative;
   z-index: 2;
-  border: 1px solid #eee;
+  border: 1px solid #eee !important;
   box-shadow: 0 10px 40px -10px rgba(0, 64, 128, 0.09);
   transition: 0.3s;
 }
@@ -205,6 +205,7 @@ body {
   position: absolute;
 }
 .price-head h2 {
+  color: #111;
   font-weight: 600;
   margin-bottom: 0px;
   text-transform: capitalize;
@@ -221,12 +222,12 @@ body {
   margin-left: 2px;
 }
 .price {
+  color: #111;
   font-weight: 600;
   font-size: 40px;
   margin-bottom: 0px;
 }
-.single-pricing {
-}
+
 .single-pricing h5 {
   font-size: 14px;
   margin-bottom: 0px;
@@ -280,4 +281,37 @@ body {
   align-items: center;
   justify-content: center;
   padding-left: 1rem;
+}
+
+/* portfolio */
+.service-card {
+  transition: all 0.3s ease;
+  min-height: 250px;
+}
+
+.service-card:hover {
+  background-color: #f6fff9;
+  border: 3px solid #28a745;
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.card .icon-wrapper,
+.card h6,
+.card p {
+  z-index: 2;
+  position: relative;
 }

@@ -10,6 +10,7 @@ import bg12 from '../packages/ui/assets/images/team1.jpg'
 import bg13 from '../packages/ui/assets/images/team2.jpg'
 import PricePlan from '@/components/PricePlanSection'
 import MidSliderSection from '@/components/MidSliderSection'
+import { portfolioServices } from './libraries/portfolioServices'
 
 export default function Home() {
   return (
@@ -110,6 +111,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* <!--//bottom-3-grids--> */}
       {/* <!--/features-section --> */}
       <section className="w3l-features" id="work">
@@ -127,9 +129,56 @@ export default function Home() {
       {/* <!--//features section --> */}
 
       <MidSliderSection />
+      <section className="w3l-features" id="work">
+        <div className="container py-lg-5 py-md-4 py-2">
+          <div className="title-content text-center mb-md-5 mb-4">
+            <h6 className="title-subw3hny mb-1">Portfolio</h6>
+            <h3 className="title-w3l mb-2">Setting Industry Standards</h3>
+          </div>
+          <div className="container">
+            <div className="row g-4">
+              {portfolioServices.map((service, index) => (
+                <div className="col-12 col-sm-6 col-md-6 " key={index}>
+                  <Link
+                    href={service.href}
+                    className="text-decoration-none text-dark"
+                  >
+                    <div
+                      className="card text-start service-card p-4 mb-4 border rounded-3 transition position-relative"
+                      style={{
+                        backgroundImage: `url(${service.bgImage})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        minHeight: '300px',
+                      }}
+                    >
+                      {/* Overlay */}
+                      <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+                      {/* Icon */}
+                      <div
+                        className="icon-wrapper mb-3"
+                        style={{ backgroundColor: 'transparent' }}
+                      >
+                        <i className="bi bi-youtube fs-2 text-danger"></i>
+                      </div>
+
+                      {/* Text Content */}
+                      {/* <h6 className="fw-semibold mb-1">{service.title} &gt;</h6>
+                      <p className="small mb-0">
+                        Starting from {service.price}
+                      </p> */}
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/*/home-page-video-popup*/}
-      <section className="w3l-video-sec" id="video">
+      <section className="w3l-video-sec mt-5" id="video">
         <div className="container">
           <div className="w3l-index5 py-5" id="video">
             <div className="history-info align-self text-center py-5 my-lg-5">
