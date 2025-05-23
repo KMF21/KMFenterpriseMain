@@ -7,7 +7,9 @@ const ThemeToggle = () => {
   useEffect(() => {
     // Check if user has a stored preference
     const storedTheme = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const prefersDark = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches
 
     if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
       document.documentElement.setAttribute('data-theme', 'dark')
