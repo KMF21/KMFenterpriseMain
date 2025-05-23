@@ -48,7 +48,7 @@ function FooterSection() {
                 <h6 className="footer-title-29">Address</h6>
                 <div className="footer-listw3-grids">
                   <ul className="footer-listw3">
-                    <li>Gwarimpa, Abuja</li>
+                    <li>Abuja, Nigeria</li>
                     {/* <li>998 Uru Street, Office 46</li>
                     <li>CraveCafe 61466</li> */}
                   </ul>
@@ -59,11 +59,13 @@ function FooterSection() {
                 <div className="footer-listw3-grids">
                   <ul className="footer-listw3">
                     <li>
-                      <Link href="tel:+(21) 255 999 8888">080 3457 3377</Link>
+                      <Link href="tel:+(21) 255 999 8888">
+                        +234 911 013 7795
+                      </Link>
                     </li>
                     <li>
                       <Link href="mailto:govtagency@mail.com" className="mail">
-                        KMFenterprise@mail.com
+                        KMFenterprise@example.com
                       </Link>
                     </li>
                   </ul>
@@ -79,9 +81,9 @@ function FooterSection() {
                     <li>
                       <Link href="/about">About</Link>
                     </li>
-                    {/* <li>
-                      <Link href="#">Blogs</Link>
-                    </li> */}
+                    <li>
+                      <Link href="/services">Services</Link>
+                    </li>
                     <li>
                       <Link href="/contact">Contact</Link>
                     </li>
@@ -111,12 +113,12 @@ function FooterSection() {
                   <Link href="#facebook" className="facebook">
                     <span className="fab fa-facebook-f" />
                   </Link>
-                  <Link href="#twitter" className="twitter">
+                  {/* <Link href="#twitter" className="twitter">
                     <span className="fab fa-twitter" />
-                  </Link>
-                  <Link href="#instagram" className="instagram">
+                  </Link> */}
+                  {/* <Link href="#instagram" className="instagram">
                     <span className="fab fa-instagram" />
-                  </Link>
+                  </Link> */}
                   <Link href="#linkd" className="linkd">
                     <span className="fab fa-linkedin-in" />
                   </Link>

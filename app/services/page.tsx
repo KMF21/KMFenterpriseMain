@@ -17,9 +17,9 @@ function page() {
       {/*//inner-page*/}
       {/*/w3l-services-1*/}
       <div className="w3l-services-1 py-5" id="grids-3">
-        <div className="container py-md-5 py-2">
+        <div className="container  py-2">
           {/*/row-1*/}
-          <div className="row mb-5 pb-lg-4">
+          <div className="row  pb-lg-2">
             <div className="col-lg-6 p5-lg-4 services-1-left">
               <Image src={bg1} alt="" className="img-fluid radius-image" />
             </div>
