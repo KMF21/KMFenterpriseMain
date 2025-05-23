@@ -83,9 +83,10 @@ const PricePlanSection = () => {
                 <span />
                 <span />
               </div>
-              <span className="price-label">Here</span>
-              <h1 className="price">500,000</h1>
-              {/* <h5>Monthly</h5> */}
+              {/* <span className="price-label ">Here</span> */}
+
+              <h1 className="price sm:pt-2 sm:px-4">500,000</h1>
+
               <ul>
                 <li>Up to 10 pages</li>
                 <li>Free Domain (1st year)</li>
