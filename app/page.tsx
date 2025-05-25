@@ -227,13 +227,13 @@ export default function Home() {
                     <div className="testimonial">
                       <p>
                         <i className="fas fa-quote-left me-2" /> I love how
-                        passionate the KMFEnterprise Tech Agency team is about
+                        passionate the KMFenterprise Tech Agency team is about
                         helping business owners stand out. They truly make us
                         look polished, professional, and ready to thrive in
                         today’s modern business world.
                       </p>
                     </div>
-                    <div className="bottom-info mt-4">
+                    <div className="bottom-info mt-4 mb-3">
                       <Link className="comment-img" href="#url">
                         <Image
                           src={bg12}
