@@ -162,12 +162,6 @@ export default function Home() {
                       >
                         <i className="bi bi-youtube fs-2 text-danger"></i>
                       </div>
-
-                      {/* Text Content */}
-                      {/* <h6 className="fw-semibold mb-1">{service.title} &gt;</h6>
-                      <p className="small mb-0">
-                        Starting from {service.price}
-                      </p> */}
                     </div>
                   </Link>
                 </div>
