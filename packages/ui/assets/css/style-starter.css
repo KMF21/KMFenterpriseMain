@@ -18845,7 +18845,7 @@ a.dropdown-item.active {
 
 
 .w3l-main-slider .banner-top2 {
-    background: url('/assets/images/banner2.png') no-repeat center center;
+    background: url('/assets/images/banner.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -19039,7 +19039,7 @@ a.btn.btn-style.btn-banner:hover {
 
 /*--/video--*/
 .w3l-index5 {
-    background: url('/assets/images/banner2.png') no-repeat center;
+    background: url('/assets/images/banner.jpg') no-repeat center;
     -ms-background-size: cover;
     background-size: cover;
     z-index: 0;

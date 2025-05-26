@@ -185,6 +185,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/*  */}
+      {/* /home-page-video-popup*/}
+      {/* <section className="w3l-video-sec mt-5" id="video">
+        <div className="container">
+          <div className="w3l-index5 py-5" id="video">
+            <div className="history-info align-self text-center py-5 my-lg-5">
+              <div className="position-relative py-5 my-lg-5">
+                <Link
+                  href="#video"
+                  className="popup-with-zoom-anim play-view text-center position-absolute"
+                >
+                  <span className="video-play-icon">
+                    <span className="fa fa-play" />
+                  </span>
+                </Link>
+               
+                <div id="small-dialog1" className="zoom-anim-dialog mfp-hide">
+                  <iframe
+                    src="https://player.vimeo.com/video/124801644"
+                    allow="autoplay; fullscreen"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      {/* dialog itself, mfp-hide class is required to make dialog hidden -- */}
+      {/* //home-page-video-popup */}
+
       {/* Testimonials Section */}
       <section className="w3l-clients w3l-test py-5" id="testimonials">
         <div className="container py-lg-5 py-md-4 pt-2 pb-5">

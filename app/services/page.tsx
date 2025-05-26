@@ -17,7 +17,7 @@ function Page() {
           <div className="row pb-lg-2">
             <div className="col-lg-6 p5-lg-4 services-1-left">
               <Image
-                src="/assets/images/g8a.jpg"
+                src="/assets/images/g8.jpg"
                 alt="Service Visual"
                 width={600}
                 height={400}
