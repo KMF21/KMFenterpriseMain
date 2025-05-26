@@ -18107,7 +18107,7 @@ p.white {
 
 .title-w3l,
 .title-w3l.two {
-    font-size: 32px;
+    font-size: 30px;
     line-height: 46px;
     font-weight: 700;
     text-transform: capitalize;
@@ -18168,7 +18168,7 @@ a.read:hover span.fas {
 
 @media (max-width: 1080px) {
     .title-w3l {
-        font-size: 32px !important;
+        font-size: 30px !important;
         line-height: 40px;
     }
 
@@ -18179,7 +18179,7 @@ a.read:hover span.fas {
 
 @media (max-width: 568px) {
     .title-w3l {
-        font-size: 30px !important;
+        font-size: 28px !important;
         line-height: 38px;
     }
 
@@ -18190,7 +18190,7 @@ a.read:hover span.fas {
 
 @media (max-width:480px) {
     .title-w3l {
-        font-size: 26px !important;
+        font-size: 24px !important;
         line-height: 32px;
     }
 

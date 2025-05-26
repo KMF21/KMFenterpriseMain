@@ -135,14 +135,11 @@ function page() {
               </div>
               <div className="col-lg-5 align-self mt-lg-0 mt-sm-5 mt-4">
                 <div className="w3l-buttons d-sm-flex justify-content-end">
-                  <Link
-                    href="services.html"
-                    className="btn btn-style btn-primary"
-                  >
+                  <Link href="/services" className="btn btn-style btn-primary">
                     Our Services
                   </Link>
                   <Link
-                    href="contact.html"
+                    href="/contact"
                     className="btn btn-style transparant-btn ms-sm-3"
                   >
                     Get Started{' '}
