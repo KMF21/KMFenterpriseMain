@@ -17,7 +17,7 @@ function page() {
           <iframe
             width="100%"
             height={400}
-            src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Abuja,%20FCT,%20Nigeria+(GovtAgency)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+            src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Abuja,%20FCT,%20Nigeria+(KMFenterprice)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
           />
         </div>
 
@@ -38,10 +38,7 @@ function page() {
                     </div>
                     <div className="cont-right">
                       <h6>Our head office address:</h6>
-                      <p>
-                        Lorem ipsum Agency, 343 marketing, #4148 Honey street,
-                        NY - 62617.
-                      </p>
+                      <p>Abuja, Nigeria</p>
                     </div>
                   </div>
                   <div className="cont-top margin-up">
@@ -52,12 +49,12 @@ function page() {
                       <h6>Call for help :</h6>
                       <p>
                         <Link href="tel:+234 906 783 1050">
-                          +234 906 783 1050
+                          +234 911 013 7795
                         </Link>
                       </p>
                       <p>
                         <Link href="tel:+234 816 391 0146">
-                          +234 816 391 0146
+                          +234 911 013 7795
                         </Link>
                       </p>
                     </div>
@@ -84,66 +81,66 @@ function page() {
               </div>
               <div className="contact-right">
                 <form
-                  action="https://sendmail.w3layouts.com/submitForm"
-                  method="post"
+                  action="https://formsubmit.co/ikoojojoseph817@gmail.com"
+                  method="POST"
                   className="signin-form"
                 >
+                  {/* Optional Hidden Fields */}
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="https://yourwebsite.com/thank-you"
+                  />
+
                   <div className="input-grids">
                     <input
                       type="text"
-                      name="w3lName"
-                      id="w3lName"
+                      name="name"
                       placeholder="Your Name*"
                       className="contact-input"
                       required
                     />
                     <input
                       type="email"
-                      name="w3lSender"
-                      id="w3lSender"
+                      name="email"
                       placeholder="Your Email*"
                       className="contact-input"
                       required
                     />
                     <input
                       type="text"
-                      name="w3lSubect"
-                      id="w3lSubect"
+                      name="website"
                       placeholder="Your Current Website (if you have one)*"
                       className="contact-input"
                       required
                     />
                   </div>
+
                   <div className="form-input">
                     <textarea
-                      name="w3lMessage"
-                      id="w3lMessage"
+                      name="story"
                       placeholder="Tell us your story, what does your business do and how did you get here?*"
                       required
-                      defaultValue={''}
                     />
                   </div>
                   <div className="form-input">
                     <textarea
-                      name="w3lMessage"
-                      id="w3lMessage"
-                      placeholder="which of our services are you interested in?*"
+                      name="services"
+                      placeholder="Which of our services are you interested in?*"
                       required
-                      defaultValue={''}
                     />
                   </div>
                   <div className="form-input">
                     <textarea
-                      name="w3lMessage"
-                      id="w3lMessage"
-                      placeholder="Tell us your project, what problems are you hoping to solve by working with us and what does success look like for your business?*"
+                      name="project"
+                      placeholder="Tell us about your project — what problems are you hoping to solve and what does success look like for your business?*"
                       required
-                      defaultValue={''}
                     />
                   </div>
 
                   <div className="submit-w3l-button text-lg-right">
-                    <button className="btn btn-style btn-primary">
+                    <button className="btn btn-style btn-primary" type="submit">
                       Send Message
                     </button>
                   </div>

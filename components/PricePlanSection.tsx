@@ -32,7 +32,7 @@ const PricePlanSection = () => {
                 <li>Website Design</li>
                 <li>Delivery within 10 days</li>
               </ul>
-              <a href="#">Request Package</a>
+              <a href="/contact">Request Package</a>
             </div>
           </div>
           {/*- END COL */}
@@ -63,7 +63,7 @@ const PricePlanSection = () => {
                 <li>Website Design</li>
                 <li>Delivery within 18 days</li>
               </ul>
-              <a href="#">Request Package</a>
+              <a href="/contact">Request Package</a>
             </div>
           </div>
           {/*- END COL */}
@@ -96,7 +96,7 @@ const PricePlanSection = () => {
                 <li>Website Design</li>
                 <li>Delivery within 25 days</li>
               </ul>
-              <a href="#">Request Package</a>
+              <a href="/contact">Request Package</a>
             </div>
           </div>
           {/*- END COL */}

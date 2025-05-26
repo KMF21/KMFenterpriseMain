@@ -38,7 +38,7 @@ function page() {
             <div className="col-md-6">
               <div className="abw3-info">
                 <Image
-                  src="/assets/images/banner5.jpg"
+                  src="/assets/images/banner5b.jpg"
                   alt=""
                   className="img-fluid radius-image"
                   width={700}
@@ -55,7 +55,7 @@ function page() {
             <div className="col-md-6 mt-md-0 mt-4">
               <div className="abw3-info">
                 <Image
-                  src="/assets/images/banner1.jpg"
+                  src="/assets/images/banner5bb.jpg"
                   alt=""
                   className="img-fluid radius-image"
                   width={700}
