@@ -173,9 +173,9 @@ export default function Home() {
                       }}
                     >
                       <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100" />
-                      <div className="icon-wrapper mb-3">
+                      {/* <div className="icon-wrapper mb-3">
                         <i className="bi bi-youtube fs-2 text-danger" />
-                      </div>
+                      </div> */}
                     </div>
                   </Link>
                 </div>
