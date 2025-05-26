@@ -3,11 +3,6 @@ import Link from 'next/link'
 import Navbar from '@/components/NavbarSection'
 import Footer from '@/components/FooterSection'
 import SliderComponent from '@/components/landing/SliderComponent'
-import bg1 from '../packages/ui/assets/images/g1a.jpg'
-import bg2 from '../packages/ui/assets/images/g1.jpg'
-import bg3 from '../packages/ui/assets/images/g1c.jpg'
-import bg12 from '../packages/ui/assets/images/team1.jpg'
-import bg13 from '../packages/ui/assets/images/team2.jpg'
 import PricePlan from '@/components/PricePlanSection'
 import MidSliderSection from '@/components/MidSliderSection'
 import { portfolioServices } from './libraries/portfolioServices'
@@ -16,22 +11,22 @@ export default function Home() {
   return (
     <div className="">
       <Navbar />
-      {/* Header */}
       <SliderComponent />
+
+      {/* 3-Grids Section */}
       <div className="w3l-3-grids py-5" id="grids-3">
         <div className="container py-md-5 py-2">
-          {/*/row-1*/}
           <div className="row mb-5 pb-lg-4">
             <div className="col-lg-4 pe-lg-4">
               <div className="title-content text-left">
                 <h6 className="title-subw3hny mb-1">About Us</h6>
                 <h3 className="title-w3l">
-                  Excellence is the baseline. Premium or nothing.{' '}
+                  Excellence is the baseline. Premium or nothing.
                 </h3>
               </div>
             </div>
             <div className="col-lg-4 mt-lg-0 mt-md-5 mt-4 ps-lg-4">
-              <p className="">
+              <p>
                 At KMFenterprise, we create innovative, high-performance
                 websites that help businesses grow and succeed online. With a
                 focus on design, development, and digital strategy, we deliver
@@ -40,18 +35,26 @@ export default function Home() {
               </p>
             </div>
             <div className="col-lg-4 mt-lg-0 mt-md-5 mt-4 ps-lg-4">
-              <p className="">
+              <p>
                 A creative agency specialising in thoughtful and compelling
                 brands powered by a high-converting online presence.
               </p>
             </div>
           </div>
-          {/*//row-1*/}
+
           <div className="row pt-md-0 pt-5">
             <div className="col-lg-4 col-md-6 mt-md-0 mt-sm-4 px-lg-0">
               <div className="grids3-info position-relative">
                 <Link href="#" className="d-block zoom">
-                  <Image src={bg1} alt="" className="img-fluid news-image" />
+                  <Image
+                    src="/assets/images/g1a.jpg"
+                    alt="Website Design example"
+                    className="img-fluid news-image"
+                    width={500}
+                    height={300}
+                    layout="responsive"
+                    loading="lazy"
+                  />
                 </Link>
                 <div className="w3-grids3-info">
                   <h6>
@@ -68,10 +71,19 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className="col-lg-4 col-md-6 mt-md-0 mt-4 px-lg-0 grids3-info2">
               <div className="grids3-info second position-relative">
                 <Link href="#" className="d-block zoom">
-                  <Image src={bg2} alt="" className="img-fluid news-image" />
+                  <Image
+                    src="/assets/images/g1.jpg"
+                    alt="Social Media Management"
+                    className="img-fluid news-image"
+                    width={500}
+                    height={300}
+                    layout="responsive"
+                    loading="lazy"
+                  />
                 </Link>
                 <div className="w3-grids3-info second">
                   <h6>
@@ -88,10 +100,19 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className="col-lg-4 col-md-6 mt-lg-0 mt-4 px-lg-0">
               <div className="grids3-info position-relative">
                 <Link href="#" className="d-block zoom">
-                  <Image src={bg3} alt="" className="img-fluid news-image" />
+                  <Image
+                    src="/assets/images/g1c.jpg"
+                    alt="SEO Strategies"
+                    className="img-fluid news-image"
+                    width={500}
+                    height={300}
+                    layout="responsive"
+                    loading="lazy"
+                  />
                 </Link>
                 <div className="w3-grids3-info">
                   <h6>
@@ -112,8 +133,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <!--//bottom-3-grids--> */}
-      {/* <!--/features-section --> */}
+      {/* Pricing Section */}
       <section className="w3l-features" id="work">
         <div className="container py-lg-5 py-md-4 py-2">
           <div className="title-content text-center mb-md-5 mb-4">
@@ -126,10 +146,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <!--//features section --> */}
-
       <MidSliderSection />
-      <section className="w3l-features" id="work">
+
+      {/* Portfolio Section */}
+      <section className="w3l-features" id="portfolio">
         <div className="container py-lg-5 py-md-4 py-2">
           <div className="title-content text-center mb-md-5 mb-4">
             <h6 className="title-subw3hny mb-1">Portfolio</h6>
@@ -138,7 +158,7 @@ export default function Home() {
           <div className="container">
             <div className="row g-4">
               {portfolioServices.map((service, index) => (
-                <div className="col-12 col-sm-6 col-md-6 " key={index}>
+                <div className="col-12 col-sm-6 col-md-6" key={index}>
                   <Link
                     href={service.href}
                     className="text-decoration-none text-dark"
@@ -152,15 +172,9 @@ export default function Home() {
                         minHeight: '300px',
                       }}
                     >
-                      {/* Overlay */}
-                      <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-
-                      {/* Icon */}
-                      <div
-                        className="icon-wrapper mb-3"
-                        style={{ backgroundColor: 'transparent' }}
-                      >
-                        <i className="bi bi-youtube fs-2 text-danger"></i>
+                      <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100" />
+                      <div className="icon-wrapper mb-3">
+                        <i className="bi bi-youtube fs-2 text-danger" />
                       </div>
                     </div>
                   </Link>
@@ -171,36 +185,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/*/home-page-video-popup*/}
-      <section className="w3l-video-sec mt-5" id="video">
-        <div className="container">
-          <div className="w3l-index5 py-5" id="video">
-            <div className="history-info align-self text-center py-5 my-lg-5">
-              <div className="position-relative py-5 my-lg-5">
-                <Link
-                  href="#video"
-                  className="popup-with-zoom-anim play-view text-center position-absolute"
-                >
-                  <span className="video-play-icon">
-                    <span className="fa fa-play" />
-                  </span>
-                </Link>
-                {/* dialog itself, mfp-hide class is required to make dialog hidden -- */}
-                <div id="small-dialog1" className="zoom-anim-dialog mfp-hide">
-                  {/* <iframe
-                    src="https://player.vimeo.com/video/124801644"
-                    allow="autoplay; fullscreen"
-                    allowFullScreen
-                  /> */}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* //home-page-video-popup*/}
-
-      {/* testimonials section */}
+      {/* Testimonials Section */}
       <section className="w3l-clients w3l-test py-5" id="testimonials">
         <div className="container py-lg-5 py-md-4 pt-2 pb-5">
           <div className="row w3test-grids p-5">
@@ -214,25 +199,28 @@ export default function Home() {
                 </p>
               </div>
             </div>
+
             <div className="col-lg-8 testimonials-con-right mt-lg-0 mt-3 p-xl-3 pb-4">
               <div id="owl-demo2" className="owl-theme py-sm-5 pt-0 py-3 row">
                 <div className="col-md-6 item">
                   <div className="testimonial-content">
                     <div className="testimonial">
                       <p>
-                        <i className="fas fa-quote-left me-2" /> I love how
+                        <i className="fas fa-quote-left me-2" />I love how
                         passionate the KMFenterprise Tech Agency team is about
-                        helping business owners stand out. They truly make us
-                        look polished, professional, and ready to thrive in
-                        today’s modern business world.
+                        helping business owners stand out.
                       </p>
                     </div>
                     <div className="bottom-info mt-4 mb-3">
                       <Link className="comment-img" href="#url">
                         <Image
-                          src={bg12}
+                          src="/assets/images/team1.jpg"
+                          alt="Johnson Ojogbane"
                           className="img-fluid radius-image"
-                          alt="placeholder image"
+                          width={80}
+                          height={80}
+                          layout="fixed"
+                          loading="lazy"
                         />
                       </Link>
                       <div className="people-info align-self">
@@ -242,23 +230,26 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
                 <div className="col-md-6 item">
                   <div className="testimonial-content">
                     <div className="testimonial">
                       <p>
                         <i className="fas fa-quote-left me-2" />
                         If you&apos;re looking for high-quality, impactful
-                        marketing, reach out to KMFenterprise. Their team is
-                        committed to setting you up for success and making your
-                        brand stand out!
+                        marketing, reach out to KMFenterprise.
                       </p>
                     </div>
                     <div className="bottom-info mt-4">
                       <Link className="comment-img" href="#url">
                         <Image
-                          src={bg13}
+                          src="/assets/images/team2.jpg"
+                          alt="Bola Tinubu"
                           className="img-fluid radius-image"
-                          alt="placeholder image"
+                          width={80}
+                          height={80}
+                          layout="fixed"
+                          loading="lazy"
                         />
                       </Link>
                       <div className="people-info align-self">
@@ -273,8 +264,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* //testimonials section */}
-      {/*/w3l-footer-29-main*/}
 
       <Footer />
     </div>

@@ -1,11 +1,8 @@
 import Image from 'next/image'
-import bg4 from '../packages/ui/assets/images/ab1.png'
-import bg5 from '../packages/ui/assets/images/ab2.png'
 
 const MidSliderSection = () => {
   return (
     <>
-      {' '}
       {/* <!--/w3l-midslider--> */}
       <section className="w3l-midslider py-5" id="midslider">
         {/* /grids */}
@@ -14,10 +11,24 @@ const MidSliderSection = () => {
             <div className="col-lg-7 stats_info-images pe-lg-5">
               <div className="stats_info-images-right row">
                 <div className="col-6 mid-slider-content">
-                  <Image src={bg4} className="img-fluid radius-image" alt="" />
+                  <Image
+                    src="/assets/images/ab1.png"
+                    className="img-fluid radius-image"
+                    alt="About image 1"
+                    width={500}
+                    height={500}
+                    loading="lazy"
+                  />
                 </div>
                 <div className="col-6 mid-slider-content">
-                  <Image src={bg5} className="img-fluid radius-image" alt="" />
+                  <Image
+                    src="/assets/images/ab2.png"
+                    className="img-fluid radius-image"
+                    alt="About image 2"
+                    width={500}
+                    height={500}
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
@@ -34,25 +45,8 @@ const MidSliderSection = () => {
                 reflective of the impactful industry leaders they&apos;ve
                 become.
               </p>
-
-              {/* <ul className="icon-list-items mt-3">
-                <li className="icon-list-item">
-                  <i aria-hidden="true" className="fas fa-check" />
-                  Innovative ideas
-                </li>
-                <li className="icon-list-item mt-2">
-                  <i aria-hidden="true" className="fas fa-check" />
-                  Professional assistance
-                </li>
-                <li className="icon-list-item mt-2">
-                  <i aria-hidden="true" className="fas fa-check" />
-                  Financial advisory
-                </li>
-              </ul> */}
             </div>
-            {/*/grids */}
           </div>
-          {/*/grids */}
         </div>
       </section>
       {/*//w3l-midslider*/}

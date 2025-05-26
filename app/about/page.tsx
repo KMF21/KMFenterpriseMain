@@ -4,10 +4,6 @@ import NavLanding from '@/components/landing/NavLanding'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/FooterSection'
-import bg1 from '../../packages/ui/assets/images/banner5.jpg'
-import bg2 from '../../packages/ui/assets/images/banner1.jpg'
-import bg6 from '../../packages/ui/assets/images/ab1.png'
-import bg7 from '../../packages/ui/assets/images/ab2.png'
 
 function page() {
   return (
@@ -41,7 +37,13 @@ function page() {
           <div className="row pt-md-0 pt-5">
             <div className="col-md-6">
               <div className="abw3-info">
-                <Image src={bg1} alt="" className="img-fluid radius-image" />
+                <Image
+                  src="/assets/images/banner5.jpg"
+                  alt=""
+                  className="img-fluid radius-image"
+                  width={700}
+                  height={400}
+                />
                 <h3 className="title-w3l mt-4 mb-2">Our Vision</h3>
                 <p className="">
                   To empower businesses across Africa and beyond with
@@ -52,7 +54,13 @@ function page() {
             </div>
             <div className="col-md-6 mt-md-0 mt-4">
               <div className="abw3-info">
-                <Image src={bg2} alt="" className="img-fluid radius-image" />
+                <Image
+                  src="/assets/images/banner1.jpg"
+                  alt=""
+                  className="img-fluid radius-image"
+                  width={700}
+                  height={400}
+                />
                 <h3 className="title-w3l mt-4 mb-2">Our Mission</h3>
                 <p className="">
                   At KMFenterprise, our mission is to design and develop dynamic
@@ -105,86 +113,6 @@ function page() {
       </section>
       {/*//Counts-Section*/}
 
-      {/*/team*/}
-      {/* <section id="team" className="w3lteam py-5">
-        <div className="container py-md-5">
-          <div className="title-content text-center">
-            <h6 className="title-subw3hny mb-1">Our Team</h6>
-            <h3 className="title-w3l mb-5">Our Creative Team.</h3>
-          </div>
-          <div className="row">
-            <div className="col-lg-4 col-md-6">
-              <div className="member">
-                <div className="pic">
-                  <Image src={bg4} className="img-fluid radius-image" alt="" />
-                </div>
-                <div className="member-info">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
-                  <div className="social">
-                    <Link href="#facebook" className="facebook">
-                      <span className="fab fa-facebook-f" />
-                    </Link>
-                    <Link href="#twitter" className="twitter">
-                      <span className="fab fa-twitter" />
-                    </Link>
-                    <Link href="#linkd" className="linkd">
-                      <span className="fab fa-linkedin-in" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="member">
-                <div className="pic">
-                  <Image src={bg5} className="img-fluid radius-image" alt="" />
-                </div>
-                <div className="member-info">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                  <div className="social">
-                    <Link href="#facebook" className="facebook">
-                      <span className="fab fa-facebook-f" />
-                    </Link>
-                    <Link href="#twitter" className="twitter">
-                      <span className="fab fa-twitter" />
-                    </Link>
-                    <Link href="#linkd" className="linkd">
-                      <span className="fab fa-linkedin-in" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="member">
-                <div className="pic">
-                  <Image src={bg3} className="img-fluid radius-image" alt="" />
-                </div>
-                <div className="member-info">
-                  <h4>William Anderson</h4>
-                  <span>Sales Manager</span>
-                  <div className="social">
-                    <Link href="#facebook" className="facebook">
-                      <span className="fab fa-facebook-f" />
-                    </Link>
-                    <Link href="#twitter" className="twitter">
-                      <span className="fab fa-twitter" />
-                    </Link>
-                    <Link href="#linkd" className="linkd">
-                      <span className="fab fa-linkedin-in" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/* End Team Section */}
-      {/*/w3l-project*/}
-
       <section className="w3l-index5 py-5 mt-5">
         <div className="container py-md-3">
           <div className="w3l-project-in">
@@ -226,8 +154,6 @@ function page() {
           </div>
         </div>
       </section>
-      {/*//w3l-project*/}
-      {/*/w3l-midslider*/}
 
       <section className="w3l-midslider py-5" id="midslider">
         {/* /grids */}
@@ -273,10 +199,22 @@ function page() {
             <div className="col-lg-7 stats_info-images ps-lg-5">
               <div className="stats_info-images-right row">
                 <div className="col-6 mid-slider-content">
-                  <Image src={bg6} className="img-fluid radius-image" alt="" />
+                  <Image
+                    src="/assets/images/ab1.png"
+                    className="img-fluid radius-image"
+                    alt=""
+                    width={500}
+                    height={500}
+                  />
                 </div>
                 <div className="col-6 mid-slider-content">
-                  <Image src={bg7} className="img-fluid radius-image" alt="" />
+                  <Image
+                    src="/assets/images/ab2.png"
+                    className="img-fluid radius-image"
+                    alt=""
+                    width={500}
+                    height={500}
+                  />
                 </div>
               </div>
             </div>
