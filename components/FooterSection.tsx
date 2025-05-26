@@ -64,7 +64,7 @@ function FooterSection() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="mailto:govtagency@mail.com" className="mail">
+                      <Link href="mailto:info@kmfenterprise.com" className="mail">
                         info@kmfenterprise.com
                       </Link>
                     </li>
