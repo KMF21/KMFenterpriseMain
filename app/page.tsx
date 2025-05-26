@@ -214,8 +214,8 @@ export default function Home() {
                     <div className="bottom-info mt-4 mb-3">
                       <Link className="comment-img" href="#url">
                         <Image
-                          src="/assets/images/team1.jpg"
-                          alt="Johnson Ojogbane"
+                          src="https://ui-avatars.com/api/?name=Ache+Paul&size=80&background=random&color=fff&rounded=true"
+                          alt="Ache Paul"
                           className="img-fluid radius-image"
                           width={80}
                           height={80}
@@ -224,8 +224,8 @@ export default function Home() {
                         />
                       </Link>
                       <div className="people-info align-self">
-                        <h3>Johnson Ojogbane</h3>
-                        <p className="identity">Example City</p>
+                        <h3>Ache Paul</h3>
+                        <p className="identity">RMRDC</p>
                       </div>
                     </div>
                   </div>
@@ -243,8 +243,8 @@ export default function Home() {
                     <div className="bottom-info mt-4">
                       <Link className="comment-img" href="#url">
                         <Image
-                          src="/assets/images/team2.jpg"
-                          alt="Bola Tinubu"
+                          src="https://ui-avatars.com/api/?name=David+Ojogbane&size=80&background=random&color=fff&rounded=true"
+                          alt="David Ojogbane"
                           className="img-fluid radius-image"
                           width={80}
                           height={80}
@@ -253,8 +253,8 @@ export default function Home() {
                         />
                       </Link>
                       <div className="people-info align-self">
-                        <h3>Bola Tinubu</h3>
-                        <p className="identity">Example City</p>
+                        <h3>David Ojogbane</h3>
+                        <p className="identity">OJ Digitals</p>
                       </div>
                     </div>
                   </div>
