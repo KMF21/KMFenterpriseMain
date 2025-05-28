@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/NavbarSection'
@@ -6,8 +8,26 @@ import SliderComponent from '@/components/landing/SliderComponent'
 import PricePlan from '@/components/PricePlanSection'
 import MidSliderSection from '@/components/MidSliderSection'
 import { portfolioServices } from './libraries/portfolioServices'
+import ProgressBar from '@badrap/bar-of-progress'
+import { useEffect } from 'react'
 
 export default function Home() {
+  useEffect(() => {
+    const progress = new ProgressBar({
+      size: 2,
+      color: '#0ead69',
+      className: 'bar-of-progress',
+      delay: 80,
+    })
+
+    progress.start()
+
+    const timer = setTimeout(() => {
+      progress.finish()
+    }, 1000)
+
+    return () => clearTimeout(timer)
+  }, [])
   return (
     <div className="">
       <Navbar />

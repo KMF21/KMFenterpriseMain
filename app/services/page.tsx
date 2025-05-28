@@ -1,11 +1,29 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import Navbar from '@/components/NavbarSection'
 import NavLanding from '@/components/landing/NavLanding'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/FooterSection'
+import ProgressBar from '@badrap/bar-of-progress'
 
 function Page() {
+  useEffect(() => {
+    const progress = new ProgressBar({
+      size: 2,
+      color: '#0ead69',
+      className: 'bar-of-progress',
+      delay: 80,
+    })
+
+    progress.start()
+
+    const timer = setTimeout(() => {
+      progress.finish()
+    }, 1000)
+
+    return () => clearTimeout(timer)
+  }, [])
   return (
     <div>
       <Navbar />
