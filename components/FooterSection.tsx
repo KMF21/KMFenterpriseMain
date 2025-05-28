@@ -65,7 +65,7 @@ function FooterSection() {
                     </li>
                     <li>
                       <Link href="mailto:govtagency@mail.com" className="mail">
-                        KMFenterprise@example.com
+                        info@kmfenterprise.com
                       </Link>
                     </li>
                   </ul>
@@ -110,7 +110,10 @@ function FooterSection() {
                   </button>
                 </form>
                 <div className="main-social-footer-29 mt-4">
-                  <Link href="#facebook" className="facebook">
+                  <Link
+                    href="https://www.facebook.com/KMFenterprise"
+                    className="facebook"
+                  >
                     <span className="fab fa-facebook-f" />
                   </Link>
                   {/* <Link href="#twitter" className="twitter">
@@ -119,7 +122,10 @@ function FooterSection() {
                   {/* <Link href="#instagram" className="instagram">
                     <span className="fab fa-instagram" />
                   </Link> */}
-                  <Link href="#linkd" className="linkd">
+                  <Link
+                    href="https://www.linkedin.com/company/kmfenterprise"
+                    className="linkd"
+                  >
                     <span className="fab fa-linkedin-in" />
                   </Link>
                 </div>

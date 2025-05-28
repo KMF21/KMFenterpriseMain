@@ -83,28 +83,28 @@ function page() {
             <div className="col-lg-3 col-md-6 w3stats_info counter_grid">
               <div className="count-box">
                 <i className="fas fa-users" />
-                <p className="counter">25+</p>
+                <p className="counter">5+</p>
                 <p>Happy Clients</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 mt-5 mt-md-0 w3stats_info counter_grid">
               <div className="count-box">
                 <i className="far fa-images" />
-                <p className="counter">40+</p>
+                <p className="counter">5+</p>
                 <p>Projects</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0 w3stats_info counter_grid">
               <div className="count-box">
                 <i className="fas fa-headset" />
-                <p className="counter">200+</p>
+                <p className="counter">19+</p>
                 <p>Hours Of Support</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0 w3stats_info counter_grid">
               <div className="count-box">
                 <i className="fas fa-user-tie" />
-                <p className="counter">10+</p>
+                <p className="counter">5+</p>
                 <p>Hard Workers</p>
               </div>
             </div>
@@ -140,10 +140,10 @@ function page() {
                   </Link>
                   <Link
                     href="/contact"
-                    className="btn btn-style transparant-btn ms-sm-3"
+                    className="btn btn-style transparant-btn ms-sm-3 ms-2 "
                   >
                     Get Started{' '}
-                    <i className="fas fa-arrow-right ms-lg-4 ms-2" />{' '}
+                    <i className="fas fa-arrow-right ms-lg-4 ms-2 " />{' '}
                   </Link>
                 </div>
               </div>

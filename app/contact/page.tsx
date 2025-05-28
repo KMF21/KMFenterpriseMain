@@ -67,12 +67,12 @@ function page() {
                       <h6>Mail us:</h6>
                       <p>
                         <Link href="mailto:support@mail.com" className="mail">
-                          support@mail.com
+                          info@kmfenterprise.com
                         </Link>
                       </p>
                       <p>
                         <Link href="mailto:contact@mail.com" className="mail">
-                          contact@mail.com
+                          support@kmfenterprise.com
                         </Link>
                       </p>
                     </div>

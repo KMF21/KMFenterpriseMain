@@ -20,7 +20,7 @@ const Page = () => {
           padding: '2rem',
         }}
       >
-        <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>
+        <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>
           🚧 Under Development 🚧
         </h1>
         <p style={{ fontSize: '1.25rem', color: '#555' }}>
