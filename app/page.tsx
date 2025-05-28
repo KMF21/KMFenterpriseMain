@@ -184,7 +184,7 @@ export default function Home() {
                     className="text-decoration-none text-dark"
                   >
                     <div
-                      className="card text-start service-card p-4 mb-4 border rounded-3 transition position-relative"
+                      className="card text-start service-card p-4  border rounded-3 transition position-relative"
                       style={{
                         backgroundImage: `url(${service.bgImage})`,
                         backgroundSize: 'cover',
