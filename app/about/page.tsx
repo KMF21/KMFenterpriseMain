@@ -7,7 +7,7 @@ import Link from 'next/link'
 import Footer from '@/components/FooterSection'
 import ProgressBar from '@badrap/bar-of-progress'
 
-function page() {
+function Page() {
   useEffect(() => {
     const progress = new ProgressBar({
       size: 2,
@@ -243,4 +243,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
