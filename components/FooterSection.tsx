@@ -116,9 +116,15 @@ function FooterSection() {
                   >
                     <span className="fab fa-facebook-f" />
                   </Link>
-                  {/* <Link href="#twitter" className="twitter">
-                    <span className="fab fa-twitter" />
-                  </Link> */}
+                  <Link
+                    href="https://wa.me/2349110137795?text=Hello%2C%20I'm%20interested%20in%20your%20service"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-500 hover:text-green-700"
+                  >
+                    <span className="fab fa-whatsapp text-xl" />
+                  </Link>
+
                   {/* <Link href="#instagram" className="instagram">
                     <span className="fab fa-instagram" />
                   </Link> */}
