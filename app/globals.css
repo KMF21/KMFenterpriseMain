@@ -315,3 +315,29 @@ body {
   z-index: 2;
   position: relative;
 }
+
+/* profolio images */
+.service-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 250px; /* optional: reduce height slightly on mobile */
+  }
+}
+
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent dark overlay */
+  z-index: 1;
+  border-radius: inherit;
+}

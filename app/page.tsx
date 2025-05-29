@@ -174,32 +174,30 @@ export default function Home() {
             <h6 className="title-subw3hny mb-1">Portfolio</h6>
             <h3 className="title-w3l mb-2">Setting Industry Standards</h3>
           </div>
-          <div className="container">
-            <div className="row g-4">
-              {portfolioServices.map((service, index) => (
-                <div className="col-12 col-sm-6 col-md-6" key={index}>
-                  <Link
-                    href={service.href}
-                    className="text-decoration-none text-dark"
+
+          <div className="row g-4">
+            {portfolioServices.map((service, index) => (
+              <div className="col-12 col-sm-6 col-md-6" key={index}>
+                <Link
+                  href={service.href}
+                  className="text-decoration-none text-dark"
+                >
+                  <div
+                    className="card text-start service-card p-4 border rounded-3 transition position-relative"
+                    style={{
+                      backgroundImage: `url(${service.bgImage})`,
+                    }}
                   >
-                    <div
-                      className="card text-start service-card p-4  border rounded-3 transition position-relative"
-                      style={{
-                        backgroundImage: `url(${service.bgImage})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        minHeight: '300px',
-                      }}
-                    >
-                      <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100" />
-                      {/* <div className="icon-wrapper mb-3">
-                        <i className="bi bi-youtube fs-2 text-danger" />
-                      </div> */}
-                    </div>
-                  </Link>
-                </div>
-              ))}
-            </div>
+                    {/* Overlay that darkens background */}
+                    {/* <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100" />
+
+                    <div className="position-relative" style={{ zIndex: 2 }}>
+                      <h5 className="text-white">{service.title}</h5>
+                    </div> */}
+                  </div>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
