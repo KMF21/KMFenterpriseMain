@@ -58,7 +58,7 @@ function NavbarSection() {
                 { href: '/services', label: 'Services' },
                 { href: '/portfolio', label: 'Portfolio' },
                 { href: '/contact', label: 'Contact' },
-              ].map((item) => (
+              ].map((item: any) => (
                 <li className="nav-item" key={item.href}>
                   <Link
                     href={item.href}
@@ -75,7 +75,11 @@ function NavbarSection() {
 
             <ul className="header-search ms-lg-auto text-center text-lg-end py-2">
               <li className="get-btn">
-                <Link href="/contact" className="btn btn-style btn-primary">
+                <Link
+                  href="https://calendly.com/ikoojojoseph817/30min"
+                  target="_blank"
+                  className="btn btn-style btn-primary"
+                >
                   Book a call <i className="fas fa-arrow-right ms-lg-4 ms-2" />
                 </Link>
               </li>
