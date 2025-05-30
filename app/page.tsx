@@ -240,7 +240,7 @@ export default function Home() {
             <div className="col-lg-4 testimonials-con-left-info py-sm-5 pt-0 py-3">
               <div className="title-content text-left p-xl-3">
                 <h6 className="title-subw3hny">Reviews</h6>
-                <h3 className="title-w3l two">What Our Clients Say</h3>
+                <h3 className="title-w3l two mt-1">What Our Clients Say</h3>
                 <p className="test-p mt-3">
                   A creative studio specialising in thoughtful and compelling
                   brands powered by a high-converting online presence.
