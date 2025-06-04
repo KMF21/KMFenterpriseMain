@@ -66,7 +66,7 @@ const PricePlanSection = () => {
               <a href="/contact">Request Package</a>
             </div>
           </div>
-          {/*- END COL */}
+          {/*- END COLumn */}
           <div
             className="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp"
             data-wow-duration="1s"
