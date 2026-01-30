@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/FooterSection'
 import ProgressBar from '@badrap/bar-of-progress'
+import Faqs from '@/components/Faqs'
 
 function Page() {
   useEffect(() => {
@@ -166,7 +167,7 @@ function Page() {
       </section>
 
       {/* Featured Services Section */}
-      <section className="w3l-services-6 py-5" id="services">
+      <section className="w3l-services-6 py-2" id="services">
         <div className="container py-lg-5 py-md-4 py-2">
           <div className="title-services text-center">
             <h6 className="title-subw3hny mb-1">Services Info</h6>
@@ -260,6 +261,9 @@ function Page() {
           </div>
         </div>
       </section>
+
+      {/* FAQS */}
+      <Faqs />
 
       <Footer />
     </div>
