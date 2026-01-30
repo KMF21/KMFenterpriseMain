@@ -3,24 +3,23 @@ import Link from "next/link";
 import Navbar from "@/components/NavbarSection";
 import Footer from "@/components/FooterSection";
 import SliderComponent from "@/components/landing/SliderComponent";
-import bg1 from "../packages/ui/assets/images/g1a.jpg";
-import bg2 from "../packages/ui/assets/images/g1.jpg";
-import bg3 from "../packages/ui/assets/images/g1c.jpg";
-import bg12 from "../packages/ui/assets/images/team1.jpg";
-import bg13 from "../packages/ui/assets/images/team2.jpg";
 import PricePlan from "@/components/PricePlanSection";
 import MidSliderSection from "@/components/MidSliderSection";
-import { portfolioServices } from './libraries/portfolioServices'
+import { portfolioServices } from "./libraries/portfolioServices";
+
+// Import local images for Next.js optimization
+import g1a from "../public/assets/images/g1a.jpg";
+import g1 from "../public/assets/images/g1.jpg";
+import g1c from "../public/assets/images/g1c.jpg";
 
 export default function Home() {
-  
   return (
-    <div className="">
+    <div>
       <Navbar />
       <SliderComponent />
 
       {/* 3-Grids Section */}
-      <div className="w3l-3-grids py-5" id="grids-3">
+      <section className="w3l-3-grids py-5" id="grids-3">
         <div className="container py-md-5 py-2">
           <div className="row mb-5 pb-lg-4">
             <div className="col-lg-4 pe-lg-4">
@@ -53,13 +52,11 @@ export default function Home() {
               <div className="grids3-info position-relative">
                 <Link href="#" className="d-block zoom">
                   <Image
-                    src="/assets/images/g1a.jpg"
+                    src={g1a}
                     alt="Website Design example"
                     className="img-fluid news-image"
                     width={500}
                     height={300}
-                    layout="responsive"
-                    loading="lazy"
                   />
                 </Link>
                 <div className="w3-grids3-info">
@@ -82,13 +79,11 @@ export default function Home() {
               <div className="grids3-info second position-relative">
                 <Link href="#" className="d-block zoom">
                   <Image
-                    src="/assets/images/g1.jpg"
+                    src={g1}
                     alt="Social Media Management"
                     className="img-fluid news-image"
                     width={500}
                     height={300}
-                    layout="responsive"
-                    loading="lazy"
                   />
                 </Link>
                 <div className="w3-grids3-info second">
@@ -111,13 +106,11 @@ export default function Home() {
               <div className="grids3-info position-relative">
                 <Link href="#" className="d-block zoom">
                   <Image
-                    src="/assets/images/g1c.jpg"
+                    src={g1c}
                     alt="SEO Strategies"
                     className="img-fluid news-image"
                     width={500}
                     height={300}
-                    layout="responsive"
-                    loading="lazy"
                   />
                 </Link>
                 <div className="w3-grids3-info">
@@ -137,7 +130,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Pricing Section */}
       <section className="w3l-features" id="work">
@@ -154,91 +147,40 @@ export default function Home() {
 
       <MidSliderSection />
 
-      {/* Portfoliomain Section */}
+      {/* Portfolio Section */}
       <section className="w3l-features" id="portfolio">
         <div className="container py-lg-5 py-md-4 py-2">
           <div className="title-content text-center mb-4">
             <h6 className="title-subw3hny mb-1">Portfolio</h6>
             <h3 className="title-w3l mb-2">Setting Industry Standards</h3>
           </div>
-          <div className="container">
-            <div className="row g-4">
-              {portfolioServices.map((service, index) => (
-                <div className="col-12 col-sm-6 col-md-6 " key={index}>
-                  <Link
-                    href={service.href}
-                    className="text-decoration-none text-dark"
+          <div className="row g-4">
+            {portfolioServices.map((service, index) => (
+              <div className="col-12 col-sm-6 col-md-6" key={index}>
+                <Link
+                  href={service.href}
+                  className="text-decoration-none text-dark"
+                >
+                  <div
+                    className="card text-start service-card p-4 mb-4 border rounded-3 transition position-relative"
+                    style={{
+                      backgroundImage: `url(${service.bgImage})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      minHeight: "300px",
+                    }}
                   >
-                    <div
-                      // className="card text-start service-card h-100 p-3 mb-3 border rounded-3 transition"
-                      className="card text-start service-card p-4 mb-4 border rounded-3 transition"
-                      style={{
-                        backgroundImage: `url(${service.bgImage})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        minHeight: '300px',
-                      }}
-                    >
-                      <div className="icon-wrapper mb-3 ">
-                        <i className="bi bi-youtube fs-2 text-danger"></i>
-                      </div>
-                      <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-                      {/* <h6 className="fw-semibold mb-1">
-                        {service.title} &gt;
-                      </h6>
-                      <p className="small mb-0">
-                        Starting from {service.price}
-                      </p> */}
+                    <div className="icon-wrapper mb-3 ">
+                      <i className="bi bi-youtube fs-2 text-danger"></i>
                     </div>
-                  </Link>
-                </div>
-              ))}
-            </div>
+                    <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+                  </div>
+                </Link>
+              </div>
+            ))}
           </div>
-          {/* End Portfolio Item */}
-        </div>
-        {/* End Portfolio Grid */}
-      </div>
-    </div>
-  </section>
-  {/* /Portfolio Section */}
-</>
         </div>
       </section>
-
-
-
-
-      {/*  */}
-      {/* /home-page-video-popup*/}
-      {/* <section className="w3l-video-sec mt-5" id="video">
-        <div className="container">
-          <div className="w3l-index5 py-5" id="video">
-            <div className="history-info align-self text-center py-5 my-lg-5">
-              <div className="position-relative py-5 my-lg-5">
-                <Link
-                  href="#video"
-                  className="popup-with-zoom-anim play-view text-center position-absolute"
-                >
-                  <span className="video-play-icon">
-                    <span className="fa fa-play" />
-                  </span>
-                </Link>
-               
-                <div id="small-dialog1" className="zoom-anim-dialog mfp-hide">
-                  <iframe
-                    src="https://player.vimeo.com/video/124801644"
-                    allow="autoplay; fullscreen"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/* dialog itself, mfp-hide class is required to make dialog hidden -- */}
-      {/* //home-page-video-popup */}
 
       {/* Testimonials Section */}
       <section className="w3l-clients w3l-test py-5" id="testimonials">
@@ -256,29 +198,26 @@ export default function Home() {
             </div>
 
             <div className="col-lg-8 testimonials-con-right mt-lg-0 mt-3 p-xl-3 pb-4">
-              <div id="owl-demo2" className="owl-theme py-sm-5 pt-0 py-3 row">
+              <div className="row">
                 <div className="col-md-6 item">
                   <div className="testimonial-content">
                     <div className="testimonial">
                       <p>
-                        <i className="fas fa-quote-left me-2" />I love how
-                        passionate the KMFenterprise Tech Agency team is about
-                        helping business owners stand out.
+                        <i className="fas fa-quote-left me-2" />
+                        I love how passionate the KMFenterprise Tech Agency team
+                        is about helping business owners stand out.
                       </p>
                     </div>
-                    <div className="bottom-info mt-4 mb-3">
-                      <Link className="comment-img" href="#url">
+                    <div className="bottom-info mt-4 mb-3 d-flex align-items-center">
+                      <Link className="comment-img me-3" href="#url">
                         <Image
                           src="https://ui-avatars.com/api/?name=Ache+Paul&size=80&background=random&color=fff&rounded=true"
                           alt="Ache Paul"
-                          className="img-fluid radius-image"
                           width={80}
                           height={80}
-                          layout="fixed"
-                          loading="lazy"
                         />
                       </Link>
-                      <div className="people-info align-self">
+                      <div className="people-info">
                         <h3>Ache Paul</h3>
                         <p className="identity">RMRDC</p>
                       </div>
@@ -295,19 +234,16 @@ export default function Home() {
                         marketing, reach out to KMFenterprise.
                       </p>
                     </div>
-                    <div className="bottom-info mt-4">
-                      <Link className="comment-img" href="#url">
+                    <div className="bottom-info mt-4 d-flex align-items-center">
+                      <Link className="comment-img me-3" href="#url">
                         <Image
                           src="https://ui-avatars.com/api/?name=David+Ojogbane&size=80&background=random&color=fff&rounded=true"
                           alt="David Ojogbane"
-                          className="img-fluid radius-image"
                           width={80}
                           height={80}
-                          layout="fixed"
-                          loading="lazy"
                         />
                       </Link>
-                      <div className="people-info align-self">
+                      <div className="people-info">
                         <h3>David Ojogbane</h3>
                         <p className="identity">OJ Digitals</p>
                       </div>
@@ -322,5 +258,5 @@ export default function Home() {
 
       <Footer />
     </div>
-  )
+  );
 }
