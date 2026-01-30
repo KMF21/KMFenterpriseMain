@@ -30,6 +30,11 @@ function NavbarSection() {
             KMF<span className="w3yellow">ENTERPRISE</span>
           </Link>
 
+          {/* Always visible Theme Toggle */}
+          {/* <div className="theme-toggle-wrapper ms-auto d-lg-none me-2 py-2">
+            <ThemeToggle />
+          </div> */}
+
           <button
             className="navbar-toggler ms-auto my-2"
             type="button"

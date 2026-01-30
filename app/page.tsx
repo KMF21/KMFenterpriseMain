@@ -1,32 +1,19 @@
-'use client'
-import Image from 'next/image'
-import Link from 'next/link'
-import Navbar from '@/components/NavbarSection'
-import Footer from '@/components/FooterSection'
-import SliderComponent from '@/components/landing/SliderComponent'
-import PricePlan from '@/components/PricePlanSection'
-import MidSliderSection from '@/components/MidSliderSection'
+import Image from "next/image";
+import Link from "next/link";
+import Navbar from "@/components/NavbarSection";
+import Footer from "@/components/FooterSection";
+import SliderComponent from "@/components/landing/SliderComponent";
+import bg1 from "../packages/ui/assets/images/g1a.jpg";
+import bg2 from "../packages/ui/assets/images/g1.jpg";
+import bg3 from "../packages/ui/assets/images/g1c.jpg";
+import bg12 from "../packages/ui/assets/images/team1.jpg";
+import bg13 from "../packages/ui/assets/images/team2.jpg";
+import PricePlan from "@/components/PricePlanSection";
+import MidSliderSection from "@/components/MidSliderSection";
 import { portfolioServices } from './libraries/portfolioServices'
-import ProgressBar from '@badrap/bar-of-progress'
-import { useEffect } from 'react'
 
 export default function Home() {
-  useEffect(() => {
-    const progress = new ProgressBar({
-      size: 2,
-      color: '#0ead69',
-      className: 'bar-of-progress',
-      delay: 80,
-    })
-
-    progress.start()
-
-    const timer = setTimeout(() => {
-      progress.finish()
-    }, 1000)
-
-    return () => clearTimeout(timer)
-  }, [])
+  
   return (
     <div className="">
       <Navbar />
@@ -174,307 +161,38 @@ export default function Home() {
             <h6 className="title-subw3hny mb-1">Portfolio</h6>
             <h3 className="title-w3l mb-2">Setting Industry Standards</h3>
           </div>
-
-          <>
-  {/* Portfolio Section */}
-  <section id="portfolio" className="portfolio section">
-  
-    <div className="">
-      <div
-        className="isotope-layout"
-        data-default-filter="*"
-        data-layout="fitRows"
-        data-sort="original-order"
-      >
-        <div className="portfolio-filters-wrapper">
-          <ul className="portfolio-filters isotope-filters">
-            <li data-filter="*" className="filter-active">
-              All Projects
-            </li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-web">Web Design</li>
-            <li data-filter=".filter-print">Print Design</li>
-            <li data-filter=".filter-motion">Motion</li>
-          </ul>
-        </div>
-        <div className="row gy-4 portfolio-grid ">
-          <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-            <div className="portfolio-card">
-              <div className="image-container">
-                <img
-                  src="assets/images/portfolio/portfolio-3.webp"
-                  className="img-fluid"
-                  alt="Brand Identity"
-                  loading="lazy"
-                />
-                <div className="overlay">
-                  <div className="overlay-content">
-                    <a
-                      href="assets/images/portfolio/portfolio-3.webp"
-                      className="glightbox zoom-link"
-                      title="Brand Identity Project"
+          <div className="container">
+            <div className="row g-4">
+              {portfolioServices.map((service, index) => (
+                <div className="col-12 col-sm-6 col-md-6 " key={index}>
+                  <Link
+                    href={service.href}
+                    className="text-decoration-none text-dark"
+                  >
+                    <div
+                      // className="card text-start service-card h-100 p-3 mb-3 border rounded-3 transition"
+                      className="card text-start service-card p-4 mb-4 border rounded-3 transition"
+                      style={{
+                        backgroundImage: `url(${service.bgImage})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        minHeight: '300px',
+                      }}
                     >
-                      <i className="bi bi-zoom-in" />
-                    </a>
-                    <a
-                      href="portfolio-details.html"
-                      className="details-link"
-                      title="View Project Details"
-                    >
-                      <i className="bi bi-arrow-right" />
-                    </a>
-                  </div>
+                      <div className="icon-wrapper mb-3 ">
+                        <i className="bi bi-youtube fs-2 text-danger"></i>
+                      </div>
+                      <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+                      {/* <h6 className="fw-semibold mb-1">
+                        {service.title} &gt;
+                      </h6>
+                      <p className="small mb-0">
+                        Starting from {service.price}
+                      </p> */}
+                    </div>
+                  </Link>
                 </div>
-              </div>
-              <div className="content">
-                <h3>Brand Identity</h3>
-                <p>Corporate branding and visual identity system</p>
-              </div>
-            </div>
-          </div>
-          {/* End Portfolio Item */}
-          <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-            <div className="portfolio-card">
-              <div className="image-container">
-                <img
-                  src="assets/images/portfolio/portfolio-7.webp"
-                  className="img-fluid"
-                  alt="E-commerce Platform"
-                  loading="lazy"
-                />
-                <div className="overlay">
-                  <div className="overlay-content">
-                    <a
-                      href="assets/images/portfolio/portfolio-7.webp"
-                      className="glightbox zoom-link"
-                      title="E-commerce Platform"
-                    >
-                      <i className="bi bi-zoom-in" />
-                    </a>
-                    <a
-                      href="portfolio-details.html"
-                      className="details-link"
-                      title="View Project Details"
-                    >
-                      <i className="bi bi-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="content">
-                <h3>E-commerce Platform</h3>
-                <p>Modern online shopping experience</p>
-              </div>
-            </div>
-          </div>
-          {/* End Portfolio Item */}
-          <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-print">
-            <div className="portfolio-card">
-              <div className="image-container">
-                <img
-                  src="assets/images/portfolio/portfolio-portrait-5.webp"
-                  className="img-fluid"
-                  alt="Magazine Design"
-                  loading="lazy"
-                />
-                <div className="overlay">
-                  <div className="overlay-content">
-                    <a
-                      href="assets/images/portfolio/portfolio-portrait-5.webp"
-                      className="glightbox zoom-link"
-                      title="Magazine Design"
-                    >
-                      <i className="bi bi-zoom-in" />
-                    </a>
-                    <a
-                      href="portfolio-details.html"
-                      className="details-link"
-                      title="View Project Details"
-                    >
-                      <i className="bi bi-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="content">
-                <h3>Magazine Design</h3>
-                <p>Editorial layout and typography</p>
-              </div>
-            </div>
-          </div>
-          {/* End Portfolio Item */}
-          <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-motion">
-            <div className="portfolio-card">
-              <div className="image-container">
-                <img
-                  src="assets/images/portfolio/portfolio-8.webp"
-                  className="img-fluid"
-                  alt="Motion Graphics"
-                  loading="lazy"
-                />
-                <div className="overlay">
-                  <div className="overlay-content">
-                    <a
-                      href="assets/images/portfolio/portfolio-8.webp"
-                      className="glightbox zoom-link"
-                      title="Motion Graphics"
-                    >
-                      <i className="bi bi-zoom-in" />
-                    </a>
-                    <a
-                      href="portfolio-details.html"
-                      className="details-link"
-                      title="View Project Details"
-                    >
-                      <i className="bi bi-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="content">
-                <h3>Motion Graphics</h3>
-                <p>Animated visual storytelling</p>
-              </div>
-            </div>
-          </div>
-          {/* End Portfolio Item */}
-          <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-            <div className="portfolio-card">
-              <div className="image-container">
-                <img
-                  src="assets/images/portfolio/portfolio-9.webp"
-                  className="img-fluid"
-                  alt="Logo Collection"
-                  loading="lazy"
-                />
-                <div className="overlay">
-                  <div className="overlay-content">
-                    <a
-                      href="assets/images/portfolio/portfolio-9.webp"
-                      className="glightbox zoom-link"
-                      title="Logo Collection"
-                    >
-                      <i className="bi bi-zoom-in" />
-                    </a>
-                    <a
-                      href="portfolio-details.html"
-                      className="details-link"
-                      title="View Project Details"
-                    >
-                      <i className="bi bi-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="content">
-                <h3>Logo Collection</h3>
-                <p>Diverse brand mark explorations</p>
-              </div>
-            </div>
-          </div>
-          {/* End Portfolio Item */}
-          <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-            <div className="portfolio-card">
-              <div className="image-container">
-                <img
-                  src="assets/images/portfolio/portfolio-portrait-8.webp"
-                  className="img-fluid"
-                  alt="Mobile App Design"
-                  loading="lazy"
-                />
-                <div className="overlay">
-                  <div className="overlay-content">
-                    <a
-                      href="assets/images/portfolio/portfolio-portrait-8.webp"
-                      className="glightbox zoom-link"
-                      title="Mobile App Design"
-                    >
-                      <i className="bi bi-zoom-in" />
-                    </a>
-                    <a
-                      href="portfolio-details.html"
-                      className="details-link"
-                      title="View Project Details"
-                    >
-                      <i className="bi bi-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="content">
-                <h3>Mobile App Design</h3>
-                <p>User-centered interface design</p>
-              </div>
-            </div>
-          </div>
-          {/* End Portfolio Item */}
-          <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-print">
-            <div className="portfolio-card">
-              <div className="image-container">
-                <img
-                  src="assets/images/portfolio/portfolio-10.webp"
-                  className="img-fluid"
-                  alt="Packaging Design"
-                  loading="lazy"
-                />
-                <div className="overlay">
-                  <div className="overlay-content">
-                    <a
-                      href="assets/images/portfolio/portfolio-10.webp"
-                      className="glightbox zoom-link"
-                      title="Packaging Design"
-                    >
-                      <i className="bi bi-zoom-in" />
-                    </a>
-                    <a
-                      href="portfolio-details.html"
-                      className="details-link"
-                      title="View Project Details"
-                    >
-                      <i className="bi bi-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="content">
-                <h3>Packaging Design</h3>
-                <p>Sustainable product packaging solutions</p>
-              </div>
-            </div>
-          </div>
-          {/* End Portfolio Item */}
-          <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-motion">
-            <div className="portfolio-card">
-              <div className="image-container">
-                <img
-                  src="assets/images/portfolio/portfolio-11.webp"
-                  className="img-fluid"
-                  alt="Brand Animation"
-                  loading="lazy"
-                />
-                <div className="overlay">
-                  <div className="overlay-content">
-                    <a
-                      href="assets/images/portfolio/portfolio-11.webp"
-                      className="glightbox zoom-link"
-                      title="Brand Animation"
-                    >
-                      <i className="bi bi-zoom-in" />
-                    </a>
-                    <a
-                      href="portfolio-details.html"
-                      className="details-link"
-                      title="View Project Details"
-                    >
-                      <i className="bi bi-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="content">
-                <h3>Brand Animation</h3>
-                <p>Dynamic brand identity systems</p>
-              </div>
+              ))}
             </div>
           </div>
           {/* End Portfolio Item */}
