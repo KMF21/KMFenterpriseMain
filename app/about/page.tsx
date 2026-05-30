@@ -101,21 +101,21 @@ function Page() {
             <div className="col-lg-3 col-md-6 w3stats_info counter_grid">
               <div className="count-box">
                 <i className="fas fa-users" />
-                <p className="counter">5+</p>
+                <p className="counter">50+</p>
                 <p>Happy Clients</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 mt-5 mt-md-0 w3stats_info counter_grid">
               <div className="count-box">
                 <i className="far fa-images" />
-                <p className="counter">5+</p>
+                <p className="counter">50+</p>
                 <p>Projects</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0 w3stats_info counter_grid">
               <div className="count-box">
                 <i className="fas fa-headset" />
-                <p className="counter">19+</p>
+                <p className="counter">199+</p>
                 <p>Hours Of Support</p>
               </div>
             </div>
