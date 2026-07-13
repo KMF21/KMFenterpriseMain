@@ -1,104 +1,122 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import ThemeToggle from './ThemeToggle'
+import { Menu, X } from 'lucide-react'
+
+const NAV_LINKS = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/contact', label: 'Contact' },
+]
 
 function NavbarSection() {
-  const [change, setChange] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY
-      const threshold = 80
-      setChange(scrolled >= threshold)
-    }
+    const handleScroll = () => setScrolled(window.scrollY >= 80)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [pathname])
+
   return (
     <header
-      id="site-header header"
-      className={`w3l-header fixed-top ${change ? 'nav-fixed' : ''}`}
+      className={`fixed top-0 inset-x-0 z-50 bg-white transition-shadow ${
+        scrolled ? 'shadow-[0_2px_20px_rgba(26,36,26,0.08)]' : ''
+      }`}
     >
-      <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light stroke py-lg-0">
-          <Link className="navbar-brand pe-xl-5 pe-lg-4" href="/">
-            KMF<span className="w3yellow">ENTERPRISE</span>
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10">
+        <nav className="flex items-center justify-between h-[76px]">
+          <Link href="/" className="flex items-center gap-2.5">
+            <Image
+              src="/assets/images/Logo1.png"
+              alt="KMF Enterprise"
+              width={36}
+              height={36}
+              className="rounded-lg"
+            />
+            <span className="font-display font-medium text-lg text-brand-panel">
+              KMF<span className="text-brand-gold">ENTERPRISE</span>
+            </span>
           </Link>
 
-          {/* Always visible Theme Toggle */}
-          {/* <div className="theme-toggle-wrapper ms-auto d-lg-none me-2 py-2">
-            <ThemeToggle />
-          </div> */}
-
-          <button
-            className="navbar-toggler ms-auto my-2"
-            type="button"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle navigation"
-          >
-            <span
-              className={`fas ${menuOpen ? 'fa-times' : 'fa-bars'} text-white`}
-              style={{
-                backgroundColor: '#b57d0a',
-                padding: '10px 14px',
-                borderRadius: '4px',
-                fontSize: '1.5rem',
-              }}
-            />
-          </button>
-
-          <div
-            className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`}
-            id="navbarScroll"
-          >
-            <ul className="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
-              {[
-                { href: '/', label: 'Home' },
-                { href: '/about', label: 'About' },
-                { href: '/services', label: 'Services' },
-                { href: '/portfolio', label: 'Portfolio' },
-                { href: '/contact', label: 'Contact' },
-              ].map((item: any) => (
-                <li className="nav-item" key={item.href}>
-                  <Link
-                    href={item.href}
-                    className={`nav-link ${
-                      pathname === item.href ? 'active' : ''
-                    }`}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <ul className="header-search ms-lg-auto text-center text-lg-end py-2">
-              <li className="get-btn">
+          <ul className="hidden lg:flex items-center gap-8">
+            {NAV_LINKS.map((item) => (
+              <li key={item.href}>
                 <Link
-                  href="https://calendly.com/ikoojojoseph817/30min"
-                  target="_blank"
-                  className="btn btn-style btn-primary"
+                  href={item.href}
+                  className={`text-sm font-medium transition-colors ${
+                    pathname === item.href
+                      ? 'text-brand-gold'
+                      : 'text-brand-panel/80 hover:text-brand-gold'
+                  }`}
                 >
-                  Book a call <i className="fas fa-arrow-right ms-lg-4 ms-2" />
+                  {item.label}
                 </Link>
               </li>
-            </ul>
-            {/* Theme toggle for large screens */}
-            <div className="theme-toggle-wrapper d-none d-lg-flex ms-3 py-2">
-              <ThemeToggle />
-            </div>
+            ))}
+          </ul>
+
+          <div className="hidden lg:block">
+            <Link
+              href="https://calendly.com/ikoojojoseph817/30min"
+              target="_blank"
+              className="inline-flex items-center gap-2 bg-brand-gold text-brand-ink text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-goldDeep transition-colors"
+            >
+              Book a call
+            </Link>
           </div>
+
+          <button
+            className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-md bg-brand-panel text-white"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </nav>
       </div>
-      <hr className="hr-color" style={{ marginTop: 0 }} />
+
+      {/* Mobile menu panel */}
+      <div
+        className={`lg:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out bg-white border-t border-black/10 ${
+          menuOpen ? 'max-h-[420px]' : 'max-h-0'
+        }`}
+      >
+        <ul className="flex flex-col px-6 py-4 gap-1">
+          {NAV_LINKS.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className={`block py-2.5 text-[15px] font-medium ${
+                  pathname === item.href ? 'text-brand-gold' : 'text-brand-panel'
+                }`}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+          <li className="pt-2">
+            <Link
+              href="https://calendly.com/ikoojojoseph817/30min"
+              target="_blank"
+              className="block text-center bg-brand-gold text-brand-ink text-sm font-semibold px-5 py-3 rounded-md"
+            >
+              Book a call
+            </Link>
+          </li>
+        </ul>
+      </div>
     </header>
-    // hello
   )
 }
 

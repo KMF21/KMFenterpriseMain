@@ -1,246 +1,261 @@
-'use client'
-import React, { useEffect } from 'react'
-import Navbar from '@/components/NavbarSection'
-import NavLanding from '@/components/landing/NavLanding'
-import Image from 'next/image'
-import Link from 'next/link'
-import Footer from '@/components/FooterSection'
-import ProgressBar from '@badrap/bar-of-progress'
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Users,
+  Layers,
+  ShieldCheck,
+  TrendingUp,
+  ArrowRight,
+} from "lucide-react";
 
-function Page() {
-  useEffect(() => {
-    const progress = new ProgressBar({
-      size: 2,
-      color: '#0ead69',
-      className: 'bar-of-progress',
-      delay: 80,
-    })
+import NavbarSection from "../../components/NavbarSection";
+import NavLanding from "../../components/landing/NavLanding";
+import FooterSection from "../../components/FooterSection";
 
-    progress.start()
+export const metadata: Metadata = {
+  title: "About | KMFenterprise",
+  description:
+    "KMFenterprise — Keep Moving Forward. We build systems, platforms, and digital infrastructure that help organizations scale with confidence.",
+};
 
-    const timer = setTimeout(() => {
-      progress.finish()
-    }, 1000)
+const STATS = [
+  {
+    icon: Users,
+    value: "1,000+",
+    label: "Users served across production systems",
+  },
+  {
+    icon: Layers,
+    value: "50+",
+    label: "Projects delivered and deployed",
+  },
+  {
+    icon: ShieldCheck,
+    value: "99.9%",
+    label: "Reliability target for critical systems",
+  },
+  {
+    icon: TrendingUp,
+    value: "5+",
+    label: "Years of combined experience",
+  },
+];
 
-    return () => clearTimeout(timer)
-  }, [])
+const VALUES = [
+  {
+    name: "Systems Thinking",
+    desc: "We solve root problems rather than symptoms by designing systems that scale.",
+  },
+  {
+    name: "Excellence",
+    desc: "Quality is not a feature. It is the baseline for every product we deliver.",
+  },
+  {
+    name: "Ownership",
+    desc: "We take responsibility for outcomes, not just deliverables.",
+  },
+  {
+    name: "Integrity",
+    desc: "Trust is built through transparency, reliability, and consistency.",
+  },
+  {
+    name: "Continuous Progress",
+    desc: "Keep Moving Forward is more than our name — it is how we operate.",
+  },
+];
+
+export default function AboutPage() {
   return (
-    <div>
-      <Navbar />
+    <main className="min-h-screen overflow-x-hidden bg-white pt-[76px]">
+      <NavbarSection />
       <NavLanding props="About Us" />
-      <div className="w3l-3-grids py-5" id="grids-3">
-        <div className="container py-md-5 py-2">
-          {/*/row-1*/}
-          <div className="row mb-5 pb-lg-4">
-            <div className="col-lg-6 pe-lg-4">
-              <div className="title-content text-left">
-                <h6 className="title-subw3hny mb-1">Our Info</h6>
-                <h3 className="title-w3l">
-                  Excellence is the baseline. Premium or nothing.{' '}
-                </h3>
-              </div>
-            </div>
-            <div className="col-lg-6 mt-lg-0 mt-md-5 mt-4 ps-lg-5">
-              <p className="">
-                At KMFenterprise we specialise in telling your story through
-                intentional design that creates impact (and income!). We love
-                working with clients driven by purpose who&apos;ve built their
-                businesses from the ground up and are ready for a brand
-                reflective of the impactful industry leaders they&apos;ve
-                become.
+
+      {/* Hero */}
+      <section className="relative overflow-hidden py-24 md:py-32">
+        <div className="absolute left-0 top-0 h-[420px] w-[420px] rounded-full bg-brand-gold/10 blur-[140px]" />
+        <div className="absolute right-0 bottom-0 h-[380px] w-[380px] rounded-full bg-brand-gold/5 blur-[140px]" />
+
+        <div className="relative z-10 mx-auto max-w-[1180px] px-6 md:px-10">
+          <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
+            <div>
+              <h6 className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-brand-goldDeep">
+                About KMFenterprise
+              </h6>
+
+              <h1 className="mb-8 font-display text-[42px] font-medium leading-[1.02] tracking-[-0.04em] text-brand-panel md:text-[58px]">
+                Technology should remove friction, not create it.
+              </h1>
+
+              <p className="mb-6 text-[17px] leading-relaxed text-[#5C6459]">
+                KMFenterprise exists to help organizations remove operational
+                friction through technology.
+              </p>
+
+              <p className="mb-6 text-[17px] leading-relaxed text-[#5C6459]">
+                We design and build digital infrastructure that simplifies
+                processes, automates workflows, and creates leverage for growth.
+              </p>
+
+              <p className="text-[17px] leading-relaxed text-[#5C6459]">
+                Whether it&apos;s an institutional platform, customer portal,
+                business website, AI assistant, or internal system, our goal
+                remains the same:
+              </p>
+
+              <p className="mt-4 font-display text-2xl text-brand-goldDeep">
+                Keep Moving Forward.
               </p>
             </div>
+
+            <div className="relative aspect-[4/3] w-full rounded-[28px] overflow-hidden">
+              <Image
+                src="/assets/images/g2.jpg"
+                alt="Digital infrastructure"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
-          {/*//row-1*/}
-          <div className="row pt-md-0 pt-5">
-            <div className="col-md-6">
-              <div className="abw3-info">
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="bg-brand-paper py-24 md:py-32">
+        <div className="mx-auto max-w-[1180px] px-6 md:px-10">
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="rounded-[28px] border border-black/[0.06] bg-white p-10">
+              <div className="relative mb-8 aspect-[16/9] w-full rounded-2xl overflow-hidden">
                 <Image
                   src="/assets/images/banner5b.jpg"
-                  alt=""
-                  className="img-fluid radius-image"
-                  width={700}
-                  height={400}
+                  alt="Our vision"
+                  fill
+                  className="object-cover"
                 />
-                <h3 className="title-w3l mt-4 mb-2">Our Vision</h3>
-                <p className="">
-                  To empower businesses across Africa and beyond with
-                  innovative, forward-thinking web solutions that drive digital
-                  transformation and sustainable growth.
-                </p>
               </div>
+
+              <h3 className="mb-4 font-display text-3xl font-medium text-brand-panel">
+                Our Vision
+              </h3>
+
+              <p className="leading-relaxed text-[#5C6459]">
+                To become Africa&apos;s trusted technology partner for organizations
+                building for scale, efficiency, and impact.
+              </p>
             </div>
-            <div className="col-md-6 mt-md-0 mt-4">
-              <div className="abw3-info">
+
+            <div className="rounded-[28px] border border-black/[0.06] bg-white p-10">
+              <div className="relative mb-8 aspect-[16/9] w-full rounded-2xl overflow-hidden">
                 <Image
                   src="/assets/images/banner5bb.jpg"
-                  alt=""
-                  className="img-fluid radius-image"
-                  width={700}
-                  height={400}
+                  alt="Our mission"
+                  fill
+                  className="object-cover"
                 />
-                <h3 className="title-w3l mt-4 mb-2">Our Mission</h3>
-                <p className="">
-                  At KMFenterprise, our mission is to design and develop dynamic
-                  digital platforms that help businesses thrive online. Guided
-                  by our philosophy of &apos;Keep Moving Forward,&apos; we
-                  combine creativity, technology, and strategy to deliver
-                  scalable web solutions that accelerate progress for startups,
-                  SMEs, and enterprises.
+              </div>
+
+              <h3 className="mb-4 font-display text-3xl font-medium text-brand-panel">
+                Our Mission
+              </h3>
+
+              <p className="leading-relaxed text-[#5C6459]">
+                To design and deploy technology systems that reduce friction,
+                automate operations, and help organizations move forward with
+                confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics */}
+      <section className="bg-brand-ink py-20 text-white md:py-24">
+        <div className="mx-auto grid max-w-[1180px] grid-cols-2 gap-8 px-6 md:grid-cols-4 md:px-10">
+          {STATS.map(({ icon: Icon, value, label }) => (
+            <div key={label} className="text-center">
+              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5">
+                <Icon size={24} className="text-brand-gold" />
+              </div>
+
+              <p className="font-display text-4xl font-medium text-brand-gold">
+                {value}
+              </p>
+
+              <p className="mx-auto mt-3 max-w-[180px] text-sm leading-relaxed text-[#A9B3A4]">
+                {label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-[1180px] px-6 md:px-10">
+          <div className="mb-16 text-center">
+            <h6 className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-brand-goldDeep">
+              Core Values
+            </h6>
+
+            <h2 className="font-display text-[36px] font-medium text-brand-panel md:text-[48px]">
+              The principles that guide our work
+            </h2>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {VALUES.map((value) => (
+              <div
+                key={value.name}
+                className="group rounded-[28px] border border-black/[0.06] bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:border-brand-gold/20 hover:shadow-[0_25px_60px_-20px_rgba(24,25,28,0.15)]"
+              >
+                <div className="mb-6 h-1 w-16 rounded-full bg-brand-gold" />
+
+                <h3 className="mb-4 font-display text-2xl font-medium text-brand-panel">
+                  {value.name}
+                </h3>
+
+                <p className="leading-relaxed text-[#5C6459]">
+                  {value.desc}
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/*//bottom-3-grids*/}
-      {/*/Counts-Section*/}
-      <section id="counts" className="w3lcounts">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3 col-md-6 w3stats_info counter_grid">
-              <div className="count-box">
-                <i className="fas fa-users" />
-                <p className="counter">50+</p>
-                <p>Happy Clients</p>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mt-5 mt-md-0 w3stats_info counter_grid">
-              <div className="count-box">
-                <i className="far fa-images" />
-                <p className="counter">50+</p>
-                <p>Projects</p>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mt-5 mt-lg-0 w3stats_info counter_grid">
-              <div className="count-box">
-                <i className="fas fa-headset" />
-                <p className="counter">199+</p>
-                <p>Hours Of Support</p>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mt-5 mt-lg-0 w3stats_info counter_grid">
-              <div className="count-box">
-                <i className="fas fa-user-tie" />
-                <p className="counter">5+</p>
-                <p>Hard Workers</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*//Counts-Section*/}
-
-      <section className="w3l-index5 py-5 mt-5">
-        <div className="container py-md-3">
-          <div className="w3l-project-in">
-            <div className="row">
-              <div className="col-lg-7">
-                <div className="bottom-info">
-                  <div className="header-section pe-lg-5">
-                    <h5 className="title-subw3hny mb-3">Invite Your Friends</h5>
-                    <h3 className="title-w3l two mb-3">
-                      Refer and Get Free Services
-                    </h3>
-                    <p>
-                      Love working with us? Spread the word! Refer your friends,
-                      startups, or businesses to our agency and earn free design
-                      hours, discounts, or even full services on your next
-                      project.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-5 align-self mt-lg-0 mt-sm-5 mt-4">
-                <div className="w3l-buttons d-sm-flex justify-content-end">
-                  <Link href="/services" className="btn btn-style btn-primary">
-                    Our Services
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="btn btn-style transparant-btn ms-sm-3 ms-2 "
-                  >
-                    Get Started{' '}
-                    <i className="fas fa-arrow-right ms-lg-4 ms-2 " />{' '}
-                  </Link>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="w3l-midslider py-5" id="midslider">
-        {/* /grids */}
-        <div className="container py-md-5">
-          <div className="row">
-            <div className="col-lg-5 title-content text-left pe-lg-5 mb-lg-0 mb-5">
-              <h6 className="title-subw3hny mb-1">Why Us</h6>
-              <h3 className="title-w3l mb-3">The Values That Drive Us</h3>
-              <p className="mb-3">
-                Our core values are the foundation of everything we do. They
-                guide our actions, shape our culture, and drive us toward
-                excellence. Here’s what we stand for:
-              </p>
-              <ul className="icon-list-items mt-3">
-                <li className="icon-list-item">
-                  <i aria-hidden="true" className="fas fa-check" />
-                  Innovation – We embrace cutting-edge technologies to create
-                  future-ready solutions.
-                </li>
-                <li className="icon-list-item mt-2">
-                  <i aria-hidden="true" className="fas fa-check" />
-                  Excellence – We strive for quality in every pixel and line of
-                  code.
-                </li>
-                <li className="icon-list-item mt-2">
-                  <i aria-hidden="true" className="fas fa-check" />
-                  Growth – We are driven by a commitment to helping our clients
-                  grow.
-                </li>
-                <li className="icon-list-item mt-2">
-                  <i aria-hidden="true" className="fas fa-check" />
-                  Integrity – We build trust through transparency and
-                  reliability.
-                </li>
-                <li className="icon-list-item mt-2">
-                  <i aria-hidden="true" className="fas fa-check" />
-                  Resilience – Like our name, we keep moving forward—no matter
-                  what.
-                </li>
-              </ul>
-            </div>
-            {/* /grids */}
-            <div className="col-lg-7 stats_info-images ps-lg-5">
-              <div className="stats_info-images-right row">
-                <div className="col-6 mid-slider-content">
-                  <Image
-                    src="/assets/images/ab1.png"
-                    className="img-fluid radius-image"
-                    alt=""
-                    width={500}
-                    height={500}
-                  />
-                </div>
-                <div className="col-6 mid-slider-content">
-                  <Image
-                    src="/assets/images/ab2.png"
-                    className="img-fluid radius-image"
-                    alt=""
-                    width={500}
-                    height={500}
-                  />
-                </div>
-              </div>
-            </div>
+      {/* CTA */}
+      <section className="bg-brand-paper py-24 md:py-32">
+        <div className="mx-auto max-w-[900px] px-6 text-center">
+          <h2 className="mb-6 font-display text-[36px] font-medium leading-tight text-brand-panel md:text-[52px]">
+            Building something ambitious?
+          </h2>
+
+          <p className="mx-auto mb-10 max-w-[620px] text-[17px] leading-relaxed text-[#5C6459]">
+            We&apos;d love to learn about your goals and explore how technology can
+            help your organization move faster, operate better, and scale with
+            confidence.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/services"
+              className="rounded-full border border-black/10 px-7 py-4 font-medium text-brand-panel transition-all hover:border-brand-gold hover:text-brand-goldDeep"
+            >
+              Explore Services
+            </Link>
+
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-gold px-7 py-4 font-medium text-brand-ink transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(247,171,10,0.45)]"
+            >
+              Start a Conversation
+              <ArrowRight size={18} />
+            </Link>
           </div>
-          {/* /grids */}
         </div>
       </section>
-      {/*//w3l-midslider*/}
-      <Footer />
-    </div>
-  )
+
+      <FooterSection />
+    </main>
+  );
 }
-
-export default Page

@@ -1,38 +1,30 @@
 import React from 'react'
 import Link from 'next/link'
+import { ChevronsRight } from 'lucide-react'
 
 function NavLanding({ props }: { props: string }) {
   return (
-    <>
-      {/*//Header*/}
-      {/*/inner-page*/}
-      <div className="inner-banner py-5">
-        <section className="w3l-breadcrumb text-left py-sm-5 ">
-          <div className="container">
-            <div className="w3breadcrumb-gids">
-              <div className="w3breadcrumb-left text-left">
-                <h2 className="inner-w3-title">{props}</h2>
-                <p className="inner-page-para mt-2">
-                  The Unique Solutions for Your Business
-                </p>
-              </div>
-              <div className="w3breadcrumb-right">
-                <ul className="breadcrumbs-custom-path">
-                  <li>
-                    <Link href="/">Home</Link>
-                  </li>
-                  <li className="active">
-                    <span className="fas fa-angle-double-right mx-2" /> {props}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+    <div className="bg-brand-panel text-white py-14">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h2 className="font-display font-medium text-3xl">{props}</h2>
+          <p className="text-sm text-[#A9B3A4] mt-2">
+            The unique solutions for your business
+          </p>
+        </div>
+        <ul className="flex items-center gap-2 text-sm text-[#A9B3A4]">
+          <li>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
+          </li>
+          <li className="flex items-center gap-2 text-white">
+            <ChevronsRight size={14} />
+            {props}
+          </li>
+        </ul>
       </div>
-      {/*//inner-page*/}
-      {/*/bottom-3-grids*/}
-    </>
+    </div>
   )
 }
 

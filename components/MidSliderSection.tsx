@@ -1,56 +1,33 @@
-import Image from 'next/image'
+import PlaceholderVisual from "./PlaceholderVisual"
 
 const MidSliderSection = () => {
   return (
-    <>
-      {/* <!--/w3l-midslider--> */}
-      <section className="w3l-midslider py-5" id="midslider">
-        {/* /grids */}
-        <div className="container py-md-5">
-          <div className="row">
-            <div className="col-lg-7 stats_info-images pe-lg-5">
-              <div className="stats_info-images-right row">
-                <div className="col-6 mid-slider-content">
-                  <Image
-                    src="/assets/images/ab1.png"
-                    className="img-fluid radius-image"
-                    alt="About image 1"
-                    width={500}
-                    height={500}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="col-6 mid-slider-content">
-                  <Image
-                    src="/assets/images/ab2.png"
-                    className="img-fluid radius-image"
-                    alt="About image 2"
-                    width={500}
-                    height={500}
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-5 title-content text-left ps-lg-5 mt-lg-0 mt-5">
-              <h6 className="title-subw3hny mb-1">Why Us</h6>
-              <h3 className="title-w3l mb-3">
-                We Partner with Conscious Businesses to Grow Impact & Income
-              </h3>
-              <p className="mb-3">
-                At KMFenterprise we specialise in telling your story through
-                intentional design that creates impact (and income!). We love
-                working with clients driven by purpose who&apos;ve built their
-                businesses from the ground up and are ready for a brand
-                reflective of the impactful industry leaders they&apos;ve
-                become.
-              </p>
-            </div>
+    <section className="py-20 bg-brand-paper" id="midslider">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10">
+        <div className="grid md:grid-cols-2 gap-14 items-center">
+          <div className="grid grid-cols-2 gap-4 order-2 md:order-1">
+            <PlaceholderVisual label="Our approach" className="aspect-square rounded-[12px]" />
+            <PlaceholderVisual label="Our work" className="aspect-square rounded-[12px] mt-8" />
+          </div>
+          <div className="order-1 md:order-2">
+            <h6 className="font-mono text-xs tracking-[0.16em] uppercase text-brand-goldDeep mb-3">
+              Why us
+            </h6>
+            <h3 className="font-display font-medium text-[28px] md:text-[32px] leading-tight mb-4 text-brand-panel">
+              We partner with conscious businesses to grow impact and income
+            </h3>
+            <p className="text-[#5C6459] leading-relaxed">
+              At KMFenterprise we specialise in telling your story through
+              intentional design that creates impact (and income!). We love
+              working with clients driven by purpose who&apos;ve built their
+              businesses from the ground up and are ready for a brand
+              reflective of the impactful industry leaders they&apos;ve
+              become.
+            </p>
           </div>
         </div>
-      </section>
-      {/*//w3l-midslider*/}
-    </>
+      </div>
+    </section>
   )
 }
 

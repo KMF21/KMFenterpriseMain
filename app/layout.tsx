@@ -1,46 +1,48 @@
+// @ts-ignore: side-effect import for global styles
 import "./globals.css";
+
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-// import 'bootstrap/dist/css/bootstrap.css';
-import "packages/ui/assets/css/style-starter.css";
-import "packages/ui/assets/css/owl.carousel.css";
-import "packages/ui/assets/css/owl.theme.default.css";
-import "packages/ui/assets/css/mainportfolio.css";
+import type { ReactNode } from "react";
 
+import {
+  IBM_Plex_Mono,
+  Inter,
+  Space_Grotesk,
+} from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--kmf-font-body",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+  variable: "--kmf-font-display",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--kmf-font-mono",
+});
 
 export const metadata: Metadata = {
   title: "KMFenterprise",
-  description: "KMFenterprise agency website",
+  description: "KMFenterprise Agency Website",
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-
-      <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-  rel="stylesheet"
-/>
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${inter.className} ${inter.variable} ${spaceGrotesk.variable} ${plexMono.variable} min-h-screen overflow-x-hidden bg-white text-black antialiased`}
+      >
         {children}
-
-
-        
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script src="/jquery-3.3.1.min.js"></script>
-{/* <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> */}
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script src="/owl.carousel.js"></script>
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
       </body>
     </html>
   );

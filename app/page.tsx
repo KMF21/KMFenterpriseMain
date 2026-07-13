@@ -1,262 +1,218 @@
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/NavbarSection";
-import Footer from "@/components/FooterSection";
-import SliderComponent from "@/components/landing/SliderComponent";
-import PricePlan from "@/components/PricePlanSection";
-import MidSliderSection from "@/components/MidSliderSection";
-import { portfolioServices } from "./libraries/portfolioServices";
+import { Quote } from "lucide-react";
 
-// Import local images for Next.js optimization
-import g1a from "../public/assets/images/g1a.jpg";
-import g1 from "../public/assets/images/g1.jpg";
-import g1c from "../public/assets/images/g1c.jpg";
+import NavbarSection from "../components/NavbarSection";
+import SliderComponent from "../components/landing/SliderComponent";
+import PlaceholderVisual from "../components/PlaceholderVisual";
+import PricePlanSection from "../components/PricePlanSection";
+import MidSliderSection from "../components/MidSliderSection";
+import FooterSection from "../components/FooterSection";
+import ProjectCard from "../components/portfolio/ProjectCard";
+
+import { portfolioProjects } from "./libraries/portfolioProjects";
+
+const SERVICES = [
+  { num: "01", label: "Website Design", image: "/assets/images/g1a.jpg" },
+  { num: "02", label: "Social Media", image: "/assets/images/g1.jpg" },
+  { num: "03", label: "SEO Strategies", image: "/assets/images/g1c.jpg" },
+];
+
+const TESTIMONIALS = [
+  {
+    quote:
+      "I love how passionate the KMFenterprise Tech Agency team is about helping business owners stand out.",
+    name: "Ache Paul",
+    role: "RMRDC",
+  },
+  {
+    quote:
+      "If you're looking for high-quality, impactful marketing, reach out to KMFenterprise.",
+    name: "David Ojogbane",
+    role: "OJ Digitals",
+  },
+];
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
+    <main className="min-h-screen overflow-x-hidden bg-white pt-[76px]">
+      <NavbarSection />
+
       <SliderComponent />
 
-      {/* 3-Grids Section */}
-      <section className="w3l-3-grids py-5" id="grids-3">
-        <div className="container py-md-5 py-2">
-          <div className="row mb-5 pb-lg-4">
-            <div className="col-lg-4 pe-lg-4">
-              <div className="title-content text-left">
-                <h6 className="title-subw3hny mb-1">About Us</h6>
-                <h3 className="title-w3l">
-                  Excellence is the baseline. Premium or nothing.
-                </h3>
-              </div>
+      {/* About Section */}
+      <section className="py-20 md:py-24">
+        <div className="mx-auto max-w-[1180px] px-6 md:px-10">
+          <div className="mb-16 grid gap-10 md:grid-cols-3">
+            <div>
+              <h6 className="mb-3 font-mono text-xs uppercase tracking-[0.16em] text-brand-goldDeep">
+                About us
+              </h6>
+
+              <h3 className="font-display text-[28px] font-medium leading-tight text-brand-panel md:text-[32px]">
+                Excellence is the baseline. Premium or nothing.
+              </h3>
             </div>
-            <div className="col-lg-4 mt-lg-0 mt-md-5 mt-4 ps-lg-4">
-              <p>
-                At KMFenterprise, we create innovative, high-performance
-                websites that help businesses grow and succeed online. With a
-                focus on design, development, and digital strategy, we deliver
-                solutions that drive progress and keep you moving forward in the
-                digital world.
-              </p>
-            </div>
-            <div className="col-lg-4 mt-lg-0 mt-md-5 mt-4 ps-lg-4">
-              <p>
-                A creative agency specialising in thoughtful and compelling
-                brands powered by a high-converting online presence.
-              </p>
-            </div>
+
+            <p className="leading-relaxed text-[#5C6459]">
+              At KMFenterprise, we create innovative, high-performance websites
+              that help businesses grow and succeed online. With a focus on
+              design, development, and digital strategy, we deliver solutions
+              that drive progress and keep you moving forward in the digital
+              world.
+            </p>
+
+            <p className="leading-relaxed text-[#5C6459]">
+              A creative agency specialising in thoughtful and compelling brands
+              powered by a high-converting online presence.
+            </p>
           </div>
 
-          <div className="row pt-md-0 pt-5">
-            <div className="col-lg-4 col-md-6 mt-md-0 mt-sm-4 px-lg-0">
-              <div className="grids3-info position-relative">
-                <Link href="#" className="d-block zoom">
+        <div className="grid md:grid-cols-3 gap-6">
+            {SERVICES.map((service) => (
+              <Link
+                key={service.num}
+                href="/services"
+                className="group relative block rounded-xl overflow-hidden"
+              >
+                <div className="relative w-full aspect-[5/3]">
                   <Image
-                    src={g1a}
-                    alt="Website Design example"
-                    className="img-fluid news-image"
-                    width={500}
-                    height={300}
+                    src={service.image}
+                    alt={service.label}
+                    fill
+                    className="object-cover"
                   />
-                </Link>
-                <div className="w3-grids3-info">
-                  <h6>
-                    <Link href="#category" className="category d-block">
-                      01
-                    </Link>
-                  </h6>
-                  <h4 className="gdnhy-1">
-                    <Link href="#">Website Design</Link>
-                    <Link className="w3item-link" href="#">
-                      <i className="fas fa-arrow-right ms-lg-4" />
-                    </Link>
-                  </h4>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 mt-md-0 mt-4 px-lg-0 grids3-info2">
-              <div className="grids3-info second position-relative">
-                <Link href="#" className="d-block zoom">
-                  <Image
-                    src={g1}
-                    alt="Social Media Management"
-                    className="img-fluid news-image"
-                    width={500}
-                    height={300}
-                  />
-                </Link>
-                <div className="w3-grids3-info second">
-                  <h6>
-                    <Link href="#category" className="category d-block">
-                      02
-                    </Link>
-                  </h6>
-                  <h4 className="gdnhy-1">
-                    <Link href="#">Social Media</Link>
-                    <Link className="w3item-link" href="#">
-                      <i className="fas fa-arrow-right ms-lg-4" />
-                    </Link>
-                  </h4>
+                <div className="absolute inset-0 bg-black/35" />
+                <div className="absolute inset-0 flex flex-col justify-end p-6">
+                  <span className="font-mono text-xs text-brand-gold mb-1">
+                    {service.num}
+                  </span>
+                  <span className="flex items-center justify-between font-display font-medium text-lg text-white">
+                    {service.label}
+                    <span className="transition-transform group-hover:translate-x-1">→</span>
+                  </span>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 mt-lg-0 mt-4 px-lg-0">
-              <div className="grids3-info position-relative">
-                <Link href="#" className="d-block zoom">
-                  <Image
-                    src={g1c}
-                    alt="SEO Strategies"
-                    className="img-fluid news-image"
-                    width={500}
-                    height={300}
-                  />
-                </Link>
-                <div className="w3-grids3-info">
-                  <h6>
-                    <Link href="#category" className="category d-block">
-                      03
-                    </Link>
-                  </h6>
-                  <h4 className="gdnhy-1">
-                    <Link href="#">SEO Strategies</Link>
-                    <Link className="w3item-link" href="#">
-                      <i className="fas fa-arrow-right ms-lg-4" />
-                    </Link>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="w3l-features" id="work">
-        <div className="container py-lg-5 py-md-4 py-2">
-          <div className="title-content text-center mb-md-5 mb-4">
-            <h6 className="title-subw3hny mb-1">Pricing Plans</h6>
-            <h3 className="title-w3l mb-5">
-              Choose the perfect plan for your needs
-            </h3>
-          </div>
-          <PricePlan />
-        </div>
-      </section>
-
-      <MidSliderSection />
-
-      {/* Portfolio Section */}
-      <section className="w3l-features" id="portfolio">
-        <div className="container py-lg-5 py-md-4 py-2">
-          <div className="title-content text-center mb-4">
-            <h6 className="title-subw3hny mb-1">Portfolio</h6>
-            <h3 className="title-w3l mb-2">Setting Industry Standards</h3>
-          </div>
-          <div className="row g-4">
-            {portfolioServices.map((service, index) => (
-              <div className="col-12 col-sm-6 col-md-6" key={index}>
-                <Link
-                  href={service.href}
-                  className="text-decoration-none text-dark"
-                >
-                  <div
-                    className="card text-start service-card p-4 mb-4 border rounded-3 transition position-relative"
-                    style={{
-                      backgroundImage: `url(${service.bgImage})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      minHeight: "300px",
-                    }}
-                  >
-                    <div className="icon-wrapper mb-3 ">
-                      <i className="bi bi-youtube fs-2 text-danger"></i>
-                    </div>
-                    <div className="bg-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-                  </div>
-                </Link>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="w3l-clients w3l-test py-5" id="testimonials">
-        <div className="container py-lg-5 py-md-4 pt-2 pb-5">
-          <div className="row w3test-grids p-5">
-            <div className="col-lg-4 testimonials-con-left-info py-sm-5 pt-0 py-3">
-              <div className="title-content text-left p-xl-3">
-                <h6 className="title-subw3hny">Reviews</h6>
-                <h3 className="title-w3l two mt-1">What Our Clients Say</h3>
-                <p className="test-p mt-3">
-                  A creative studio specialising in thoughtful and compelling
-                  brands powered by a high-converting online presence.
-                </p>
-              </div>
+      {/* Pricing */}
+      <section className="bg-brand-paper py-20 md:py-24" id="work">
+        <div className="mx-auto max-w-[1180px] px-6 md:px-10">
+          <div className="mb-14 text-center">
+            <h6 className="mb-3 font-mono text-xs uppercase tracking-[0.16em] text-brand-goldDeep">
+              Pricing plans
+            </h6>
+
+            <h3 className="font-display text-[28px] font-medium text-brand-panel md:text-[32px]">
+              Choose the perfect plan for your needs
+            </h3>
+          </div>
+
+          <PricePlanSection />
+        </div>
+      </section>
+
+      <MidSliderSection />
+
+      {/* Portfolio */}
+      <section className="py-20 md:py-24" id="portfolio">
+        <div className="mx-auto max-w-[1180px] px-6 md:px-10">
+          <div className="mb-14 text-center">
+            <h6 className="mb-3 font-mono text-xs uppercase tracking-[0.16em] text-brand-goldDeep">
+              Portfolio
+            </h6>
+
+            <h3 className="font-display text-[28px] font-medium text-brand-panel md:text-[32px]">
+              Setting industry standards
+            </h3>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {portfolioProjects.slice(0, 3).map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/portfolio"
+              className="inline-flex items-center gap-2 border-b border-brand-goldDeep/40 pb-1 font-mono text-sm font-medium text-brand-goldDeep"
+            >
+              View all work
+              <span>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section
+        className="bg-brand-panel py-20 text-white md:py-24"
+        id="testimonials"
+      >
+        <div className="mx-auto max-w-[1180px] px-6 md:px-10">
+          <div className="grid gap-14 lg:grid-cols-3">
+            <div>
+              <h6 className="mb-3 font-mono text-xs uppercase tracking-[0.16em] text-brand-gold">
+                Reviews
+              </h6>
+
+              <h3 className="mb-4 font-display text-[28px] font-medium leading-tight">
+                What our clients say
+              </h3>
+
+              <p className="leading-relaxed text-[#A9B3A4]">
+                A creative studio specialising in thoughtful and compelling
+                brands powered by a high-converting online presence.
+              </p>
             </div>
 
-            <div className="col-lg-8 testimonials-con-right mt-lg-0 mt-3 p-xl-3 pb-4">
-              <div className="row">
-                <div className="col-md-6 item">
-                  <div className="testimonial-content">
-                    <div className="testimonial">
-                      <p>
-                        <i className="fas fa-quote-left me-2" />
-                        I love how passionate the KMFenterprise Tech Agency team
-                        is about helping business owners stand out.
-                      </p>
-                    </div>
-                    <div className="bottom-info mt-4 mb-3 d-flex align-items-center">
-                      <Link className="comment-img me-3" href="#url">
-                        <Image
-                          src="https://ui-avatars.com/api/?name=Ache+Paul&size=80&background=random&color=fff&rounded=true"
-                          alt="Ache Paul"
-                          width={80}
-                          height={80}
-                        />
-                      </Link>
-                      <div className="people-info">
-                        <h3>Ache Paul</h3>
-                        <p className="identity">RMRDC</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:col-span-2">
+              {TESTIMONIALS.map((testimonial) => (
+                <div
+                  key={testimonial.name}
+                  className="rounded-xl border border-white/10 bg-white/[0.04] p-6"
+                >
+                  <Quote size={20} className="mb-4 text-brand-gold" />
 
-                <div className="col-md-6 item">
-                  <div className="testimonial-content">
-                    <div className="testimonial">
-                      <p>
-                        <i className="fas fa-quote-left me-2" />
-                        If you&apos;re looking for high-quality, impactful
-                        marketing, reach out to KMFenterprise.
+                  <p className="mb-6 text-[15px] leading-relaxed text-white/90">
+                    {testimonial.quote}
+                  </p>
+
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
+                        testimonial.name
+                      )}&size=80&background=F7AB0A&color=10160C&rounded=true`}
+                      alt={testimonial.name}
+                      width={44}
+                      height={44}
+                      className="rounded-full"
+                      unoptimized
+                    />
+
+                    <div>
+                      <h4 className="text-sm font-medium">
+                        {testimonial.name}
+                      </h4>
+
+                      <p className="text-xs text-[#A9B3A4]">
+                        {testimonial.role}
                       </p>
-                    </div>
-                    <div className="bottom-info mt-4 d-flex align-items-center">
-                      <Link className="comment-img me-3" href="#url">
-                        <Image
-                          src="https://ui-avatars.com/api/?name=David+Ojogbane&size=80&background=random&color=fff&rounded=true"
-                          alt="David Ojogbane"
-                          width={80}
-                          height={80}
-                        />
-                      </Link>
-                      <div className="people-info">
-                        <h3>David Ojogbane</h3>
-                        <p className="identity">OJ Digitals</p>
-                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <Footer />
-    </div>
+      <FooterSection />
+    </main>
   );
 }

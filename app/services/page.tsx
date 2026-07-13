@@ -1,260 +1,131 @@
-'use client'
-import React, { useEffect } from 'react'
-import Navbar from '@/components/NavbarSection'
-import NavLanding from '@/components/landing/NavLanding'
-import Image from 'next/image'
-import Link from 'next/link'
-import Footer from '@/components/FooterSection'
-import ProgressBar from '@badrap/bar-of-progress'
-import Faqs from '@/components/Faqs'
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Check,
+  Building2,
+  Globe,
+  LayoutDashboard,
+  Bot,
+  Workflow,
+  ArrowRight,
+} from "lucide-react";
 
-function Page() {
-  useEffect(() => {
-    const progress = new ProgressBar({
-      size: 2,
-      color: '#0ead69',
-      className: 'bar-of-progress',
-      delay: 80,
-    })
+import NavbarSection from "../../components/NavbarSection";
+import NavLanding from "../../components/landing/NavLanding";
+import Faqs from "../../components/Faqs";
+import FooterSection from "../../components/FooterSection";
 
-    progress.start()
+export const metadata: Metadata = {
+  title: "Services | KMFenterprise",
+  description:
+    "Technology infrastructure for growing organizations — institutional platforms, business websites, portals, automation systems, and AI-powered solutions.",
+};
 
-    const timer = setTimeout(() => {
-      progress.finish()
-    }, 1000)
+const OFFER_POINTS = [
+  "Custom systems tailored to your operational workflows",
+  "Built for scale, security, and long-term maintainability",
+  "Automation that reduces manual work and operational friction",
+  "Performance-focused architecture for speed and reliability",
+  "Seamless integrations with payment and third-party platforms",
+  "Production support after launch",
+];
 
-    return () => clearTimeout(timer)
-  }, [])
+const PROCESS_STEPS = [
+  {
+    title: "Discovery",
+    desc: "Understanding your workflows, bottlenecks, and business goals.",
+  },
+  {
+    title: "Architecture",
+    desc: "Designing systems and experiences that scale with growth.",
+  },
+  {
+    title: "Implementation",
+    desc: "Building secure, maintainable, production-ready solutions.",
+  },
+  {
+    title: "Deployment",
+    desc: "Launch, monitoring, optimization, and ongoing support.",
+  },
+];
+
+const FEATURED_SERVICES = [
+  {
+    icon: Building2,
+    title: "Institutional Platforms",
+    desc: "Admission portals, screening systems, payment workflows, registration systems, and operational software for universities, organizations, and institutions.",
+  },
+  {
+    icon: Globe,
+    title: "Business Websites",
+    desc: "Premium websites designed to strengthen credibility, improve conversions, and support business growth.",
+  },
+  {
+    icon: LayoutDashboard,
+    title: "Customer Portals",
+    desc: "Member dashboards, onboarding systems, customer areas, and self-service platforms that improve user experience.",
+  },
+  {
+    icon: Workflow,
+    title: "Internal Systems",
+    desc: "Workflow automation, staff management systems, reporting dashboards, and operational tools that reduce friction.",
+  },
+  {
+    icon: Bot,
+    title: "AI Automation",
+    desc: "AI assistants, intelligent customer support, and automation systems that improve efficiency and reduce repetitive work.",
+  },
+];
+
+export default function ServicesPage() {
   return (
-    <div>
-      <Navbar />
+    <main className="min-h-screen overflow-x-hidden bg-white pt-[76px]">
+      <NavbarSection />
+
       <NavLanding props="Services" />
 
-      {/* Inner Page - Services Section */}
-      <div className="w3l-services-1 py-5" id="grids-3">
-        <div className="container py-2">
-          <div className="row pb-lg-2">
-            <div className="col-lg-6 p5-lg-4 services-1-left">
+      {/* Intro */}
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-[1180px] px-6 md:px-10">
+          <div className="grid items-center gap-14 lg:grid-cols-2">
+            <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden">
               <Image
                 src="/assets/images/g8.jpg"
-                alt="Service Visual"
-                width={600}
-                height={400}
-                className="img-fluid radius-image"
+                alt="Technology infrastructure"
+                fill
+                className="object-cover"
               />
             </div>
-            <div className="services-1-right col-lg-6 mt-lg-0 mt-md-5 mt-4 ps-lg-5">
-              <div className="title-content text-left">
-                <h6 className="title-subw3hny mb-1">Services Info</h6>
-                <h3 className="title-w3l mb-3">
-                  Excellence is the baseline. Premium or nothing.
+
+            <div>
+              <h6 className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-brand-goldDeep">
+                What we do
+              </h6>
+
+              <h1 className="mb-6 font-display text-[38px] font-medium leading-[1.05] tracking-[-0.03em] text-brand-panel md:text-[52px]">
+                We build systems that reduce friction and create leverage.
+              </h1>
+
+              <div className="rounded-3xl border border-black/[0.06] bg-brand-paper p-8">
+                <h3 className="mb-4 text-lg font-medium text-brand-panel">
+                  Most organizations don&apos;t have a people problem.
                 </h3>
-              </div>
-              <div className="p-4 bg-light shadow-sm">
-                <h6 className="fw-bold text-primary mb-2">
-                  Hard work got you here, but now it&apos;s time to grow
-                </h6>
-                <p className="text-muted mb-2">
-                  You&apos;ve put your heart and soul into your business. But
-                  hard work can only get you so far, and a poor brand presence
-                  will have you working overtime without seeing results.
-                </p>
-                <p className="text-muted">
-                  So it&apos;s time to set yourself apart as the industry leader
-                  you&apos;ve become, with a kick-ass brand your customers
-                  genuinely love as much as you do.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* What We Offer Section */}
-      <section className="w3l-services-2" id="services1">
-        <div className="w3l-services-1 py-5" id="grids-3">
-          <div className="container py-2">
-            <div className="row align-items-center">
-              {/* Text Content */}
-              <div className="col-lg-6 ps-lg-5">
-                <div className="serve-title-header text-left">
-                  <h6 className="title-subw3hny mb-1">What We Offer</h6>
-                  <h3 className="title-w3l mb-3">
-                    Websites That Speak Your Brand&apos;s Language.
-                  </h3>
-                  <p className="mb-4">
-                    Being a leading website development company, we specialize
-                    in creating exceptional web development services that
-                    elevate your brand and drive business success. Our team of
-                    skilled developers and designers understands the importance
-                    of a strong online presence. We collaborate closely with you
-                    to bring your vision to life, crafting custom websites that
-                    resonate with your audience.
-                  </p>
-
-                  {/* Bullet Points */}
-                  <div className="row">
-                    {[
-                      'Custom Solutions tailored to your business needs',
-                      'User-Centric Design for enhanced engagement.',
-                      'Responsive Designs that look great on any device',
-                      'SEO Optimization to boost search engine rankings.',
-                      'Fast Loading Speeds for improved user satisfaction.',
-                      'Robust Security to protect your data.',
-                    ].map((text, index) => (
-                      <div
-                        key={index}
-                        className="col-12 d-flex align-items-start mb-3"
-                      >
-                        <div
-                          className="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3"
-                          style={{ width: '30px', height: '30px' }}
-                        >
-                          <i className="fas fa-check"></i>
-                        </div>
-                        <p className="mb-0">{text}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Image */}
-              <div className="col-lg-6 mb-4 mb-lg-0">
-                <Image
-                  src="/assets/images/g8aa.jpg"
-                  alt="Service Visual"
-                  width={600}
-                  height={400}
-                  className="img-fluid radius-image"
-                />
-              </div>
-            </div>
-
-            {/* Service Cards */}
-            <div className="grids-of-5 row mt-5 text-center">
-              {[
-                { src: '/assets/images/g2.jpg', label: 'Planning' },
-                { src: '/assets/images/g4.jpg', label: 'Design' },
-                { src: '/assets/images/g6.jpg', label: 'Development' },
-                { src: '/assets/images/g6.jpg', label: 'Launch' },
-              ].map(({ src, label }, idx) => (
-                <div
-                  key={idx}
-                  className="col-lg-3 col-md-6 mt-md-0 mt-sm-5 mt-4"
-                >
-                  <div className="grids5-info">
-                    <Link href="#service" className="d-block zoom">
-                      <Image
-                        src={src}
-                        alt={label}
-                        width={300}
-                        height={200}
-                        className="img-fluid radius-image"
-                      />
-                    </Link>
-                    <div className="blog-info">
-                      <h4>
-                        <Link href="#service">{label}</Link>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Services Section */}
-      <section className="w3l-services-6 py-2" id="services">
-        <div className="container py-lg-5 py-md-4 py-2">
-          <div className="title-services text-center">
-            <h6 className="title-subw3hny mb-1">Services Info</h6>
-            <h3 className="title-w3l mb-3">Featured Services</h3>
-          </div>
-          <div className="grids-area-hny main-cont-wthree-fea row pt-3 mt-5">
-            <div className="col-lg-4 col-md-6 grids-feature mb-2">
-              <div className="area-box">
-                <div className="area-icon icon-red">
-                  <span className="fas fa-code" />
-                </div>
-                <h4>
-                  <Link href="#feature" className="title-head">
-                    Custom Web Development
-                  </Link>
-                </h4>
-                <p>
-                  Our developers utilize robust programming languages and
-                  frameworks to build scalable and secure web solutions tailored
-                  to your specifications.
+                <p className="mb-4 leading-relaxed text-[#5C6459]">
+                  They have a systems problem.
                 </p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 grids-feature mt-md-0 mt-4">
-              <div className="area-box">
-                <div className="area-icon icon-green">
-                  <span className="fas fa-laptop-code" />
-                </div>
-                <h4>
-                  <Link href="#feature" className="title-head">
-                    Front-end Web Development
-                  </Link>
-                </h4>
-                <p>
-                  We use Next.js, Tailwind.css, and other tools to build
-                  responsive and interactive websites that enhance user
-                  experience across devices.
+
+                <p className="mb-4 leading-relaxed text-[#5C6459]">
+                  Manual workflows, disconnected tools, duplicated effort, and
+                  operational friction quietly slow growth and reduce
+                  efficiency.
                 </p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 grids-feature mt-md-0 mt-4">
-              <div className="area-box">
-                <div className="area-icon icon-green">
-                  <span className="fas fa-server" />
-                </div>
-                <h4>
-                  <Link href="#feature" className="title-head">
-                    Back-end Web Development
-                  </Link>
-                </h4>
-                <p>
-                  Our back-end web development services involve building robust
-                  server-side applications and databases that ensure your
-                  website operates seamlessly.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 grids-feature mt-md-0 mt-4">
-              <div className="area-box">
-                <div className="area-icon icon-green">
-                  <span className="fas fa-edit" />
-                </div>
-                <h4>
-                  <Link href="#feature" className="title-head">
-                    CMS Web Development
-                  </Link>
-                </h4>
-                <p>
-                  Our CMS web development services include building and
-                  customizing platforms like Sanity.io and Shopify.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 grids-feature mt-md-0 mt-4">
-              <div className="area-box">
-                <div className="area-icon icon-green">
-                  <span className="fas fa-mobile-alt" />
-                </div>
-                <h4>
-                  <Link href="#feature" className="title-head">
-                    Progressive Web Development
-                  </Link>
-                </h4>
-                <p>
-                  We create progressive web apps (PWAs) that combine the best of
-                  web and mobile applications, offering fast loading times.
-                  Innovative Web Solutions.
+
+                <p className="leading-relaxed text-[#5C6459]">
+                  We design and build the technology infrastructure that removes
+                  those bottlenecks and helps organizations move forward with
+                  confidence.
                 </p>
               </div>
             </div>
@@ -262,12 +133,158 @@ function Page() {
         </div>
       </section>
 
-      {/* FAQS */}
+      {/* What We Offer */}
+      <section className="bg-brand-paper py-24 md:py-32">
+        <div className="mx-auto max-w-[1180px] px-6 md:px-10">
+          <div className="mb-20 grid items-center gap-14 lg:grid-cols-2">
+            <div>
+              <h6 className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-brand-goldDeep">
+                Our approach
+              </h6>
+
+              <h2 className="mb-6 font-display text-[34px] font-medium leading-tight text-brand-panel md:text-[42px]">
+                Technology infrastructure designed for growth.
+              </h2>
+
+              <p className="mb-8 leading-relaxed text-[#5C6459]">
+                Every system we build is designed around one objective:
+                eliminating friction and creating operational leverage.
+                Technology should simplify complexity, not create more of it.
+              </p>
+
+              <ul className="space-y-4">
+                {OFFER_POINTS.map((point) => (
+                  <li key={point} className="flex items-start gap-4">
+                    <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-gold text-brand-ink">
+                      <Check size={14} />
+                    </span>
+
+                    <span className="leading-relaxed text-[#5C6459]">
+                      {point}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden">
+              <Image
+                src="/assets/images/g8aa.jpg"
+                alt="Systems thinking"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Process */}
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {PROCESS_STEPS.map((step, index) => (
+              <div
+                key={step.title}
+                className="rounded-3xl border border-black/[0.06] bg-white p-8"
+              >
+                <div className="mb-6 font-mono text-sm uppercase tracking-[0.16em] text-brand-goldDeep">
+                  0{index + 1}
+                </div>
+
+                <h3 className="mb-3 font-display text-xl font-medium text-brand-panel">
+                  {step.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-[#5C6459]">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-[1180px] px-6 md:px-10">
+          <div className="mb-16 text-center">
+            <h6 className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-brand-goldDeep">
+              Services
+            </h6>
+
+            <h2 className="font-display text-[34px] font-medium text-brand-panel md:text-[42px]">
+              Technology capabilities
+            </h2>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            {FEATURED_SERVICES.map(({ icon: Icon, title, desc }) => (
+              <div
+                key={title}
+                className="
+                  group
+                  rounded-3xl
+                  border
+                  border-black/[0.06]
+                  bg-white
+                  p-8
+                  transition-all
+                  duration-500
+                  hover:-translate-y-2
+                  hover:border-brand-gold/20
+                  hover:shadow-[0_25px_60px_-20px_rgba(24,25,28,0.15)]
+                "
+              >
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-paper transition-colors duration-300 group-hover:bg-brand-gold/10">
+                  <Icon size={24} className="text-brand-goldDeep" />
+                </div>
+
+                <h3 className="mb-4 font-display text-[22px] font-medium text-brand-panel">
+                  {title}
+                </h3>
+
+                <p className="leading-relaxed text-[#5C6459]">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-brand-ink py-24 text-center md:py-32">
+        <div className="mx-auto max-w-[760px] px-6">
+          <h2 className="mb-6 font-display text-[34px] font-medium leading-tight text-white md:text-[48px]">
+            Not every project fits into a predefined category.
+          </h2>
+
+          <p className="mb-10 leading-relaxed text-[#A9B3A4]">
+            If you&apos;re building something ambitious, we&apos;d love to hear about it.
+          </p>
+
+          <Link
+            href="/contact"
+            className="
+              inline-flex
+              items-center
+              gap-3
+              rounded-full
+              bg-brand-gold
+              px-8
+              py-4
+              font-medium
+              text-brand-ink
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:shadow-[0_20px_50px_-15px_rgba(247,171,10,0.45)]
+            "
+          >
+            Book a Discovery Call
+            <ArrowRight size={18} />
+          </Link>
+        </div>
+      </section>
+
       <Faqs />
 
-      <Footer />
-    </div>
-  )
+      <FooterSection />
+    </main>
+  );
 }
-
-export default Page
