@@ -38,7 +38,7 @@ function NavbarSection() {
         <nav className="flex items-center justify-between h-[76px]">
           <Link href="/" className="flex items-center gap-2.5">
             <Image
-              src="/assets/images/Logo1.png"
+              src="/assets/images/logo.png"
               alt="KMF Enterprise"
               width={36}
               height={36}
