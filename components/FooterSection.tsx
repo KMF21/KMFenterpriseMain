@@ -16,88 +16,28 @@ function FooterSection() {
 
   return (
     <>
-      {/* //testimonials section */}
-      {/*/w3l-footer-29-main*/}
-      <footer className="w3l-footer-29-main">
-        <div className="footer-29 py-5">
-          <div className="container py-lg-4">
-            <h2>
-              We protect &amp; support
-              <br />
-              your business
-            </h2>
-            <div className="row footer-top-29 mt-md-5 mt-4">
-              <div className="col-lg-3 col-md-6 footer-list-29 footer-1">
-                <h6 className="footer-title-29">Address</h6>
-                <div className="footer-listw3-grids">
-                  <ul className="footer-listw3">
-                    <li>Abuja, Nigeria</li>
-                    {/* <li>998 Uru Street, Office 46</li>
-                    <li>CraveCafe 61466</li> */}
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5 pe-lg-5">
-                <h6 className="footer-title-29">Say hello</h6>
-                <div className="footer-listw3-grids">
-                  <ul className="footer-listw3">
-                    <li>
-                      <Link href="tel:+(21) 255 999 8888">
-                        +234 911 013 7795
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="mailto:info@kmfenterprise.ng" className="mail">
-                        info@kmfenterprise.ng
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5 pe-lg-5">
-                <h6 className="footer-title-29">Links</h6>
-                <div className="footer-listw3-grids">
-                  <ul className="footer-listw3">
-                    <li>
-                      <Link href="/">Home</Link>
-                    </li>
-                    <li>
-                      <Link href="/about">About</Link>
-                    </li>
-                    <li>
-                      <Link href="/services">Services</Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">Contact</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 footer-list-29 footer-4 mt-lg-0 mt-5 ps-lg-5">
-                <h6 className="footer-title-29">Keep Connected</h6>
-                <p>Get Updates By Subscribe Our Weekly Newsletter</p>
-                <form action="#" className="subscribe" method="post">
-                  <input
-                    onChange={(e) => {
-                      const value = e.target.value
-                      setInput(value)
-                    }}
-                    type="email"
-                    name="email"
-                    placeholder="Your Email Address"
-                    value={input}
-                    required
-                  />
-                  <button>
-                    <span className="fas fa-paper-plane" />
-                  </button>
-                </form>
-                <div className="main-social-footer-29 mt-4">
-                  <Link
-                    href="https://www.facebook.com/KMFenterprise"
-                    className="facebook"
-                  >
-                    <span className="fab fa-facebook-f" />
+      <footer className="bg-brand-ink text-white">
+        <div className="max-w-[1180px] mx-auto px-6 md:px-10 py-16 md:py-20">git 
+          <h2 className="font-display font-medium text-3xl md:text-[40px] leading-tight max-w-lg">
+            We protect &amp; support your business
+          </h2>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-14">
+            <div>
+              <h6 className="font-mono text-xs tracking-[0.14em] uppercase text-brand-gold mb-4">
+                Address
+              </h6>
+              <p className="text-sm text-[#A9B3A4]">Abuja, Nigeria</p>
+            </div>
+
+            <div>
+              <h6 className="font-mono text-xs tracking-[0.14em] uppercase text-brand-gold mb-4">
+                Say hello
+              </h6>
+              <ul className="space-y-2 text-sm text-[#A9B3A4]">
+                <li>
+                  <Link href="tel:+2349110137795" className="hover:text-white transition-colors">
+                    +234 911 013 7795
                   </Link>
                 </li>
                 <li>
