@@ -17,7 +17,7 @@ function FooterSection() {
   return (
     <>
       <footer className="bg-brand-ink text-white">
-        <div className="max-w-[1180px] mx-auto px-6 md:px-10 py-16 md:py-20">git 
+        <div className="max-w-[1180px] mx-auto px-6 md:px-10 py-16 md:py-20">
           <h2 className="font-display font-medium text-3xl md:text-[40px] leading-tight max-w-lg">
             We protect &amp; support your business
           </h2>
