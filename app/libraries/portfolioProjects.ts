@@ -65,6 +65,8 @@ export const portfolioProjects: Project[] = [
       'A full school management system spanning nursery through senior secondary — student records, staff management, subjects, and a unified report-card engine, built to be replicated across schools.',
     stack: ['Next.js', 'Supabase'],
     href: 'https://kmf-schools.vercel.app',
+    image: '/assets/images/portfolio/kmf-schools-desktop.jpg',
+    imageStyle: 'device',
   },
   {
     slug: 'tsu-ipcm',
