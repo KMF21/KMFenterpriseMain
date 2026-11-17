@@ -61,28 +61,6 @@ export const portfolioProjects: Project[] = [
     stack: ['Next.js', 'Supabase'],
     href: 'https://ipcm.tsucpgs.com.ng',
   },
-  {
-    slug: 'kmf-assist',
-    tag: 'AI product',
-    title: 'KMF-Assist',
-    description:
-      'A customizable AI-powered customer support agent with shareable links and real-time conversation management.',
-    stack: ['Next.js', 'AI SDK'],
-    href: '#',
-    image: '/assets/images/g1b.jpg',
-    imageStyle: 'full-bleed',
-  },
-  {
-    slug: 'kmf-ecommerce',
-    tag: 'E-commerce',
-    title: 'KMF-Ecommerce',
-    description:
-      'A storefront and backend for custom print-on-demand retail — product catalogue, checkout, and order management.',
-    stack: ['Next.js', 'Clerk'],
-    href: '#',
-    image: '/assets/images/g1bb.jpg',
-    imageStyle: 'full-bleed',
-  },
 ]
 
 export const featuredProject = portfolioProjects.find((p) => p.featured)!
