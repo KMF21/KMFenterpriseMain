@@ -25,8 +25,8 @@ export const portfolioProjects: Project[] = [
     stack: ['Next.js 14', 'Supabase', 'Clerk', 'Paystack'],
     href: 'https://tsucpgs.com.ng',
     featured: true,
-    image: '/assets/images/portfolio/tsu-screening-desktop.png',
-    imageMobile: '/assets/images/portfolio/tsu-screening-mobile.png',
+    image: '/assets/images/portfolio/tsu-screening-desktop.jpg',
+    imageMobile: '/assets/images/portfolio/tsu-screening-mobile.jpg',
     imageStyle: 'device',
     stats: [
       { label: 'Applicants', value: '1,000+' },
