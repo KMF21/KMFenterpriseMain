@@ -35,6 +35,17 @@ export const portfolioProjects: Project[] = [
     ],
   },
   {
+    slug: 'tsu-main-website',
+    tag: 'University website',
+    title: 'Taraba State University — Main Website',
+    description:
+      "A full migration of the university's main website off WordPress onto Next.js and Sanity — ten faculties, news and events, and a page-builder CMS, rebuilt natively to compete at a global standard.",
+    stack: ['Next.js', 'Sanity', 'TypeScript'],
+    href: 'https://www.tsuniversity.edu.ng',
+    image: '/assets/images/portfolio/tsu-main-website-desktop.jpg',
+    imageStyle: 'device',
+  },
+  {
     slug: 'practical-skills-assessment-portal',
     tag: 'Institutional platform',
     title: 'Practical Skills Assessment Portal',
@@ -42,6 +53,9 @@ export const portfolioProjects: Project[] = [
       'A role-based assessment system for community health students — Admin and Clinical Skills Assessor roles, draw-based practical exams across 15 clinical skills, per-exam scoring, and chapter-based project grading.',
     stack: ['Next.js', 'Supabase', 'Clerk'],
     href: 'https://psap-phi.vercel.app',
+    image: '/assets/images/portfolio/psap-desktop.jpg',
+    imageMobile: '/assets/images/portfolio/psap-mobile.jpg',
+    imageStyle: 'device',
   },
   {
     slug: 'school-management-portal',
